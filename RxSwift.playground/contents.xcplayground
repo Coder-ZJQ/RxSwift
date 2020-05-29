@@ -4,5 +4,6 @@
         <page name='Contents'/>
         <page name='Observables'/>
         <page name='Subjects'/>
+        <page name='Operators'/>
     </pages>
 </playground>

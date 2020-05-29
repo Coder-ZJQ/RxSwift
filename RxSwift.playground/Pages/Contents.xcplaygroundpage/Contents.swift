@@ -4,6 +4,7 @@
 
  - [Observables](Observables)
  - [Subjects](Subjects)
+ - [Operators](Operators)
  
  */
 

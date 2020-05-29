@@ -7,4 +7,11 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Practices">
+      <FileRef
+         location = "group:Practices/01-observables-in-practice/Combinestagram.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
