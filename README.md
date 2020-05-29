@@ -3,7 +3,7 @@ My learning playgrounds and practice projects of book [RxSwift: Reactive Program
 
 ## Contents
 
-![image-20200529155121424](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/image-20200529155121424.png)
+![image-20200529173933231](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/image-20200529173933231.png)
 
 ## Usage
 
@@ -14,3 +14,10 @@ pod install
 ...
 open RxSwift.xcworkspace
 ```
+
+## Useful Links
+
+- [https://github.com/ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift)
+- [http://reactivex.io](http://reactivex.io/)
+- [RxSwift 中文文档](https://beeth0ven.github.io/RxSwift-Chinese-Documentation/)
+- [Rx standard sequence operators visualized (visualization tool)](http://rxmarbles.com/)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770EF317249FE67F07371AE2 /* Pods_Combinestagram_filtering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD3686D9EC484280E3B769 /* Pods_Combinestagram_filtering.framework */; };
 		9C2951971F780F0100FD8830 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2951961F780F0100FD8830 /* UIViewController+Rx.swift */; };
 		9CDD7B041DE5AABE0058B2D5 /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7B031DE5AABE0058B2D5 /* UIImage+Collage.swift */; };
 		9CDD7B061DE5BC660058B2D5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7B051DE5BC660058B2D5 /* PhotosViewController.swift */; };
@@ -18,6 +17,7 @@
 		9CE7E5E41DE5A40A00C8BA5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E21DE5A40A00C8BA5A /* Main.storyboard */; };
 		9CE7E5E61DE5A40A00C8BA5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E51DE5A40A00C8BA5A /* Assets.xcassets */; };
 		9CE7E5E91DE5A40A00C8BA5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E71DE5A40A00C8BA5A /* LaunchScreen.storyboard */; };
+		EA54E2C5362A028CD70E0731 /* Pods_02_Combinestagram_filtering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A917AD8CF348160E025F4907 /* Pods_02_Combinestagram_filtering.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		9CDD7B051DE5BC660058B2D5 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotosViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B071DE6D7ED0058B2D5 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B0B1DE6E3D30058B2D5 /* PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoWriter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		9CE7E5D91DE5A40900C8BA5A /* Combinestagram-filtering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combinestagram-filtering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE7E5D91DE5A40900C8BA5A /* 02.Combinestagram-filtering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02.Combinestagram-filtering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE7E5DC1DE5A40900C8BA5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CE7E5DE1DE5A40A00C8BA5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MainViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CE7E5E31DE5A40A00C8BA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,8 +35,10 @@
 		9CE7E5E81DE5A40A00C8BA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CE7E5EA1DE5A40A00C8BA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CE7E5F01DE5A94600C8BA5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A917AD8CF348160E025F4907 /* Pods_02_Combinestagram_filtering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_02_Combinestagram_filtering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB96E9CB6957FD42497975F6 /* Pods-Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Combinestagram-filtering/Pods-Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
-		BFFD3686D9EC484280E3B769 /* Pods_Combinestagram_filtering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Combinestagram_filtering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E74E094EB85267CE3CD8CF01 /* Pods-02.Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02.Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
+		EE9EF99B78CAD23671A849AA /* Pods-02.Combinestagram-filtering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02.Combinestagram-filtering.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770EF317249FE67F07371AE2 /* Pods_Combinestagram_filtering.framework in Frameworks */,
+				EA54E2C5362A028CD70E0731 /* Pods_02_Combinestagram_filtering.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +56,7 @@
 		0461A7F49609FA1A1211AFBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFFD3686D9EC484280E3B769 /* Pods_Combinestagram_filtering.framework */,
+				A917AD8CF348160E025F4907 /* Pods_02_Combinestagram_filtering.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,6 +66,8 @@
 			children = (
 				8A52A6F344CA5D86A0EA728D /* Pods-Combinestagram-filtering.debug.xcconfig */,
 				BB96E9CB6957FD42497975F6 /* Pods-Combinestagram-filtering.release.xcconfig */,
+				EE9EF99B78CAD23671A849AA /* Pods-02.Combinestagram-filtering.debug.xcconfig */,
+				E74E094EB85267CE3CD8CF01 /* Pods-02.Combinestagram-filtering.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -105,7 +109,7 @@
 		9CE7E5DA1DE5A40900C8BA5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CE7E5D91DE5A40900C8BA5A /* Combinestagram-filtering.app */,
+				9CE7E5D91DE5A40900C8BA5A /* 02.Combinestagram-filtering.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CE7E5D81DE5A40900C8BA5A /* Combinestagram-filtering */ = {
+		9CE7E5D81DE5A40900C8BA5A /* 02.Combinestagram-filtering */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "Combinestagram-filtering" */;
+			buildConfigurationList = 9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "02.Combinestagram-filtering" */;
 			buildPhases = (
 				09C19AFAD069649C502BB8E5 /* [CP] Check Pods Manifest.lock */,
 				9CE7E5D51DE5A40900C8BA5A /* Sources */,
@@ -140,9 +144,9 @@
 			);
 			dependencies = (
 			);
-			name = "Combinestagram-filtering";
+			name = "02.Combinestagram-filtering";
 			productName = Combinestagram;
-			productReference = 9CE7E5D91DE5A40900C8BA5A /* Combinestagram-filtering.app */;
+			productReference = 9CE7E5D91DE5A40900C8BA5A /* 02.Combinestagram-filtering.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +166,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "Combinestagram-filtering" */;
+			buildConfigurationList = 9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "02.Combinestagram-filtering" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -175,7 +179,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CE7E5D81DE5A40900C8BA5A /* Combinestagram-filtering */,
+				9CE7E5D81DE5A40900C8BA5A /* 02.Combinestagram-filtering */,
 			);
 		};
 /* End PBXProject section */
@@ -209,7 +213,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Combinestagram-filtering-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-02.Combinestagram-filtering-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -222,7 +226,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-filtering/Pods-Combinestagram-filtering-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -233,7 +237,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-filtering/Pods-Combinestagram-filtering-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -388,7 +392,7 @@
 		};
 		9CE7E5EE1DE5A40A00C8BA5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A52A6F344CA5D86A0EA728D /* Pods-Combinestagram-filtering.debug.xcconfig */;
+			baseConfigurationReference = EE9EF99B78CAD23671A849AA /* Pods-02.Combinestagram-filtering.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -405,7 +409,7 @@
 		};
 		9CE7E5EF1DE5A40A00C8BA5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB96E9CB6957FD42497975F6 /* Pods-Combinestagram-filtering.release.xcconfig */;
+			baseConfigurationReference = E74E094EB85267CE3CD8CF01 /* Pods-02.Combinestagram-filtering.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -423,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "Combinestagram-filtering" */ = {
+		9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "02.Combinestagram-filtering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CE7E5EB1DE5A40A00C8BA5A /* Debug */,
@@ -432,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "Combinestagram-filtering" */ = {
+		9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "02.Combinestagram-filtering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CE7E5EE1DE5A40A00C8BA5A /* Debug */,

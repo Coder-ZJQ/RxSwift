@@ -10,14 +10,14 @@ use_frameworks!
 workspace 'RxSwift.xcworkspace'
 platform :ios, '9.0'
 
-target 'Combinestagram-observables' do
-  project 'Practices/01-observables-in-practice/Combinestagram-observables.xcodeproj'
+target '01.Combinestagram-observables' do
+  project 'Practices/01-observables-in-practice/01.Combinestagram-observables.xcodeproj'
   pod 'RxSwift'
   pod 'RxRelay'
 end
 
-target 'Combinestagram-filtering' do
-  project 'Practices/02-filtering-operators-in-practice/Combinestagram-filtering.xcodeproj'
+target '02.Combinestagram-filtering' do
+  project 'Practices/02-filtering-operators-in-practice/02.Combinestagram-filtering.xcodeproj'
   pod 'RxSwift'
   pod 'RxRelay'
 end

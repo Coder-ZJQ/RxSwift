@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-38" y="-630"/>
         </scene>
-        <!--Combinestagram-observables-->
+        <!--01.Combinestagram-observables-->
         <scene sceneID="psc-5k-bru">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="iXO-Bu-Lsj" customClass="MainViewController" customModule="Combinestagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                             <constraint firstItem="zp0-a0-4Ju" firstAttribute="centerY" secondItem="jrW-hL-WKx" secondAttribute="centerY" multiplier="1.5" id="xJS-AR-SfF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Combinestagram-observables" id="E09-hM-Eum">
+                    <navigationItem key="navigationItem" title="01.Combinestagram-observables" id="E09-hM-Eum">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XF1-i7-ele">
                             <connections>
                                 <action selector="actionAdd" destination="iXO-Bu-Lsj" id="Nju-qq-y7r"/>

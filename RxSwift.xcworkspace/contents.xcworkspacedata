@@ -8,10 +8,10 @@
       location = "container:"
       name = "Practices">
       <FileRef
-         location = "group:Practices/02-filtering-operators-in-practice/Combinestagram-filtering.xcodeproj">
+         location = "group:Practices/01-observables-in-practice/01.Combinestagram-observables.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Practices/01-observables-in-practice/Combinestagram-observables.xcodeproj">
+         location = "group:Practices/02-filtering-operators-in-practice/02.Combinestagram-filtering.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

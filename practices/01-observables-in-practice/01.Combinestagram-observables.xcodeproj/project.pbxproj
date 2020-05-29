@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F240CBC57D6F5B1F5CBD6D7 /* Pods_Combinestagram_observables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9698B2404337E113575752 /* Pods_Combinestagram_observables.framework */; };
 		9CDD7B041DE5AABE0058B2D5 /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7B031DE5AABE0058B2D5 /* UIImage+Collage.swift */; };
 		9CDD7B061DE5BC660058B2D5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7B051DE5BC660058B2D5 /* PhotosViewController.swift */; };
 		9CDD7B081DE6D7ED0058B2D5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7B071DE6D7ED0058B2D5 /* PhotoCell.swift */; };
@@ -17,16 +16,19 @@
 		9CE7E5E41DE5A40A00C8BA5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E21DE5A40A00C8BA5A /* Main.storyboard */; };
 		9CE7E5E61DE5A40A00C8BA5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E51DE5A40A00C8BA5A /* Assets.xcassets */; };
 		9CE7E5E91DE5A40A00C8BA5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E71DE5A40A00C8BA5A /* LaunchScreen.storyboard */; };
+		A6430605F36FDAB27A7D503C /* Pods_01_Combinestagram_observables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AD1C4B5D581350C1888717 /* Pods_01_Combinestagram_observables.framework */; };
 		F30D84ED2480AEAB00959C04 /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30D84EC2480AEAB00959C04 /* UIViewController+rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11A8EED5FCBDBDA940CAF47C /* Pods-01.Combinestagram-observables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01.Combinestagram-observables.release.xcconfig"; path = "Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables.release.xcconfig"; sourceTree = "<group>"; };
+		5BDC4DAD4E38B1667B49CBED /* Pods-01.Combinestagram-observables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01.Combinestagram-observables.debug.xcconfig"; path = "Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables.debug.xcconfig"; sourceTree = "<group>"; };
 		9243A56339BFC5E7CF4C8D56 /* Pods-Combinestagram-observables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-observables.debug.xcconfig"; path = "Target Support Files/Pods-Combinestagram-observables/Pods-Combinestagram-observables.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDD7B031DE5AABE0058B2D5 /* UIImage+Collage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIImage+Collage.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B051DE5BC660058B2D5 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotosViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B071DE6D7ED0058B2D5 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B0B1DE6E3D30058B2D5 /* PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoWriter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		9CE7E5D91DE5A40900C8BA5A /* Combinestagram-observables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combinestagram-observables.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE7E5D91DE5A40900C8BA5A /* 01.Combinestagram-observables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01.Combinestagram-observables.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE7E5DC1DE5A40900C8BA5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CE7E5DE1DE5A40A00C8BA5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MainViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CE7E5E31DE5A40A00C8BA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,9 +36,9 @@
 		9CE7E5E81DE5A40A00C8BA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CE7E5EA1DE5A40A00C8BA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DB86582AAB4EFBF68AF59AE /* Pods-Combinestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram.debug.xcconfig"; path = "Target Support Files/Pods-Combinestagram/Pods-Combinestagram.debug.xcconfig"; sourceTree = "<group>"; };
-		BD9698B2404337E113575752 /* Pods_Combinestagram_observables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Combinestagram_observables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD974AFAE3CE169D0D6BE394 /* Pods-Combinestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram/Pods-Combinestagram.release.xcconfig"; sourceTree = "<group>"; };
 		E47008B4456F14373991868F /* Pods-Combinestagram-observables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-observables.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram-observables/Pods-Combinestagram-observables.release.xcconfig"; sourceTree = "<group>"; };
+		F0AD1C4B5D581350C1888717 /* Pods_01_Combinestagram_observables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_01_Combinestagram_observables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30D84EC2480AEAB00959C04 /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+rx.swift"; path = "combinestagram/UIViewController+rx.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -45,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F240CBC57D6F5B1F5CBD6D7 /* Pods_Combinestagram_observables.framework in Frameworks */,
+				A6430605F36FDAB27A7D503C /* Pods_01_Combinestagram_observables.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +57,7 @@
 		10B35538A19678E76C1D5395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BD9698B2404337E113575752 /* Pods_Combinestagram_observables.framework */,
+				F0AD1C4B5D581350C1888717 /* Pods_01_Combinestagram_observables.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,7 +98,7 @@
 		9CE7E5DA1DE5A40900C8BA5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CE7E5D91DE5A40900C8BA5A /* Combinestagram-observables.app */,
+				9CE7E5D91DE5A40900C8BA5A /* 01.Combinestagram-observables.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +123,8 @@
 				BD974AFAE3CE169D0D6BE394 /* Pods-Combinestagram.release.xcconfig */,
 				9243A56339BFC5E7CF4C8D56 /* Pods-Combinestagram-observables.debug.xcconfig */,
 				E47008B4456F14373991868F /* Pods-Combinestagram-observables.release.xcconfig */,
+				5BDC4DAD4E38B1667B49CBED /* Pods-01.Combinestagram-observables.debug.xcconfig */,
+				11A8EED5FCBDBDA940CAF47C /* Pods-01.Combinestagram-observables.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -129,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CE7E5D81DE5A40900C8BA5A /* Combinestagram-observables */ = {
+		9CE7E5D81DE5A40900C8BA5A /* 01.Combinestagram-observables */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "Combinestagram-observables" */;
+			buildConfigurationList = 9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "01.Combinestagram-observables" */;
 			buildPhases = (
 				7ABB6B339B489AA9034C85B4 /* [CP] Check Pods Manifest.lock */,
 				9CE7E5D51DE5A40900C8BA5A /* Sources */,
@@ -143,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = "Combinestagram-observables";
+			name = "01.Combinestagram-observables";
 			productName = Combinestagram;
-			productReference = 9CE7E5D91DE5A40900C8BA5A /* Combinestagram-observables.app */;
+			productReference = 9CE7E5D91DE5A40900C8BA5A /* 01.Combinestagram-observables.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "Combinestagram-observables" */;
+			buildConfigurationList = 9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "01.Combinestagram-observables" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -179,7 +183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CE7E5D81DE5A40900C8BA5A /* Combinestagram-observables */,
+				9CE7E5D81DE5A40900C8BA5A /* 01.Combinestagram-observables */,
 			);
 		};
 /* End PBXProject section */
@@ -213,7 +217,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Combinestagram-observables-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-01.Combinestagram-observables-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -226,7 +230,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-observables/Pods-Combinestagram-observables-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -237,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Combinestagram-observables/Pods-Combinestagram-observables-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -392,7 +396,7 @@
 		};
 		9CE7E5EE1DE5A40A00C8BA5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9243A56339BFC5E7CF4C8D56 /* Pods-Combinestagram-observables.debug.xcconfig */;
+			baseConfigurationReference = 5BDC4DAD4E38B1667B49CBED /* Pods-01.Combinestagram-observables.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -407,7 +411,7 @@
 		};
 		9CE7E5EF1DE5A40A00C8BA5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E47008B4456F14373991868F /* Pods-Combinestagram-observables.release.xcconfig */;
+			baseConfigurationReference = 11A8EED5FCBDBDA940CAF47C /* Pods-01.Combinestagram-observables.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -423,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "Combinestagram-observables" */ = {
+		9CE7E5D41DE5A40900C8BA5A /* Build configuration list for PBXProject "01.Combinestagram-observables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CE7E5EB1DE5A40A00C8BA5A /* Debug */,
@@ -432,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "Combinestagram-observables" */ = {
+		9CE7E5ED1DE5A40A00C8BA5A /* Build configuration list for PBXNativeTarget "01.Combinestagram-observables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CE7E5EE1DE5A40A00C8BA5A /* Debug */,

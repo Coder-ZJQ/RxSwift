@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Combinestagram_filteringVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Combinestagram_filteringVersionString[];
+FOUNDATION_EXPORT double Pods_01_Combinestagram_observablesVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_01_Combinestagram_observablesVersionString[];
 
