@@ -2,16 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:RxSwift.playground">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Playgrounds.playground">
    </FileRef>
    <Group
       location = "container:"
       name = "Practices">
       <FileRef
-         location = "group:Practices/01-observables-in-practice/Combinestagram.xcodeproj">
+         location = "group:Practices/02-filtering-operators-in-practice/Combinestagram-filtering.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Practices/01-observables-in-practice/Combinestagram-observables.xcodeproj">
       </FileRef>
    </Group>
+   <FileRef
+      location = "group:Pods/RX.xcodeproj">
+   </FileRef>
 </Workspace>
