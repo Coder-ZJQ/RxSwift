@@ -1,7 +1,5 @@
-//: [Previous](@previous)
+import RxSwift
 
-import Foundation
 
-var str = "Hello, playground"
 
-//: [Next](@next)
+//: [Next](@next) | [Previous](@previous)
