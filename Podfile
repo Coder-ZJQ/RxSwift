@@ -2,7 +2,7 @@
 pre_install do |installer|
     original_sand = installer.sandbox
     def original_sand.project_path
-        return @root + 'RX.xcodeproj'
+        return @root + 'Rx.xcodeproj'
     end
 end
 
