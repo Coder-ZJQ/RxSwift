@@ -202,7 +202,8 @@ example(of: "Challenge") {
     
     // Add your code here
     
-    input.skipWhile({ $0 == 0 })
+    input
+        .skipWhile({ $0 == 0 })
         .filter({ $0 < 10 })
         .take(10)
         .toArray()
