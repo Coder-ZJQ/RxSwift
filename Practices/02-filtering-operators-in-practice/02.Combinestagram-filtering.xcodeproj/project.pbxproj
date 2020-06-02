@@ -34,7 +34,6 @@
 		9CE7E5E51DE5A40A00C8BA5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CE7E5E81DE5A40A00C8BA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CE7E5EA1DE5A40A00C8BA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CE7E5F01DE5A94600C8BA5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A917AD8CF348160E025F4907 /* Pods_02_Combinestagram_filtering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_02_Combinestagram_filtering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB96E9CB6957FD42497975F6 /* Pods-Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Combinestagram-filtering/Pods-Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
 		E74E094EB85267CE3CD8CF01 /* Pods-02.Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02.Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 		9CE7E5D01DE5A40900C8BA5A = {
 			isa = PBXGroup;
 			children = (
-				9CE7E5F01DE5A94600C8BA5A /* Podfile */,
 				9CE7E5DB1DE5A40900C8BA5A /* Combinestagram */,
 				9CE7E5DA1DE5A40900C8BA5A /* Products */,
 				4DC7296738112799682B67C6 /* Pods */,
