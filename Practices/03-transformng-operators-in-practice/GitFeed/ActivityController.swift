@@ -33,11 +33,18 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
+func cachedFileURL(_ fileName: String) -> URL {
+  return FileManager.default.urls(for: .cachesDirectory, in: .allDomainsMask).first!.appendingPathComponent(fileName)
+}
+
 class ActivityController: UITableViewController {
   private let repo = "ReactiveX/RxSwift"
 
   private let events = BehaviorRelay<[Event]>(value: [])
   private let bag = DisposeBag()
+  private let eventsFileURL = cachedFileURL("events.json")
+  private let modifiedFileURL = cachedFileURL("modified.txt")
+  private let lastModified = BehaviorRelay<String>(value: "")
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -51,22 +58,154 @@ class ActivityController: UITableViewController {
     refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
     refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
 
+    if let lastModifiedString = try? String(contentsOf: modifiedFileURL, encoding: .utf8) {
+      lastModified.accept(lastModifiedString)
+    }
+    
     refresh()
   }
 
   @objc func refresh() {
+    let decoder = JSONDecoder()
+    if let data = try? Data(contentsOf: eventsFileURL), let persistedEvents = try? decoder.decode([Event].self, from: data) {
+      events.accept(persistedEvents)
+    }
+    
     DispatchQueue.global(qos: .default).async { [weak self] in
       guard let self = self else { return }
       self.fetchEvents(repo: self.repo)
     }
   }
 
+  
   func fetchEvents(repo: String) {
-
+    /*
+    let response = Observable.from([repo])
+      .map { urlString -> URL in
+        return URL(string: "https://api.github.com/repos/\(urlString)/events")!
+      }
+      .map { [weak self] url -> URLRequest in
+        var request = URLRequest(url: url)
+        if let modifiedHeader = self?.lastModified.value {
+          request.addValue(modifiedHeader, forHTTPHeaderField: "Last-Modified")
+        }
+        return request
+      }
+      .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
+        return URLSession.shared.rx.response(request: request)
+      }
+      .share(replay: 1)
+    
+    response
+      .filter {
+        // ~=: 判断范围操作符
+        return 200..<300 ~= $0.response.statusCode
+      }
+      .map { couple -> [Event] in
+        let decoder = JSONDecoder()
+        let events = try? decoder.decode([Event].self, from: couple.data)
+        return events ?? []
+      }
+      .filter { !$0.isEmpty }
+      .subscribe(onNext: { [weak self] events in
+        self?.processEvents(events)
+      })
+      .disposed(by: bag)
+    
+    response
+      .filter { 200..<400 ~= $0.response.statusCode }
+      .flatMap { couple -> Observable<String> in
+        guard let value = couple.response.allHeaderFields["Last-Modified"] as? String else {
+          return Observable.empty()
+        }
+        return Observable.just(value)
+      }
+      .subscribe(onNext: { [weak self] header in
+        guard let self = self else { return }
+        self.lastModified.accept(header)
+        try?  header.write(to: self.modifiedFileURL, atomically: true, encoding: .utf8)
+      })
+      .disposed(by: bag)
+    */
+    
+    let response =
+    Observable
+      .from(["https://api.github.com/search/repositories?q=language:swift&per_page=5"])
+      .map { URL(string: $0)! }
+      .flatMap { url -> Observable<Any> in
+        return URLSession.shared.rx.json(request: URLRequest(url: url))
+      }
+      .flatMap { response -> Observable<String> in
+        guard let response = response as? [String: Any],
+          let items = response["items"] as? [[String: Any]] else {
+          return Observable.empty()
+        }
+        return Observable.from(items.map { $0["full_name"] as! String })
+      }
+      .map { URL(string: "https://api.github.com/repos/\($0)/events?per_page=5")! }
+      .map { [weak self] url -> URLRequest in
+        var request = URLRequest(url: url)
+        if let modifiedHeader = self?.lastModified.value {
+          request.addValue(modifiedHeader, forHTTPHeaderField: "Last-Modified")
+        }
+        return request
+      }
+      .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
+        return URLSession.shared.rx.response(request: request)
+      }
+      .share(replay: 1)
+    
+    
+    response
+      .filter {
+        // ~=: 判断范围操作符
+        return 200..<300 ~= $0.response.statusCode
+      }
+      .map { couple -> [Event] in
+        let decoder = JSONDecoder()
+        let events = try? decoder.decode([Event].self, from: couple.data)
+        return events ?? []
+      }
+      .filter { !$0.isEmpty }
+      .subscribe(onNext: { [weak self] events in
+        self?.processEvents(events)
+      })
+      .disposed(by: bag)
+    
+    response
+      .filter { 200..<400 ~= $0.response.statusCode }
+      .flatMap { couple -> Observable<String> in
+        guard let value = couple.response.allHeaderFields["Last-Modified"] as? String else {
+          return Observable.empty()
+        }
+        return Observable.just(value)
+      }
+      .subscribe(onNext: { [weak self] header in
+        guard let self = self else { return }
+        self.lastModified.accept(header)
+        try?  header.write(to: self.modifiedFileURL, atomically: true, encoding: .utf8)
+      })
+      .disposed(by: bag)
+    
+    
+    
   }
   
   func processEvents(_ newEvents: [Event]) {
+    var updatedEvents = newEvents + events.value
+    if updatedEvents.count > 50 {
+      updatedEvents = [Event](updatedEvents.prefix(upTo: 50))
+    }
+    events.accept(updatedEvents)
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+      self.refreshControl?.endRefreshing()
+    }
     
+    let encoder = JSONEncoder()
+    if let data = try? encoder.encode(updatedEvents) {
+      try? data.write(to: eventsFileURL, options: .atomicWrite)
+    }
   }
 
   // MARK: - Table Data Source

@@ -27,7 +27,6 @@
 		9C83327B1DF73BA90067DC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C83327E1DF73BA90067DC80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C8332801DF73BA90067DC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C8332861DF73BBD0067DC80 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CE37EC61DF73EE300E4E310 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A21A9A7C5EDD899008CC19D4 /* Pods-03.GitFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03.GitFeed.release.xcconfig"; path = "Target Support Files/Pods-03.GitFeed/Pods-03.GitFeed.release.xcconfig"; sourceTree = "<group>"; };
 		F505F8D5FBEF06966AE6048A /* Pods-03.GitFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03.GitFeed.debug.xcconfig"; path = "Target Support Files/Pods-03.GitFeed/Pods-03.GitFeed.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		9C8332681DF73BA90067DC80 = {
 			isa = PBXGroup;
 			children = (
-				9C8332861DF73BBD0067DC80 /* Podfile */,
 				9C8332731DF73BA90067DC80 /* GitFeed */,
 				9C8332721DF73BA90067DC80 /* Products */,
 				E8807A11E93A2A332B24DCF7 /* Pods */,
@@ -142,6 +140,7 @@
 				TargetAttributes = {
 					9C8332701DF73BA90067DC80 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 39Z8MCG9JF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -374,7 +373,7 @@
 			baseConfigurationReference = 2921B84F62B4EDFB9E6225D6 /* Pods-03.GitFeed-transforming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 39Z8MCG9JF;
 				INFOPLIST_FILE = GitFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -389,7 +388,7 @@
 			baseConfigurationReference = 08FAE0319EC2865709FD4CB7 /* Pods-03.GitFeed-transforming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 39Z8MCG9JF;
 				INFOPLIST_FILE = GitFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
