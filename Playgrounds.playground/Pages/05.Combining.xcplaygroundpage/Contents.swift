@@ -1,5 +1,9 @@
 import RxSwift
 
+
+/*:
+ ![startWith](startWith.png)
+ */
 example(of: "startWith") {
     let numbers = Observable.of(2, 3, 4)
     
@@ -10,6 +14,9 @@ example(of: "startWith") {
         })
 }
 
+/*:
+ ![concat](concat.png)
+ */
 example(of: "Observable.concat") {
     let first = Observable.of(1, 2, 3)
     let second = Observable.of(4, 5, 6)
@@ -46,6 +53,9 @@ example(of: "concatMap") {
     })
 }
 
+/*:
+ ![merge](merge.png)
+ */
 example(of: "merge") {
     let left = PublishSubject<String>()
     let right = PublishSubject<String>()
@@ -76,6 +86,9 @@ example(of: "merge") {
 
 }
 
+/*:
+ ![combineLatest](combineLatest.png)
+ */
 example(of: "combineLatest") {
     let left = PublishSubject<String>()
     let right = PublishSubject<String>()
@@ -115,6 +128,9 @@ example(of: "combine user choice and value") {
     })
 }
 
+/*:
+ ![zip](zip.png)
+ */
 example(of: "zip") {
     enum Weather {
         case cloudy
@@ -133,6 +149,9 @@ example(of: "zip") {
     })
 }
 
+/*:
+ ![withLatestFrom](withLatestFrom.png)
+ */
 example(of: "withLatestFrom") {
     let button = PublishSubject<Void>()
     let textField = PublishSubject<String>()
@@ -151,6 +170,9 @@ example(of: "withLatestFrom") {
     button.onNext(())
 }
 
+/*:
+ ![sample](sample.png)
+ */
 example(of: "sample") {
     let button = PublishSubject<Void>()
     let textField = PublishSubject<String>()
@@ -168,6 +190,9 @@ example(of: "sample") {
     button.onNext(())
 }
 
+/*:
+ ![amb](amb.png)
+ */
 example(of: "amb") {
     let left = PublishSubject<String>()
     let right = PublishSubject<String>()
@@ -188,6 +213,9 @@ example(of: "amb") {
     right.onCompleted()
 }
 
+/*:
+ ![switchLatest](switchLatest.png)
+ */
 example(of: "switchLatest") {
     let one = PublishSubject<String>()
     let two = PublishSubject<String>()
@@ -220,6 +248,9 @@ example(of: "switchLatest") {
     disposable.dispose()
 }
 
+/*:
+ ![reduce](reduce.png)
+ */
 example(of: "reduce") {
     let source = Observable.of(1, 3, 5, 7, 9)
     
@@ -229,6 +260,9 @@ example(of: "reduce") {
     })
 }
 
+/*:
+ ![scan](scan.png)
+ */
 example(of: "scan") {
     let source = Observable.of(1, 3, 5, 7, 9)
     

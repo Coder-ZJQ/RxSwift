@@ -1,5 +1,9 @@
 import RxSwift
 
+
+/*:
+ ![toArray](toArray.png)
+ */
 example(of: "toArray") {
     let disposeBag = DisposeBag()
     
@@ -11,6 +15,9 @@ example(of: "toArray") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![map](map.png)
+ */
 example(of: "map") {
     let disposeBag = DisposeBag()
     
@@ -41,10 +48,9 @@ example(of: "enumerated and map") {
         .disposed(by: disposeBag)
 }
 
-//struct Student {
-//    let score: BehaviorSubject<Int>
-//}
-
+/*:
+ ![flatMap](flatMap.png)
+ */
 example(of: "flatMap") {
     let disposeBag = DisposeBag()
     
@@ -72,6 +78,9 @@ example(of: "flatMap") {
     
 }
 
+/*:
+ ![flatMapLatest](flatMapLatest.png)
+ */
 example(of: "flatMapLatest") {
     let disposeBag = DisposeBag()
     
@@ -98,6 +107,10 @@ example(of: "flatMapLatest") {
     charlotte.score.onNext(100)
 }
 
+/*:
+![materialize](materialize.png)
+![dematerialize](dematerialize.png)
+ */
 example(of: "materialize and dematerialize") {
     enum MyError: Error {
         case anError

@@ -26,7 +26,9 @@ example(of: "ignoreElements") {
     strikes.onCompleted()
 }
 
-
+/*:
+ ![elementAt](elementAt.png)
+ */
 example(of: "elementAt") {
     let strikes = PublishSubject<String>()
     let disposeBag = DisposeBag()
@@ -41,6 +43,9 @@ example(of: "elementAt") {
 }
 
 
+/*:
+ ![filter](filter.png)
+ */
 example(of: "filter") {
     let disposeBag = DisposeBag()
     Observable
@@ -54,6 +59,9 @@ example(of: "filter") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![skip](skip.png)
+ */
 example(of: "skip") {
     let disposeBag = DisposeBag()
     Observable.of("A", "B", "C", "D", "E", "F")
@@ -64,6 +72,9 @@ example(of: "skip") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![skipWhile](skipWhile.png)
+ */
 example(of: "skipWhile") {
     let disposeBag = DisposeBag()
     
@@ -75,6 +86,9 @@ example(of: "skipWhile") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![skipUntil](skipUntil.png)
+ */
 example(of: "skipUntil") {
     let disposeBag = DisposeBag()
     let subject = PublishSubject<String>()
@@ -93,6 +107,9 @@ example(of: "skipUntil") {
     subject.onNext("C")
 }
 
+/*:
+ ![take](take.png)
+ */
 example(of: "take") {
     let disposeBag = DisposeBag()
     
@@ -104,6 +121,9 @@ example(of: "take") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![takeWhile](takeWhile.png)
+ */
 example(of: "takeWhile") {
     let disposeBag = DisposeBag()
     
@@ -115,6 +135,9 @@ example(of: "takeWhile") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![takeUntil](takeUntil.png)
+ */
 example(of: "takeUntil") {
     let disposeBag = DisposeBag()
     
@@ -136,6 +159,9 @@ example(of: "takeUntil") {
     
 }
 
+/*:
+ ![distinctUntilChanged](distinctUntilChanged.png)
+ */
 example(of: "distinctUntilChanged") {
     let disposeBag = DisposeBag()
     
@@ -147,6 +173,9 @@ example(of: "distinctUntilChanged") {
         .disposed(by: disposeBag)
 }
 
+/*:
+ ![distinctUntilChanged_](distinctUntilChanged_.png)
+ */
 example(of: "distinctUntilChanged(_:)") {
     let disposeBag = DisposeBag()
     
