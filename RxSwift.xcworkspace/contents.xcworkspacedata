@@ -16,8 +16,14 @@
       <FileRef
          location = "group:Practices/03-transformng-operators-in-practice/03.GitFeed-transforming.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Practices/04-combining-operators-in-practice/04.ourplanet-combining.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/04-combining-operators-in-practice/04.ourplanet-combining.xcodeproj">
    </FileRef>
 </Workspace>

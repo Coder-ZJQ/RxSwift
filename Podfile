@@ -26,3 +26,8 @@ target '03.GitFeed-transforming' do
   pod 'RxCocoa'
   pod 'Kingfisher'
 end
+
+target '04.ourplanet-combining' do
+  project 'Practices/04-combining-operators-in-practice/04.ourplanet-combining.xcodeproj'
+  pod 'RxCocoa'
+end
