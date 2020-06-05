@@ -1,26 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="asm-KJ-jxX">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="asm-KJ-jxX">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Events View Controller-->
         <scene sceneID="YSW-O0-16m">
             <objects>
-                <viewController storyboardIdentifier="events" id="RA6-xv-Ca6" customClass="EventsViewController" customModule="OurPlanet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="events" id="RA6-xv-Ca6" customClass="EventsViewController" customModule="_4_ourplanet_combining" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yEI-PB-Ue2"/>
                         <viewControllerLayoutGuide type="bottom" id="a4r-cL-wlu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AYe-sO-GPO">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="360" minValue="1" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="Fff-xl-qii">
@@ -36,11 +32,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q76-MT-nKI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="84" id="Ebo-Ni-PUN" customClass="EventCell" customModule="OurPlanet" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="84" id="Ebo-Ni-PUN" customClass="EventCell" customModule="_4_ourplanet_combining" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ebo-Ni-PUN" id="rYr-ny-QIf">
@@ -48,19 +44,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="wot?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5E-tW-Leg">
-                                                    <rect key="frame" x="8" y="8" width="257" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="243" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-Tt-Ym9">
-                                                    <rect key="frame" x="8" y="34.5" width="359" height="40.5"/>
+                                                    <rect key="frame" x="15" y="37.5" width="345" height="35.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="1000" text="2016-06-07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zw-i2-03d">
-                                                    <rect key="frame" x="273" y="7.5" width="94" height="21"/>
+                                                    <rect key="frame" x="266" y="10.5" width="94" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -149,27 +145,27 @@
         <!--Our Planet - Categories-->
         <scene sceneID="cRA-sE-wcD">
             <objects>
-                <viewController id="Q6U-rn-aS4" customClass="CategoriesViewController" customModule="OurPlanet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q6U-rn-aS4" customClass="CategoriesViewController" customModule="_4_ourplanet_combining" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6aq-6Y-V04"/>
                         <viewControllerLayoutGuide type="bottom" id="SAw-wu-kJ4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3bC-1T-vlo">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Db6-PF-SbJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pkg-Wr-lWe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" id="c8P-ih-Trw">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8P-ih-Trw" id="Ax4-3i-V7O">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -180,14 +176,23 @@
                                     <outlet property="delegate" destination="Q6U-rn-aS4" id="bQJ-Xf-x45"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yaz-2f-g27" customClass="DownloadView" customModule="_4_ourplanet_combining" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="585" width="375" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="fhL-rw-mKd"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yaz-2f-g27" secondAttribute="trailing" id="4oe-Pf-oHY"/>
                             <constraint firstItem="SAw-wu-kJ4" firstAttribute="top" secondItem="Db6-PF-SbJ" secondAttribute="bottom" id="7n8-t1-Uti"/>
+                            <constraint firstItem="SAw-wu-kJ4" firstAttribute="top" secondItem="Pkg-Wr-lWe" secondAttribute="bottom" id="H5a-qM-c5E"/>
+                            <constraint firstItem="Yaz-2f-g27" firstAttribute="leading" secondItem="3bC-1T-vlo" secondAttribute="leading" id="Q9i-ny-8cG"/>
                             <constraint firstItem="Pkg-Wr-lWe" firstAttribute="leading" secondItem="3bC-1T-vlo" secondAttribute="leading" id="Uh7-ko-SbB"/>
                             <constraint firstAttribute="trailing" secondItem="Pkg-Wr-lWe" secondAttribute="trailing" id="Y7b-sQ-45H"/>
                             <constraint firstItem="Pkg-Wr-lWe" firstAttribute="top" secondItem="3bC-1T-vlo" secondAttribute="top" id="ZvL-kZ-M8e"/>
-                            <constraint firstItem="SAw-wu-kJ4" firstAttribute="top" secondItem="Pkg-Wr-lWe" secondAttribute="bottom" id="eh8-cd-YA5"/>
+                            <constraint firstAttribute="bottom" secondItem="Yaz-2f-g27" secondAttribute="bottom" id="bT8-Sz-Iks"/>
                             <constraint firstItem="Db6-PF-SbJ" firstAttribute="leading" secondItem="3bC-1T-vlo" secondAttribute="leading" id="njs-Gb-omd"/>
                             <constraint firstItem="Db6-PF-SbJ" firstAttribute="top" secondItem="6aq-6Y-V04" secondAttribute="bottom" id="y3O-Q6-rsG"/>
                             <constraint firstAttribute="trailing" secondItem="Db6-PF-SbJ" secondAttribute="trailing" id="zmy-So-35W"/>
@@ -199,6 +204,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="downloadView" destination="Yaz-2f-g27" id="EbE-qw-qik"/>
                         <outlet property="tableView" destination="Pkg-Wr-lWe" id="btg-cL-5YD"/>
                     </connections>
                 </viewController>

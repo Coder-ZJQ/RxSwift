@@ -34,6 +34,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
 
   @IBOutlet var tableView: UITableView!
   
+  @IBOutlet weak var downloadView: DownloadView!
   
   var activityIndicator: UIActivityIndicatorView!
   
@@ -47,6 +48,9 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     activityIndicator.color = .black
     navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
     activityIndicator.startAnimating()
+    
+    downloadView.progress.progress = 0
+    downloadView.label.text = "Download: 0%"
     
     categories
       .asObservable()
@@ -66,8 +70,8 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     }.merge(maxConcurrent: 2)
     
     let updatedCategories = eoCategories.flatMap { categories in
-      downloadedEvents.scan(categories) { updated, events in
-        return updated.map { category in
+      downloadedEvents.scan((0, categories)) { tuple, events in
+        return (tuple.0 + 1, tuple.1.map { category in
           let eventsForCategory = EONET.filteredEvents(events: events, forCategory: category)
           if !eventsForCategory.isEmpty {
             var cat = category
@@ -75,7 +79,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
             return cat
           }
           return category
-        }
+        })
       }
     }
     .do(onCompleted: { [weak self] in
@@ -83,9 +87,24 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         self?.activityIndicator.stopAnimating()
       }
     })
+      .do(onNext: { [weak self] tuple in
+        DispatchQueue.main.async {
+          let progress = Float(tuple.0) / Float(tuple.1.count)
+          self?.downloadView.progress.progress = progress
+          let percent = Int(progress * 100.0)
+          self?.downloadView.label.text = "Download: \(percent)%"
+          if progress == 1 {
+            UIView.animate(withDuration: 0.25, animations: {
+              self?.downloadView.alpha = 0
+            }) { _ in
+              self?.downloadView.removeFromSuperview()
+            }
+          }
+        }
+      })
     
     eoCategories
-      .concat(updatedCategories)
+      .concat(updatedCategories.map{ $0.1 })
       .bind(to: categories)
       .disposed(by: disposeBag)
   }
