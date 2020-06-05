@@ -7,5 +7,10 @@
         <page name='03.Filtering'/>
         <page name='04.Transforming'/>
         <page name='05.Combining'/>
+        <page name='06.Time-Based-1.replay'/>
+        <page name='06.Time-Based-2.buffer'/>
+        <page name='06.Time-Based-3.window'/>
+        <page name='06.Time-Based-4.delay'/>
+        <page name='06.Time-Based-5.timeout'/>
     </pages>
 </playground>
