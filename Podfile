@@ -31,3 +31,8 @@ target '04.ourplanet-combining' do
   project 'Practices/04-combining-operators-in-practice/04.ourplanet-combining.xcodeproj'
   pod 'RxCocoa'
 end
+
+target '05.Wundercast-rxcocoa' do
+  project 'Practices/05-beginning-rxcocoa/05.Wundercast-rxcocoa.xcodeproj'
+  pod 'RxCocoa'
+end
