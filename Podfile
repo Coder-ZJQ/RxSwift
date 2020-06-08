@@ -32,7 +32,12 @@ target '04.ourplanet-combining' do
   pod 'RxCocoa'
 end
 
-target '05.Wundercast-rxcocoa' do
-  project 'Practices/05-beginning-rxcocoa/05.Wundercast-rxcocoa.xcodeproj'
+target '05.Wundercast-beginning-rxcocoa' do
+  project 'Practices/05-beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj'
+  pod 'RxCocoa'
+end
+
+target '06.Wundercast-intermediate-rxcocoa' do
+  project 'Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj'
   pod 'RxCocoa'
 end

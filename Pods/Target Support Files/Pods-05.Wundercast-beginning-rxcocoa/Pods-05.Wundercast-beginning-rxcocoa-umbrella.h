@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_05_Wundercast_rxcocoaVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_05_Wundercast_rxcocoaVersionString[];
+FOUNDATION_EXPORT double Pods_05_Wundercast_beginning_rxcocoaVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_05_Wundercast_beginning_rxcocoaVersionString[];
 

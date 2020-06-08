@@ -19,9 +19,12 @@
       <FileRef
          location = "group:Practices/04-combining-operators-in-practice/04.ourplanet-combining.xcodeproj">
       </FileRef>
-     <FileRef
-        location = "group:Practices/05-beginning-rxcocoa/05.Wundercast-rxcocoa.xcodeproj">
-     </FileRef>
+      <FileRef
+         location = "group:Practices/05-beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
