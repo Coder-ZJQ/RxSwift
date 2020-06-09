@@ -46,3 +46,17 @@ target '07.Wundercast-error-handling' do
   project 'Practices/07-error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
   pod 'RxCocoa'
 end
+
+target '08.Schedulers' do
+  platform :osx, '10.12'
+  project 'Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj'
+  pod 'RxSwift'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
+    end
+  end
+end

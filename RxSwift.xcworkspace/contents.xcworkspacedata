@@ -25,8 +25,11 @@
       <FileRef
          location = "group:Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Practices/07-error-handling-in-practice/07.Wundercast-error-handling.xcodeproj">
+      </FileRef>
      <FileRef
-        location = "group:Practices/07-error-handling-in-practice/07.Wundercast-error-handling.xcodeproj">
+        location = "group:Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj">
      </FileRef>
    </Group>
    <FileRef

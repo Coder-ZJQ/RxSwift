@@ -205,7 +205,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-04.ourplanet-combining/Pods-04.ourplanet-combining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
