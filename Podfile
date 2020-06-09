@@ -41,3 +41,8 @@ target '06.Wundercast-intermediate-rxcocoa' do
   project 'Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj'
   pod 'RxCocoa'
 end
+
+target '07.Wundercast-error-handling' do
+  project 'Practices/07-error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
+  pod 'RxCocoa'
+end
