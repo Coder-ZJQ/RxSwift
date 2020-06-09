@@ -139,6 +139,20 @@ class ApiController {
         return try decoder.decode(Weather.self, from: data)
       }
   }
+    
+    func currentWeatherArround(location: CLLocationCoordinate2D) -> Observable<[Weather]> {
+        var weathers = [Observable<Weather>]()
+        
+        for i in -1...1 {
+            for j in -1...1 {
+                let coordinate = CLLocationCoordinate2D(latitude: location.latitude + Double(i), longitude: location.longitude + Double(j))
+                weathers.append(currentWeather(at: coordinate))
+            }
+        }
+        
+        return Observable.from(weathers).merge().toArray().asObservable()
+        
+    }
 
   // MARK: - Private Methods
 
@@ -267,4 +281,5 @@ extension ApiController.Weather {
       context.draw(imageReference!, in: theRect)
     }
   }
+    
 }
