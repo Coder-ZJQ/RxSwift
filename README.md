@@ -3,7 +3,7 @@ My learning playgrounds and practice projects of book [RxSwift: Reactive Program
 
 ## Contents
 
-![image-20200602171353895](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/image-20200602171353895.png)
+![](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/20200610154126.png)
 
 ## Usage
 
@@ -14,6 +14,16 @@ pod install
 ...
 open RxSwift.xcworkspace
 ```
+
+You can select `Show Rendered Markup` to show the rich content of playgrounds:
+
+![image-20200610161834229](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/image-20200610161834229.png)
+
+![image-20200610162345328](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/image-20200610162345328.png)
+
+If you want to run the playground examples, build the `00.Playgrounds-Support` scheme first.
+
+![](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/20200610161348.png)
 
 ## Useful Links
 
