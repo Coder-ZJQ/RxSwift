@@ -13,6 +13,11 @@ platform :ios, '9.0'
 pod 'RxSwift'
 pod 'RxRelay'
 
+target '00.Playgrounds-Support' do
+  project 'Practices/00.Playgrounds-Support/00.Playgrounds-Support.xcodeproj'
+  pod 'RxCocoa'
+end
+
 target '01.Combinestagram-observables' do
   project 'Practices/01-observables-in-practice/01.Combinestagram-observables.xcodeproj'
 end

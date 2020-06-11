@@ -7,6 +7,9 @@
    <Group
       location = "container:"
       name = "Practices">
+     <FileRef
+        location = "group:Practices/00.Playgrounds-Support/00.Playgrounds-Support.xcodeproj">
+     </FileRef>
       <FileRef
          location = "group:Practices/01-observables-in-practice/01.Combinestagram-observables.xcodeproj">
       </FileRef>
@@ -28,9 +31,9 @@
       <FileRef
          location = "group:Practices/07-error-handling-in-practice/07.Wundercast-error-handling.xcodeproj">
       </FileRef>
-     <FileRef
-        location = "group:Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj">
-     </FileRef>
+      <FileRef
+         location = "group:Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
