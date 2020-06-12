@@ -7,9 +7,9 @@
    <Group
       location = "container:"
       name = "Practices">
-     <FileRef
-        location = "group:Practices/00.Playgrounds-Support/00.Playgrounds-Support.xcodeproj">
-     </FileRef>
+      <FileRef
+         location = "group:Practices/00.Playgrounds-Support/00.Playgrounds-Support.xcodeproj">
+      </FileRef>
       <FileRef
          location = "group:Practices/01-observables-in-practice/01.Combinestagram-observables.xcodeproj">
       </FileRef>
@@ -34,8 +34,20 @@
       <FileRef
          location = "group:Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Practices/09.testing-with-rxtest/09.Testing.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/Joker/Desktop/RxSwift-playground/Practices/10.creating-custom-reactive-extension/09.iGif-extension.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
    </FileRef>
 </Workspace>

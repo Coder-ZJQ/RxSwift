@@ -117,7 +117,6 @@ class ApiController {
 
   /// The api key to communicate with openweathermap.org
   /// Create you own on https://home.openweathermap.org/users/sign_up
-  /// da13201d36831242cbc1d64dc1fa4c04
   let apiKey = BehaviorSubject(value: "")
 
   /// API base URL

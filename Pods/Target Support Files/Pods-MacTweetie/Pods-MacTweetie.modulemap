@@ -1,0 +1,6 @@
+framework module Pods_MacTweetie {
+  umbrella header "Pods-MacTweetie-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_Tweetie_TweetieTests {
+  umbrella header "Pods-Tweetie-TweetieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

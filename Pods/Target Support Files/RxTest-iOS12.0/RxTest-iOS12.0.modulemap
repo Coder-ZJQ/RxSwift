@@ -1,0 +1,6 @@
+framework module RxTest {
+  umbrella header "RxTest-iOS12.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

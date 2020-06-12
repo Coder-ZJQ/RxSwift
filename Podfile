@@ -7,6 +7,7 @@ pre_install do |installer|
 end
 
 use_frameworks!
+inhibit_all_warnings!
 workspace 'RxSwift.xcworkspace'
 platform :ios, '9.0'
 
@@ -57,6 +58,57 @@ target '08.Schedulers' do
   project 'Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj'
   pod 'RxSwift'
 end
+
+target 'Testing' do
+  project 'Practices/09.testing-with-rxtest/09.Testing.xcodeproj'
+  pod 'Hue'
+
+  target 'TestingTests' do
+    inherit! :search_paths
+    pod 'RxTest'
+    pod 'RxBlocking'
+  end
+end
+
+target 'iGif' do
+  project 'Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj'
+  pod 'SwiftyJSON'
+  pod 'Gifu', :git => 'https://gitee.com/coder-zjq/Gifu.git'
+
+  target 'iGifTests' do
+    pod 'Nimble'
+    pod 'RxNimble'
+    pod 'RxBlocking'
+    pod 'OHHTTPStubs'
+    pod 'OHHTTPStubs/Swift'
+  end
+  
+end
+
+target 'Tweetie' do
+  platform :ios, '12.0'
+  project 'Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
+  pod 'Alamofire'
+  pod 'RxCocoa'
+  pod 'RealmSwift'
+  pod 'RxRealm'
+  pod 'Unbox'
+  pod 'Then'
+  pod 'Reachability'
+  pod 'RxRealmDataSources'
+  pod 'RxDataSources'
+
+  target 'MacTweetie' do
+      platform :osx, '10.14'
+  end
+  
+  target 'TweetieTests' do
+      platform :ios, '12.0'
+      pod 'RxTest'
+      pod 'RxBlocking'
+  end
+end
+    
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
