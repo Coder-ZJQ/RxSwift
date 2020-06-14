@@ -26,8 +26,8 @@
         /// Parent object associated with delegate proxy.
         private weak var _parentObject: ParentObject?
 
-        private let _currentDelegateFor: (ParentObject) -> AnyObject?
-        private let _setCurrentDelegateTo: (AnyObject?, ParentObject) -> Void
+        fileprivate let _currentDelegateFor: (ParentObject) -> AnyObject?
+        fileprivate let _setCurrentDelegateTo: (AnyObject?, ParentObject) -> Void
 
         /// Initializes new instance.
         ///
@@ -38,7 +38,7 @@
             self._currentDelegateFor = delegateProxy._currentDelegate
             self._setCurrentDelegateTo = delegateProxy._setCurrentDelegate
 
-            MainScheduler.ensureRunningOnMainThread()
+            MainScheduler.ensureExecutingOnScheduler()
             #if TRACE_RESOURCES
                 _ = Resources.incrementTotal()
             #endif
@@ -88,7 +88,7 @@
          - returns: Observable sequence of arguments passed to `selector` method.
          */
         open func sentMessage(_ selector: Selector) -> Observable<[Any]> {
-            MainScheduler.ensureRunningOnMainThread()
+            MainScheduler.ensureExecutingOnScheduler()
 
             let subject = self._sentMessageForSelector[selector]
 
@@ -145,7 +145,7 @@
          - returns: Observable sequence of arguments passed to `selector` method.
          */
         open func methodInvoked(_ selector: Selector) -> Observable<[Any]> {
-            MainScheduler.ensureRunningOnMainThread()
+            MainScheduler.ensureExecutingOnScheduler()
 
             let subject = self._methodInvokedForSelector[selector]
 
@@ -160,7 +160,7 @@
         }
 
         fileprivate func checkSelectorIsObservable(_ selector: Selector) {
-            MainScheduler.ensureRunningOnMainThread()
+            MainScheduler.ensureExecutingOnScheduler()
 
             if self.hasWiredImplementation(for: selector) {
                 print("⚠️ Delegate proxy is already implementing `\(selector)`, a more performant way of registering might exist.")
@@ -204,7 +204,7 @@
         /// - parameter retainDelegate: Should `self` retain `forwardToDelegate`.
         open func setForwardToDelegate(_ delegate: Delegate?, retainDelegate: Bool) {
             #if DEBUG // 4.0 all configurations
-                MainScheduler.ensureRunningOnMainThread()
+                MainScheduler.ensureExecutingOnScheduler()
             #endif
             self._setForwardToDelegate(delegate, retainDelegate: retainDelegate)
 
@@ -258,7 +258,7 @@
 
     private let mainScheduler = MainScheduler()
 
-    private final class MessageDispatcher {
+    fileprivate final class MessageDispatcher {
         private let dispatcher: PublishSubject<[Any]>
         private let result: Observable<[Any]>
 

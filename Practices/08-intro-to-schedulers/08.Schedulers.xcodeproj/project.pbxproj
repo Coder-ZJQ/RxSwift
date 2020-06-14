@@ -298,10 +298,10 @@
 					"-framework",
 					"\"RxSwift\"",
 					"-rpath",
-					"$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/",
+					$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -315,10 +315,10 @@
 					"-framework",
 					"\"RxSwift\"",
 					"-rpath",
-					"$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/",
+					$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

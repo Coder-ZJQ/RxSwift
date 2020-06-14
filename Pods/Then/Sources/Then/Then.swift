@@ -36,9 +36,9 @@ extension Then where Self: Any {
   ///       $0.origin.x = 10
   ///       $0.size.width = 100
   ///     }
-  public func with(_ block: (inout Self) throws -> Void) rethrows -> Self {
+  public func with(_ block: (inout Self) -> Void) -> Self {
     var copy = self
-    try block(&copy)
+    block(&copy)
     return copy
   }
 
@@ -49,8 +49,8 @@ extension Then where Self: Any {
   ///       $0.set("devxoul@gmail.com", forKey: "email")
   ///       $0.synchronize()
   ///     }
-  public func `do`(_ block: (Self) throws -> Void) rethrows {
-    try block(self)
+  public func `do`(_ block: (Self) -> Void) {
+    block(self)
   }
 
 }
@@ -60,12 +60,12 @@ extension Then where Self: AnyObject {
   /// Makes it available to set properties with closures just after initializing.
   ///
   ///     let label = UILabel().then {
-  ///       $0.textAlignment = .center
-  ///       $0.textColor = UIColor.black
+  ///       $0.textAlignment = .Center
+  ///       $0.textColor = UIColor.blackColor()
   ///       $0.text = "Hello, World!"
   ///     }
-  public func then(_ block: (Self) throws -> Void) rethrows -> Self {
-    try block(self)
+  public func then(_ block: (Self) -> Void) -> Self {
+    block(self)
     return self
   }
 
@@ -77,9 +77,6 @@ extension CGPoint: Then {}
 extension CGRect: Then {}
 extension CGSize: Then {}
 extension CGVector: Then {}
-extension Array: Then {}
-extension Dictionary: Then {}
-extension Set: Then {}
 
 #if os(iOS) || os(tvOS)
   extension UIEdgeInsets: Then {}

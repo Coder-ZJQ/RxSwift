@@ -103,7 +103,7 @@ class ViewController: UIViewController {
                     .map { _ in 1 }
             }
             print("== retrying after \(attempt + 1) seconds ==")
-            return Observable<Int>.timer(.milliseconds((attempt + 1) * 1000), scheduler: MainScheduler.instance).take(1)
+            return Observable<Int>.timer(Double(attempt) + 1.0, scheduler: MainScheduler.instance).take(1)
         }
     }
     

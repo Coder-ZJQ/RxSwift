@@ -1,6 +1,0 @@
-framework module RxSwift {
-  umbrella header "RxSwift-macOS10.12-umbrella.h"
-
-  export *
-  module * { export * }
-}

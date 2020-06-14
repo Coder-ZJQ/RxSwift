@@ -6,67 +6,41 @@
 //
 //
 
-import Foundation
 import Nimble
 import RxSwift
 import RxBlocking
 
-public extension Expectation where T: ObservableConvertibleType {
+public extension Expectation where T: ObservableType {
 
-    // MARK: - first
-
-    /// Expectation with sequence's first element
-    ///
-    /// Transforms the expression by blocking sequence and returns its first element.
-    /// - parameter timeout: Maximal time interval waiting for first element to emit before throwing error
-    func first(timeout: TimeInterval? = nil) -> Expectation<T.Element> {
+    /**
+     Expectation with sequence's first element
+     
+     Transforms the expression by blocking sequence and returns its first element.
+    */
+    public var first: Expectation<T.E> {
         return transform { source in
-            try source?.toBlocking(timeout: timeout).first()
+            try source?.toBlocking().first()
+        }
+    }
+    /**
+     Expectation with sequence's last element
+
+     Transforms the expression by blocking sequence and returns its last element.
+     */
+    public var last: Expectation<T.E> {
+        return transform { source in
+            try source?.toBlocking().last()
         }
     }
 
-    /// Expectation with sequence's first element
-    ///
-    /// Transforms the expression by blocking sequence and returns its first element.
-    var first: Expectation<T.Element> {
-        return first()
-    }
+    /**
+     Expectation with all sequence's elements
 
-    // MARK: - last
-
-    /// Expectation with sequence's last element
-    ///
-    /// Transforms the expression by blocking sequence and returns its last element.
-    /// - parameter timeout: Maximal time interval waiting for sequence to complete before throwing error
-    func last(timeout: TimeInterval? = nil) -> Expectation<T.Element> {
+     Transforms the expression by blocking sequence and returns its elements.
+     */
+    public var array: Expectation<[T.E]> {
         return transform { source in
-            try source?.toBlocking(timeout: timeout).last()
+            try source?.toBlocking().toArray()
         }
-    }
-
-    /// Expectation with sequence's last element
-    ///
-    /// Transforms the expression by blocking sequence and returns its last element.
-    var last: Expectation<T.Element> {
-        return last()
-    }
-
-    // MARK: - array
-
-    /// Expectation with all sequence's elements
-    ///
-    /// Transforms the expression by blocking sequence and returns its elements.
-    /// - parameter timeout: Maximal time interval waiting for sequence to complete before throwing error
-    func array(timeout: TimeInterval? = nil) -> Expectation<[T.Element]> {
-        return transform { source in
-            try source?.toBlocking(timeout: timeout).toArray()
-        }
-    }
-
-    /// Expectation with all sequence's elements
-    ///
-    /// Transforms the expression by blocking sequence and returns its elements.
-    var array: Expectation<[T.Element]> {
-        return array()
     }
 }

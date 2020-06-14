@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## RxRelay
+## RxAtomic
 
 **The MIT License**
 **Copyright © 2015 Krunoslav Zaher**

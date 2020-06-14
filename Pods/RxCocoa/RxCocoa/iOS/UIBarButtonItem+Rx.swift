@@ -11,7 +11,7 @@
 import UIKit
 import RxSwift
 
-private var rx_tap_key: UInt8 = 0
+fileprivate var rx_tap_key: UInt8 = 0
 
 extension Reactive where Base: UIBarButtonItem {
     
@@ -69,7 +69,7 @@ final class BarButtonItemTarget: RxTarget {
     override func dispose() {
         super.dispose()
 #if DEBUG
-        MainScheduler.ensureRunningOnMainThread()
+        MainScheduler.ensureExecutingOnScheduler()
 #endif
         
         barButtonItem?.target = nil

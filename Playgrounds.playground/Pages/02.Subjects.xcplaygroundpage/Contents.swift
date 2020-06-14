@@ -1,5 +1,5 @@
 import RxSwift
-import RxRelay
+import RxCocoa
 
 /*:
 ![PublishSubject-1](PublishSubject-1.png)

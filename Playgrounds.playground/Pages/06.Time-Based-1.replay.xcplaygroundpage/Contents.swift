@@ -40,7 +40,7 @@ let sourceObservable = Observable<Int>.create { observable -> Disposable in
     }
 }.replay(replayedElements)
 */
-let sourceObservable = Observable<Int>.interval(RxTimeInterval.milliseconds(Int(1.0 / Double(elementsPerSecond)) * 1000), scheduler: MainScheduler.instance).replay(replayedElements)
+let sourceObservable = Observable<Int>.interval(1.0 / Double(elementsPerSecond), scheduler: MainScheduler.instance).replay(replayedElements)
 
 let sourceTimeLine = TimelineView<Int>.make()
 let replayedTimeLine = TimelineView<Int>.make()

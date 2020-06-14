@@ -68,18 +68,15 @@ struct TwitterAccount {
   // MARK: - Getting the current twitter account
   private func oAuth2Token(completion: @escaping (String?)->Void) -> DataRequest {
     let parameters: Parameters = ["grant_type": "client_credentials"]
-    var headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"]
+    let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"]
 
-    if let authorizationHeader = Request.authorizationHeader(user: TwitterAccount.key, password: TwitterAccount.secret) {
-      headers[authorizationHeader.key] = authorizationHeader.value
-    }
-
-    return Alamofire.request("https://api.twitter.com/oauth2/token",
+    return AF.request("https://api.twitter.com/oauth2/token",
                       method: .post,
                       parameters: parameters,
                       encoding: URLEncoding.httpBody,
-                      headers: headers
-      ).responseJSON { response in
+                      headers: headers)
+        .authenticate(username: TwitterAccount.key, password: TwitterAccount.secret)
+        .responseJSON { response in
         guard response.error == nil, let data = response.data, let token: Token = try? unbox(data: data) else {
           completion(nil)
           return

@@ -3,7 +3,7 @@ import RxSwift
 import RxCocoa
 
 let elementsPerSecond = 1
-let delayInSeconds: RxTimeInterval = .milliseconds(1500)
+let delayInSeconds: RxTimeInterval = 1.5
 
 let sourceObservable = PublishSubject<Int>()
 
@@ -43,7 +43,7 @@ _ = sourceObservable.subscribe(sourceTimeline)
 //sourceObservable.delaySubscription(delayInSeconds, scheduler: MainScheduler.instance).subscribe(delayedTimeline)
 //sourceObservable.delay(delayInSeconds, scheduler: MainScheduler.instance).subscribe(delayedTimeline)
 Observable<Int>
-    .timer(.milliseconds(3000), scheduler: MainScheduler.instance)
+    .timer(3.0, scheduler: MainScheduler.instance)
     .flatMap { _ in
         sourceObservable.delay(delayInSeconds, scheduler: MainScheduler.instance)
     }

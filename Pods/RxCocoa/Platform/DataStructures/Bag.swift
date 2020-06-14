@@ -35,7 +35,7 @@ struct Bag<T> : CustomDebugStringConvertible {
     
     typealias Entry = (key: BagKey, value: T)
  
-    private var _nextKey: BagKey = BagKey(rawValue: 0)
+    fileprivate var _nextKey: BagKey = BagKey(rawValue: 0)
 
     // data
 
@@ -171,8 +171,8 @@ extension Bag {
 }
 
 extension BagKey: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(rawValue)
+    var hashValue: Int {
+        return rawValue.hashValue
     }
 }
 

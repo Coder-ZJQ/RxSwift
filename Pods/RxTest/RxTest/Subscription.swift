@@ -34,15 +34,17 @@ public struct Subscription
     }
 }
 
-extension Subscription: Hashable {
+extension Subscription
+    : Hashable
+    , Equatable {
     /// The hash value.
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(self.subscribe)
-        hasher.combine(self.unsubscribe)
+    public var hashValue: Int {
+        return self.subscribe.hashValue ^ self.unsubscribe.hashValue
     }
 }
 
-extension Subscription: CustomDebugStringConvertible {
+extension Subscription
+    : CustomDebugStringConvertible {
     /// A textual representation of `self`, suitable for debugging.
     public var debugDescription : String {
         let infiniteText = "Infinity"

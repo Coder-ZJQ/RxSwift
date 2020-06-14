@@ -9,7 +9,7 @@ example(of: "toArray") {
     
     Observable.of("A", "B", "C")
         .toArray()
-        .subscribe(onSuccess: {
+        .subscribe(onNext: {
             print($0)
         })
         .disposed(by: disposeBag)
@@ -206,13 +206,14 @@ example(of: "Challenge") {
     input
         .asObservable()
         .map(convert)
-        .compactMap({ $0 })
+        .filter { $0 != nil }
+        .map { $0! }
         .skipWhile({ $0 == 0 })
         .take(10)
         .toArray()
         .map(format)
         .map(dial)
-        .subscribe(onSuccess: {
+        .subscribe(onNext: {
             print($0)
         })
         .disposed(by: disposeBag)

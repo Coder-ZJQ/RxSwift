@@ -236,7 +236,7 @@ example(of: "Challenge") {
         .filter({ $0 < 10 })
         .take(10)
         .toArray()
-        .subscribe(onSuccess: {
+        .subscribe(onNext: {
             print($0)
             let phone = phoneNumber(from: $0)
             if let contact = contacts[phone] {

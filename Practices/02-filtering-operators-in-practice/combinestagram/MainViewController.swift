@@ -28,7 +28,7 @@
 
 import UIKit
 import RxSwift
-import RxRelay
+import RxCocoa
 
 class MainViewController: UIViewController {
 
@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
 
     let shareImages = images.asObservable()
-      .throttle(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
+      .throttle(0.5, scheduler: MainScheduler.instance)
       .share()
       
     shareImages

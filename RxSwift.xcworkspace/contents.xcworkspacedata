@@ -24,7 +24,7 @@
       </FileRef>
       <FileRef
          location = "group:Practices/05-beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj">
-      </FileRef>
+      </FileRef>ß
       <FileRef
          location = "group:Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj">
       </FileRef>
@@ -38,16 +38,13 @@
          location = "group:Practices/09.testing-with-rxtest/09.Testing.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:/Users/Joker/Desktop/RxSwift-playground/Practices/10.creating-custom-reactive-extension/09.iGif-extension.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj">
       </FileRef>
+   <FileRef
+      location = "group:Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
+   </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
    </FileRef>
 </Workspace>
