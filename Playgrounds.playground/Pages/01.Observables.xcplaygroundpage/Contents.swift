@@ -47,6 +47,11 @@ example(of: "empty") {
     })
 }
 
+/*:
+* Callout(never): 返回一个不会发射 items 且不会停止的 Observable
+ 
+ ![never](never.png)
+ */
 example(of: "never") {
     let never = Observable<Any>.never()
     never.subscribe(onNext: { element in
@@ -56,6 +61,11 @@ example(of: "never") {
     })
 }
 
+/*:
+* Callout(range): 创建一个发出特定范围的连续整数的 Observable
+ 
+ ![range](range.png)
+ */
 example(of: "range") {
     let observable = Observable.range(start: 1, count: 10)
     observable.subscribe(onNext: { element in
@@ -168,6 +178,7 @@ example(of: "Single") {
     }
     func loadText(from name: String) -> Single<String> {
         return Single.create { single in
+            print("single create")
             let disposable = Disposables.create()
             guard let path = Bundle.main.path(forResource: name, ofType: "txt") else {
                 single(.error(FileReadError.fileNotFound))
@@ -185,7 +196,20 @@ example(of: "Single") {
             return disposable
         }
     }
-    loadText(from: "Copyright").subscribe {
+    
+    let single = loadText(from: "Copyright")
+
+    single.subscribe {
+        switch $0 {
+        case .success(let string):
+            print(string)
+        case .error(let error):
+            print(error)
+        }
+    }
+    .disposed(by: disposeBag)
+    // 不会共享附加作用，所以再次订阅会再打印“single create”
+    single.subscribe {
         switch $0 {
         case .success(let string):
             print(string)
