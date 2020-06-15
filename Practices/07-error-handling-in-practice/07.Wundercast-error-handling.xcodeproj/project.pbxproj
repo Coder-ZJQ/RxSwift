@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DE74F48F6A350AB29567807 /* Pods_07_Wundercast_error_handling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAB3FB3AE7DBDA012D03D3F /* Pods_07_Wundercast_error_handling.framework */; };
+		8140248EBAE2054E0BBFAFEE /* Pods_BaseTarget_07_Wundercast_error_handling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C32D628DBE7C5946037FD6 /* Pods_BaseTarget_07_Wundercast_error_handling.framework */; };
 		CB4D69411DE9A7D100DC0488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D69401DE9A7D100DC0488 /* AppDelegate.swift */; };
 		CB4D69431DE9A7D100DC0488 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D69421DE9A7D100DC0488 /* ViewController.swift */; };
 		CB4D69461DE9A7D100DC0488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4D69441DE9A7D100DC0488 /* Main.storyboard */; };
@@ -25,9 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221A9D47388C9B22180A9706 /* Pods-BaseTarget-07.Wundercast-error-handling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-07.Wundercast-error-handling.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-07.Wundercast-error-handling/Pods-BaseTarget-07.Wundercast-error-handling.debug.xcconfig"; sourceTree = "<group>"; };
 		5E87149BFF58F6423B67DDFE /* Pods-07.Wundercast-error-handling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07.Wundercast-error-handling.debug.xcconfig"; path = "Target Support Files/Pods-07.Wundercast-error-handling/Pods-07.Wundercast-error-handling.debug.xcconfig"; sourceTree = "<group>"; };
 		ABDE2DCD42637A414B6A6C52 /* Pods-07.Wundercast-error-handling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-07.Wundercast-error-handling.release.xcconfig"; path = "Target Support Files/Pods-07.Wundercast-error-handling/Pods-07.Wundercast-error-handling.release.xcconfig"; sourceTree = "<group>"; };
-		AFAB3FB3AE7DBDA012D03D3F /* Pods_07_Wundercast_error_handling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_07_Wundercast_error_handling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4D693D1DE9A7D100DC0488 /* 07.Wundercast-error-handling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "07.Wundercast-error-handling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4D69401DE9A7D100DC0488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB4D69421DE9A7D100DC0488 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		CB63E2381E34BFFF0066F5BB /* InfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		CB8945FB1E43CB9400F46229 /* RxReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxReachability.swift; sourceTree = "<group>"; };
 		CBE130CA1E21CF8400F47C00 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		F14F470EFDBD3918D954F7BF /* Pods-BaseTarget-07.Wundercast-error-handling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-07.Wundercast-error-handling.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-07.Wundercast-error-handling/Pods-BaseTarget-07.Wundercast-error-handling.release.xcconfig"; sourceTree = "<group>"; };
+		F4C32D628DBE7C5946037FD6 /* Pods_BaseTarget_07_Wundercast_error_handling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_07_Wundercast_error_handling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DE74F48F6A350AB29567807 /* Pods_07_Wundercast_error_handling.framework in Frameworks */,
+				8140248EBAE2054E0BBFAFEE /* Pods_BaseTarget_07_Wundercast_error_handling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 		84331DF35FEF4B0F1A6FE1D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFAB3FB3AE7DBDA012D03D3F /* Pods_07_Wundercast_error_handling.framework */,
+				F4C32D628DBE7C5946037FD6 /* Pods_BaseTarget_07_Wundercast_error_handling.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -71,6 +73,8 @@
 			children = (
 				5E87149BFF58F6423B67DDFE /* Pods-07.Wundercast-error-handling.debug.xcconfig */,
 				ABDE2DCD42637A414B6A6C52 /* Pods-07.Wundercast-error-handling.release.xcconfig */,
+				221A9D47388C9B22180A9706 /* Pods-BaseTarget-07.Wundercast-error-handling.debug.xcconfig */,
+				F14F470EFDBD3918D954F7BF /* Pods-BaseTarget-07.Wundercast-error-handling.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -245,7 +249,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-07.Wundercast-error-handling-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-07.Wundercast-error-handling-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,9 +262,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-07.Wundercast-error-handling/Pods-07.Wundercast-error-handling-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-07.Wundercast-error-handling/Pods-BaseTarget-07.Wundercast-error-handling-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -271,7 +275,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-07.Wundercast-error-handling/Pods-07.Wundercast-error-handling-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-07.Wundercast-error-handling/Pods-BaseTarget-07.Wundercast-error-handling-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -425,7 +429,7 @@
 		};
 		CB4D695B1DE9A7D100DC0488 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E87149BFF58F6423B67DDFE /* Pods-07.Wundercast-error-handling.debug.xcconfig */;
+			baseConfigurationReference = 221A9D47388C9B22180A9706 /* Pods-BaseTarget-07.Wundercast-error-handling.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -440,7 +444,7 @@
 		};
 		CB4D695C1DE9A7D100DC0488 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABDE2DCD42637A414B6A6C52 /* Pods-07.Wundercast-error-handling.release.xcconfig */;
+			baseConfigurationReference = F14F470EFDBD3918D954F7BF /* Pods-BaseTarget-07.Wundercast-error-handling.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

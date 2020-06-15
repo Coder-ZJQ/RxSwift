@@ -59,7 +59,7 @@ class iGifTests: XCTestCase {
 }
 
 extension BlockingObservable {
-  func firstOrNil() -> Element? {
+  func firstOrNil() -> E? {
     do {
       return try first()
     } catch {

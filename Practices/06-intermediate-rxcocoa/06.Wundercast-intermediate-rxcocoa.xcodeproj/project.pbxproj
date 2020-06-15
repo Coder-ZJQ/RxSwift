@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79D442064301AA77EF971689 /* Pods_06_Wundercast_intermediate_rxcocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B98A55B04E3D390DE843EF /* Pods_06_Wundercast_intermediate_rxcocoa.framework */; };
+		1279D2641214D7A016E566B3 /* Pods_BaseTarget_06_Wundercast_intermediate_rxcocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DCBFD4064662E470617BA3 /* Pods_BaseTarget_06_Wundercast_intermediate_rxcocoa.framework */; };
 		CB4D69411DE9A7D100DC0488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D69401DE9A7D100DC0488 /* AppDelegate.swift */; };
 		CB4D69431DE9A7D100DC0488 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D69421DE9A7D100DC0488 /* ViewController.swift */; };
 		CB4D69461DE9A7D100DC0488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4D69441DE9A7D100DC0488 /* Main.storyboard */; };
@@ -23,8 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16DCBFD4064662E470617BA3 /* Pods_BaseTarget_06_Wundercast_intermediate_rxcocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_06_Wundercast_intermediate_rxcocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0A610BD9294430BD0B3D6F /* Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.debug.xcconfig"; sourceTree = "<group>"; };
+		507B1EA0D815EEC6704EAEE2 /* Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.release.xcconfig"; sourceTree = "<group>"; };
 		884BA62943ABD316C1A63BAE /* Pods-06.Wundercast-intermediate-rxcocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-06.Wundercast-intermediate-rxcocoa.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-06.Wundercast-intermediate-rxcocoa/Pods-06.Wundercast-intermediate-rxcocoa.debug.xcconfig"; sourceTree = "<group>"; };
-		C5B98A55B04E3D390DE843EF /* Pods_06_Wundercast_intermediate_rxcocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_06_Wundercast_intermediate_rxcocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4D693D1DE9A7D100DC0488 /* 06.Wundercast-intermediate-rxcocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06.Wundercast-intermediate-rxcocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4D69401DE9A7D100DC0488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB4D69421DE9A7D100DC0488 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79D442064301AA77EF971689 /* Pods_06_Wundercast_intermediate_rxcocoa.framework in Frameworks */,
+				1279D2641214D7A016E566B3 /* Pods_BaseTarget_06_Wundercast_intermediate_rxcocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +59,7 @@
 		03EE795AFB06020DB37DF781 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C5B98A55B04E3D390DE843EF /* Pods_06_Wundercast_intermediate_rxcocoa.framework */,
+				16DCBFD4064662E470617BA3 /* Pods_BaseTarget_06_Wundercast_intermediate_rxcocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,6 +69,8 @@
 			children = (
 				884BA62943ABD316C1A63BAE /* Pods-06.Wundercast-intermediate-rxcocoa.debug.xcconfig */,
 				F4FF23AD7F13A4F65A90D78E /* Pods-06.Wundercast-intermediate-rxcocoa.release.xcconfig */,
+				4B0A610BD9294430BD0B3D6F /* Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.debug.xcconfig */,
+				507B1EA0D815EEC6704EAEE2 /* Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -230,7 +234,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-06.Wundercast-intermediate-rxcocoa-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,9 +247,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-06.Wundercast-intermediate-rxcocoa/Pods-06.Wundercast-intermediate-rxcocoa-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -256,7 +260,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-06.Wundercast-intermediate-rxcocoa/Pods-06.Wundercast-intermediate-rxcocoa-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa/Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -409,7 +413,7 @@
 		};
 		CB4D695B1DE9A7D100DC0488 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 884BA62943ABD316C1A63BAE /* Pods-06.Wundercast-intermediate-rxcocoa.debug.xcconfig */;
+			baseConfigurationReference = 4B0A610BD9294430BD0B3D6F /* Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -424,7 +428,7 @@
 		};
 		CB4D695C1DE9A7D100DC0488 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4FF23AD7F13A4F65A90D78E /* Pods-06.Wundercast-intermediate-rxcocoa.release.xcconfig */;
+			baseConfigurationReference = 507B1EA0D815EEC6704EAEE2 /* Pods-BaseTarget-06.Wundercast-intermediate-rxcocoa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

@@ -16,13 +16,15 @@
 		9CE7E5E41DE5A40A00C8BA5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E21DE5A40A00C8BA5A /* Main.storyboard */; };
 		9CE7E5E61DE5A40A00C8BA5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E51DE5A40A00C8BA5A /* Assets.xcassets */; };
 		9CE7E5E91DE5A40A00C8BA5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE7E5E71DE5A40A00C8BA5A /* LaunchScreen.storyboard */; };
-		A6430605F36FDAB27A7D503C /* Pods_01_Combinestagram_observables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AD1C4B5D581350C1888717 /* Pods_01_Combinestagram_observables.framework */; };
+		E762688034509CB9CE50172A /* Pods_BaseTarget_01_Combinestagram_observables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A79394A7274222B032D61D3 /* Pods_BaseTarget_01_Combinestagram_observables.framework */; };
 		F30D84ED2480AEAB00959C04 /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30D84EC2480AEAB00959C04 /* UIViewController+rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11A8EED5FCBDBDA940CAF47C /* Pods-01.Combinestagram-observables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01.Combinestagram-observables.release.xcconfig"; path = "Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables.release.xcconfig"; sourceTree = "<group>"; };
+		5A79394A7274222B032D61D3 /* Pods_BaseTarget_01_Combinestagram_observables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_01_Combinestagram_observables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDC4DAD4E38B1667B49CBED /* Pods-01.Combinestagram-observables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01.Combinestagram-observables.debug.xcconfig"; path = "Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables.debug.xcconfig"; sourceTree = "<group>"; };
+		7460FE481EA33C06D622702C /* Pods-BaseTarget-01.Combinestagram-observables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-01.Combinestagram-observables.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-01.Combinestagram-observables/Pods-BaseTarget-01.Combinestagram-observables.debug.xcconfig"; sourceTree = "<group>"; };
 		9243A56339BFC5E7CF4C8D56 /* Pods-Combinestagram-observables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-observables.debug.xcconfig"; path = "Target Support Files/Pods-Combinestagram-observables/Pods-Combinestagram-observables.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDD7B031DE5AABE0058B2D5 /* UIImage+Collage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIImage+Collage.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B051DE5BC660058B2D5 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotosViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -37,8 +39,8 @@
 		9CE7E5EA1DE5A40A00C8BA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DB86582AAB4EFBF68AF59AE /* Pods-Combinestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram.debug.xcconfig"; path = "Target Support Files/Pods-Combinestagram/Pods-Combinestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		BD974AFAE3CE169D0D6BE394 /* Pods-Combinestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram/Pods-Combinestagram.release.xcconfig"; sourceTree = "<group>"; };
+		C3AF3DF9D8544735A6C31863 /* Pods-BaseTarget-01.Combinestagram-observables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-01.Combinestagram-observables.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-01.Combinestagram-observables/Pods-BaseTarget-01.Combinestagram-observables.release.xcconfig"; sourceTree = "<group>"; };
 		E47008B4456F14373991868F /* Pods-Combinestagram-observables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-observables.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram-observables/Pods-Combinestagram-observables.release.xcconfig"; sourceTree = "<group>"; };
-		F0AD1C4B5D581350C1888717 /* Pods_01_Combinestagram_observables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_01_Combinestagram_observables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30D84EC2480AEAB00959C04 /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+rx.swift"; path = "combinestagram/UIViewController+rx.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -47,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6430605F36FDAB27A7D503C /* Pods_01_Combinestagram_observables.framework in Frameworks */,
+				E762688034509CB9CE50172A /* Pods_BaseTarget_01_Combinestagram_observables.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +59,7 @@
 		10B35538A19678E76C1D5395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F0AD1C4B5D581350C1888717 /* Pods_01_Combinestagram_observables.framework */,
+				5A79394A7274222B032D61D3 /* Pods_BaseTarget_01_Combinestagram_observables.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +127,8 @@
 				E47008B4456F14373991868F /* Pods-Combinestagram-observables.release.xcconfig */,
 				5BDC4DAD4E38B1667B49CBED /* Pods-01.Combinestagram-observables.debug.xcconfig */,
 				11A8EED5FCBDBDA940CAF47C /* Pods-01.Combinestagram-observables.release.xcconfig */,
+				7460FE481EA33C06D622702C /* Pods-BaseTarget-01.Combinestagram-observables.debug.xcconfig */,
+				C3AF3DF9D8544735A6C31863 /* Pods-BaseTarget-01.Combinestagram-observables.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -217,7 +221,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-01.Combinestagram-observables-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-01.Combinestagram-observables-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +234,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-01.Combinestagram-observables/Pods-BaseTarget-01.Combinestagram-observables-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -243,7 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-01.Combinestagram-observables/Pods-01.Combinestagram-observables-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-01.Combinestagram-observables/Pods-BaseTarget-01.Combinestagram-observables-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -398,7 +402,7 @@
 		};
 		9CE7E5EE1DE5A40A00C8BA5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BDC4DAD4E38B1667B49CBED /* Pods-01.Combinestagram-observables.debug.xcconfig */;
+			baseConfigurationReference = 7460FE481EA33C06D622702C /* Pods-BaseTarget-01.Combinestagram-observables.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92MVBZK45G;
@@ -414,7 +418,7 @@
 		};
 		9CE7E5EF1DE5A40A00C8BA5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11A8EED5FCBDBDA940CAF47C /* Pods-01.Combinestagram-observables.release.xcconfig */;
+			baseConfigurationReference = C3AF3DF9D8544735A6C31863 /* Pods-BaseTarget-01.Combinestagram-observables.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

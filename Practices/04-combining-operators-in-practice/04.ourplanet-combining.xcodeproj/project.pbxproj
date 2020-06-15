@@ -12,7 +12,6 @@
 		3D46E62D1E258DFC0090C97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D46E62B1E258DFC0090C97B /* Main.storyboard */; };
 		3D46E62F1E258DFC0090C97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46E62E1E258DFC0090C97B /* Assets.xcassets */; };
 		3D46E6321E258DFC0090C97B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D46E6301E258DFC0090C97B /* LaunchScreen.storyboard */; };
-		D14451369AD3EE32F3A1D89A /* Pods_04_ourplanet_combining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A7B4DE1110BAB870181A8B /* Pods_04_ourplanet_combining.framework */; };
 		D8D4B3B53FB9DBEFD316986D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B590E2532FBB4E15A320 /* EventCell.swift */; };
 		D8D4B48C386519868A7FCF37 /* EOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B8B9345BB7B3111B3486 /* EOLocation.swift */; };
 		D8D4B551A4A3EC7D24280B22 /* EOEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B8EF2AD93009A46E705B /* EOEnvelope.swift */; };
@@ -22,10 +21,10 @@
 		D8D4BE89A62A1F0415C0DF42 /* EOEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B6D93EEB59915317AA1D /* EOEvent.swift */; };
 		D8D4BF1B403B74C10D576473 /* EOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4BE9443CDA2DB4BF2835C /* EOError.swift */; };
 		F3E189522488FE4000077915 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E189512488FE4000077915 /* DownloadView.swift */; };
+		F9832DA14512CE8AA432B000 /* Pods_BaseTarget_04_ourplanet_combining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB19FD609CC436BA58FB0A64 /* Pods_BaseTarget_04_ourplanet_combining.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16A7B4DE1110BAB870181A8B /* Pods_04_ourplanet_combining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_04_ourplanet_combining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D46E6241E258DFC0090C97B /* 04.ourplanet-combining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04.ourplanet-combining.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D46E6271E258DFC0090C97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D46E6291E258DFC0090C97B /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +32,8 @@
 		3D46E62E1E258DFC0090C97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D46E6311E258DFC0090C97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D46E6331E258DFC0090C97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AC97A663BBCFC7C476A567A /* Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig"; sourceTree = "<group>"; };
+		8703A3197A90F9C7AEE7542E /* Pods-BaseTarget-04.ourplanet-combining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-04.ourplanet-combining.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining.release.xcconfig"; sourceTree = "<group>"; };
 		CE298B0C4176A8DE62C86A1E /* Pods-04.ourplanet-combining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-04.ourplanet-combining.debug.xcconfig"; path = "Target Support Files/Pods-04.ourplanet-combining/Pods-04.ourplanet-combining.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F423E07D542C86B4F5AD62 /* Pods-04.ourplanet-combining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-04.ourplanet-combining.release.xcconfig"; path = "Target Support Files/Pods-04.ourplanet-combining/Pods-04.ourplanet-combining.release.xcconfig"; sourceTree = "<group>"; };
 		D8D4B16B4BA42E13E4F7DBB2 /* EOCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOCategory.swift; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		D8D4BAA4F4C10477E0535C81 /* EONET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EONET.swift; sourceTree = "<group>"; };
 		D8D4BE9443CDA2DB4BF2835C /* EOError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOError.swift; sourceTree = "<group>"; };
 		F3E189512488FE4000077915 /* DownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
+		FB19FD609CC436BA58FB0A64 /* Pods_BaseTarget_04_ourplanet_combining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_04_ourplanet_combining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14451369AD3EE32F3A1D89A /* Pods_04_ourplanet_combining.framework in Frameworks */,
+				F9832DA14512CE8AA432B000 /* Pods_BaseTarget_04_ourplanet_combining.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +65,8 @@
 			children = (
 				CE298B0C4176A8DE62C86A1E /* Pods-04.ourplanet-combining.debug.xcconfig */,
 				D6F423E07D542C86B4F5AD62 /* Pods-04.ourplanet-combining.release.xcconfig */,
+				5AC97A663BBCFC7C476A567A /* Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig */,
+				8703A3197A90F9C7AEE7542E /* Pods-BaseTarget-04.ourplanet-combining.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -108,7 +112,7 @@
 		7DF2F6BC94BB52709ECE5CF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				16A7B4DE1110BAB870181A8B /* Pods_04_ourplanet_combining.framework */,
+				FB19FD609CC436BA58FB0A64 /* Pods_BaseTarget_04_ourplanet_combining.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,9 +207,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-04.ourplanet-combining/Pods-04.ourplanet-combining-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -216,7 +220,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-04.ourplanet-combining/Pods-04.ourplanet-combining-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D52230883AED9E77C8A8BE86 /* [CP] Check Pods Manifest.lock */ = {
@@ -234,7 +238,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-04.ourplanet-combining-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-04.ourplanet-combining-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -330,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -380,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -391,7 +395,7 @@
 		};
 		3D46E6371E258DFC0090C97B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE298B0C4176A8DE62C86A1E /* Pods-04.ourplanet-combining.debug.xcconfig */;
+			baseConfigurationReference = 5AC97A663BBCFC7C476A567A /* Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -405,7 +409,7 @@
 		};
 		3D46E6381E258DFC0090C97B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6F423E07D542C86B4F5AD62 /* Pods-04.ourplanet-combining.release.xcconfig */;
+			baseConfigurationReference = 8703A3197A90F9C7AEE7542E /* Pods-BaseTarget-04.ourplanet-combining.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

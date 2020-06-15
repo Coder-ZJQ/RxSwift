@@ -13,13 +13,15 @@
 		9C83327C1DF73BA90067DC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C83327B1DF73BA90067DC80 /* Assets.xcassets */; };
 		9C83327F1DF73BA90067DC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C83327D1DF73BA90067DC80 /* LaunchScreen.storyboard */; };
 		9CE37EC71DF73EE300E4E310 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE37EC61DF73EE300E4E310 /* Event.swift */; };
-		CBB77DE675DD6C662AA9BE3B /* Pods_03_GitFeed_transforming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F41DC51F09C5129B13F4506 /* Pods_03_GitFeed_transforming.framework */; };
+		9E86AF491DD348281EBBA3EF /* Pods_BaseTarget_03_GitFeed_transforming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F60B90C874414B062336C46 /* Pods_BaseTarget_03_GitFeed_transforming.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08FAE0319EC2865709FD4CB7 /* Pods-03.GitFeed-transforming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03.GitFeed-transforming.release.xcconfig"; path = "Target Support Files/Pods-03.GitFeed-transforming/Pods-03.GitFeed-transforming.release.xcconfig"; sourceTree = "<group>"; };
 		2921B84F62B4EDFB9E6225D6 /* Pods-03.GitFeed-transforming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03.GitFeed-transforming.debug.xcconfig"; path = "Target Support Files/Pods-03.GitFeed-transforming/Pods-03.GitFeed-transforming.debug.xcconfig"; sourceTree = "<group>"; };
-		5F41DC51F09C5129B13F4506 /* Pods_03_GitFeed_transforming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_03_GitFeed_transforming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		739307AC177804CB38C8FCED /* Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig"; sourceTree = "<group>"; };
+		7F60B90C874414B062336C46 /* Pods_BaseTarget_03_GitFeed_transforming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_03_GitFeed_transforming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8646F171AF1108A5317EC373 /* Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig"; sourceTree = "<group>"; };
 		9C8332711DF73BA90067DC80 /* 03.GitFeed-transforming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03.GitFeed-transforming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8332741DF73BA90067DC80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C8332761DF73BA90067DC80 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB77DE675DD6C662AA9BE3B /* Pods_03_GitFeed_transforming.framework in Frameworks */,
+				9E86AF491DD348281EBBA3EF /* Pods_BaseTarget_03_GitFeed_transforming.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +49,7 @@
 		7DE9AD5DEAB463A47BDBA156 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F41DC51F09C5129B13F4506 /* Pods_03_GitFeed_transforming.framework */,
+				7F60B90C874414B062336C46 /* Pods_BaseTarget_03_GitFeed_transforming.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +103,8 @@
 				A21A9A7C5EDD899008CC19D4 /* Pods-03.GitFeed.release.xcconfig */,
 				2921B84F62B4EDFB9E6225D6 /* Pods-03.GitFeed-transforming.debug.xcconfig */,
 				08FAE0319EC2865709FD4CB7 /* Pods-03.GitFeed-transforming.release.xcconfig */,
+				739307AC177804CB38C8FCED /* Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig */,
+				8646F171AF1108A5317EC373 /* Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -184,16 +188,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-03.GitFeed-transforming/Pods-03.GitFeed-transforming-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-03.GitFeed-transforming/Pods-03.GitFeed-transforming-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A34E976856432E2AA7397918 /* [CP] Check Pods Manifest.lock */ = {
@@ -211,7 +221,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-03.GitFeed-transforming-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-03.GitFeed-transforming-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,7 +374,7 @@
 		};
 		9C8332841DF73BA90067DC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2921B84F62B4EDFB9E6225D6 /* Pods-03.GitFeed-transforming.debug.xcconfig */;
+			baseConfigurationReference = 739307AC177804CB38C8FCED /* Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39Z8MCG9JF;
@@ -379,7 +389,7 @@
 		};
 		9C8332851DF73BA90067DC80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08FAE0319EC2865709FD4CB7 /* Pods-03.GitFeed-transforming.release.xcconfig */;
+			baseConfigurationReference = 8646F171AF1108A5317EC373 /* Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39Z8MCG9JF;
