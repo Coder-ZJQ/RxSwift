@@ -78,6 +78,20 @@ abstract_target 'BaseTarget' do
     
   end
 
+  target '12.QuickTodo-mvvm' do
+    project 'Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj'
+    # core RxSwift
+    pod 'RxDataSources', '3.1.0'
+
+    # Community projects
+    pod 'Action', '~> 3.9'
+    pod 'NSObject+Rx', '~> 4.4'
+    
+    # Realm database
+    pod 'RealmSwift', '3.18.0'
+    pod 'RxRealm', '0.7.6'
+  end
+
 end
 
 abstract_target 'TweetieAbstract' do

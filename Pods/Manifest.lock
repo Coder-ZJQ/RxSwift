@@ -1,4 +1,7 @@
 PODS:
+  - Action (3.11.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - Alamofire (5.2.1)
   - Differentiator (3.1.0)
   - Gifu (3.2.2)
@@ -7,6 +10,8 @@ PODS:
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
   - Nimble (7.3.4)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
   - OHHTTPStubs (9.0.0):
     - OHHTTPStubs/Default (= 9.0.0)
   - OHHTTPStubs/Core (9.0.0)
@@ -64,11 +69,13 @@ PODS:
   - Unbox (3.0.0)
 
 DEPENDENCIES:
+  - Action (~> 3.9)
   - Alamofire
   - Gifu (from `https://gitee.com/coder-zjq/Gifu.git`)
   - Hue
   - Kingfisher
   - Nimble
+  - "NSObject+Rx (~> 4.4)"
   - OHHTTPStubs
   - OHHTTPStubs/Swift
   - Reachability (= 3.2.0)
@@ -87,11 +94,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Action
     - Alamofire
     - Differentiator
     - Hue
     - Kingfisher
     - Nimble
+    - "NSObject+Rx"
     - OHHTTPStubs
     - Reachability
     - Realm
@@ -119,12 +128,14 @@ CHECKOUT OPTIONS:
     :git: https://gitee.com/coder-zjq/Gifu.git
 
 SPEC CHECKSUMS:
+  Action: 689181e4c3f6566844178d8a7da6fef39a9597fc
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Gifu: 9598688f757275406fb003edb19b64e56373b362
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
@@ -142,6 +153,6 @@ SPEC CHECKSUMS:
   Then: 665607ef49c6c3f66c722cd02b7b53745a622f49
   Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
-PODFILE CHECKSUM: bb59fa5fee788acae3cf8434f8c74c7f7699f375
+PODFILE CHECKSUM: 3e94a938aff470e5023246197a9806661d2f9179
 
 COCOAPODS: 1.9.3

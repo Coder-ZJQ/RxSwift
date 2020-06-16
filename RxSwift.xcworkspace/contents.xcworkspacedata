@@ -43,6 +43,9 @@
       <FileRef
          location = "group:Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
