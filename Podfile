@@ -16,41 +16,41 @@ abstract_target 'BaseTarget' do
   pod 'RxCocoa', '4.4.1'
   
   target '00.Playgrounds-Support' do
-    project 'Practices/00.Playgrounds-Support/00.Playgrounds-Support.xcodeproj'
+    project 'Practices/00.playgrounds-support/00.Playgrounds-Support.xcodeproj'
   end
 
   target '01.Combinestagram-observables' do
-    project 'Practices/01-observables-in-practice/01.Combinestagram-observables.xcodeproj'
+    project 'Practices/01.observables-in-practice/01.Combinestagram-observables.xcodeproj'
   end
 
   target '02.Combinestagram-filtering' do
-    project 'Practices/02-filtering-operators-in-practice/02.Combinestagram-filtering.xcodeproj'
+    project 'Practices/02.filtering-operators-in-practice/02.Combinestagram-filtering.xcodeproj'
   end
 
   target '03.GitFeed-transforming' do
-    project 'Practices/03-transformng-operators-in-practice/03.GitFeed-transforming.xcodeproj'
+    project 'Practices/03.transformng-operators-in-practice/03.GitFeed-transforming.xcodeproj'
     pod 'Kingfisher'
   end
 
   target '04.ourplanet-combining' do
-    project 'Practices/04-combining-operators-in-practice/04.ourplanet-combining.xcodeproj'
+    project 'Practices/04.combining-operators-in-practice/04.ourplanet-combining.xcodeproj'
   end
 
   target '05.Wundercast-beginning-rxcocoa' do
-    project 'Practices/05-beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj'
+    project 'Practices/05.beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj'
   end
 
   target '06.Wundercast-intermediate-rxcocoa' do
-    project 'Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj'
+    project 'Practices/06.intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj'
   end
 
   target '07.Wundercast-error-handling' do
-    project 'Practices/07-error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
+    project 'Practices/07.error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
   end
 
   target '08.Schedulers' do
     platform :osx, '10.14'
-    project 'Practices/08-intro-to-schedulers/08.Schedulers.xcodeproj'
+    project 'Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj'
   end
 
   target '09.Testing' do
@@ -81,7 +81,7 @@ abstract_target 'BaseTarget' do
 end
 
 abstract_target 'TweetieAbstract' do
-  project 'Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
+  project 'Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
   pod 'Alamofire'
   pod 'RxSwift', '4.4.1'
   pod 'RxCocoa', '4.4.1'

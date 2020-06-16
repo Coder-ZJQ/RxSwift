@@ -24,7 +24,7 @@
       </FileRef>
       <FileRef
          location = "group:Practices/05-beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj">
-      </FileRef>ß
+      </FileRef>
       <FileRef
          location = "group:Practices/06-intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj">
       </FileRef>
@@ -40,11 +40,41 @@
       <FileRef
          location = "group:Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj">
       </FileRef>
-   <FileRef
-      location = "group:Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
-   </FileRef>
+      <FileRef
+         location = "group:Practices/11.Tweetie-mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/00.playgrounds-support/00.Playgrounds-Support.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/01.observables-in-practice/01.Combinestagram-observables.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/02.filtering-operators-in-practice/02.Combinestagram-filtering.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/03.transformng-operators-in-practice/03.GitFeed-transforming.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/04.combining-operators-in-practice/04.ourplanet-combining.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/05.beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/06.intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/07.error-handling-in-practice/07.Wundercast-error-handling.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj">
    </FileRef>
 </Workspace>
