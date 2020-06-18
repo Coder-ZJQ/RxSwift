@@ -332,5 +332,5 @@ example(of: "Challenge 2") {
         .disposed(by: disposeBag)
 }
 
-//: [Next](@next) | [Previous](@previous)
+//: [Previous](@previous) | [Next](@next)
 

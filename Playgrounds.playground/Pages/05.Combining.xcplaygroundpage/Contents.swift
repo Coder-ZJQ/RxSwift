@@ -316,10 +316,4 @@ example(of: "Challenge - scan") {
     })
 }
 
-
-
-
-
-
-
-//: [Next](@next) | [Previous](@previous)
+//: [Previous](@previous) | [Next](@next)

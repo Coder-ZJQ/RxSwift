@@ -64,6 +64,9 @@ sourceObservable.connect()
 let hostView = setupHostView()
 hostView.addSubview(stack)
 hostView
+
+
+
 /*:
  Copyright (c) 2019 Razeware LLC
 
@@ -93,3 +96,5 @@ hostView
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
+
+//: [Previous](@previous) | [Next](@next)
