@@ -27,6 +27,8 @@
 		D8D4BFAE409AAC26A804D7E6 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4BF2D32577F25C8EDFFC1 /* SceneCoordinatorType.swift */; };
 		D8D4BFB6F8704E6619D678C9 /* EditTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B669B9E5D5F0A890C14A /* EditTaskViewModel.swift */; };
 		D8D4BFC445A53540D28CDB55 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4BD2FD3ECDBCF00EC50D1 /* SceneCoordinator.swift */; };
+		F3C40CF4249B01C2008ADBAF /* PushedEditTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C40CF3249B01C2008ADBAF /* PushedEditTaskViewModel.swift */; };
+		F3C40CF6249B0280008ADBAF /* PushedEditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C40CF5249B0280008ADBAF /* PushedEditTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		D8D4BFBF5D6D8CA757EC782E /* TaskServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskServiceType.swift; sourceTree = "<group>"; };
 		DB5E59756396235D8745D99C /* Pods-BaseTarget-12.QuickTodo-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-12.QuickTodo-mvvm.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-12.QuickTodo-mvvm/Pods-BaseTarget-12.QuickTodo-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		E2959CA489AE2FC9049A88E3 /* Pods-12.QuickTodo-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12.QuickTodo-mvvm.release.xcconfig"; path = "Target Support Files/Pods-12.QuickTodo-mvvm/Pods-12.QuickTodo-mvvm.release.xcconfig"; sourceTree = "<group>"; };
+		F3C40CF3249B01C2008ADBAF /* PushedEditTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PushedEditTaskViewModel.swift; path = quicktodo/Controllers/PushedEditTaskViewModel.swift; sourceTree = SOURCE_ROOT; };
+		F3C40CF5249B0280008ADBAF /* PushedEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PushedEditTaskViewController.swift; path = quicktodo/Controllers/PushedEditTaskViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				D8D4B5E9DE757713868B0E95 /* TasksViewController.swift */,
 				D8D4B669B9E5D5F0A890C14A /* EditTaskViewModel.swift */,
 				D8D4BC91C06633B3679DD8E7 /* EditTaskViewController.swift */,
+				F3C40CF3249B01C2008ADBAF /* PushedEditTaskViewModel.swift */,
+				F3C40CF5249B0280008ADBAF /* PushedEditTaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,11 +333,13 @@
 				3D2E844A1E4E7A3D0075B16B /* BindableType.swift in Sources */,
 				D8D4BCFC41706D2948B976E9 /* TaskService.swift in Sources */,
 				D8D4B29BEEE5F90B2EEFD433 /* TasksViewModel.swift in Sources */,
+				F3C40CF6249B0280008ADBAF /* PushedEditTaskViewController.swift in Sources */,
 				D8D4B6D94E7B54B9C1F34CBD /* TasksViewController.swift in Sources */,
 				D8D4BFB6F8704E6619D678C9 /* EditTaskViewModel.swift in Sources */,
 				D8D4B9AE9D45F3E3679C95E0 /* EditTaskViewController.swift in Sources */,
 				D8D4B443890094C4F6E8F93D /* TaskItemTableViewCell.swift in Sources */,
 				D8D4B084216A9B2C450E606F /* Scene.swift in Sources */,
+				F3C40CF4249B01C2008ADBAF /* PushedEditTaskViewModel.swift in Sources */,
 				D8D4BFAE409AAC26A804D7E6 /* SceneCoordinatorType.swift in Sources */,
 				D8D4BFC445A53540D28CDB55 /* SceneCoordinator.swift in Sources */,
 				D8D4BF8A5D0B3EA190CF4C58 /* UINavigationController+Rx.swift in Sources */,

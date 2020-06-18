@@ -47,8 +47,8 @@ class TasksViewController: UIViewController, BindableType {
     
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 60
-    
     configureDataSource()
+    setEditing(true, animated: false)
   }
   
   func bindViewModel() {
@@ -67,6 +67,20 @@ class TasksViewController: UIViewController, BindableType {
       }
       .bind(to: viewModel.editAction.inputs)
       .disposed(by: self.rx.disposeBag)
+    
+    tableView.rx.itemDeleted
+      .map { [unowned self] indexPath in
+        try! self.tableView.rx.model(at: indexPath)
+      }
+      .subscribe(viewModel.deleteAction.inputs)
+      .disposed(by: self.rx.disposeBag)
+    
+    viewModel.statistics
+      .map { stats in
+        "\(stats.todo + stats.done) tasks, \(stats.todo) due."
+      }
+      .bind(to: self.statisticsLabel.rx.text)
+      .disposed(by: self.rx.disposeBag)
   }
   
   private func configureDataSource() {
@@ -79,6 +93,7 @@ class TasksViewController: UIViewController, BindableType {
       return cell
     }, titleForHeaderInSection: { dataSource, index in
       dataSource.sectionModels[index].model
-    })
+    }, canEditRowAtIndexPath: { _, _ in true }
+    )
   }
 }
