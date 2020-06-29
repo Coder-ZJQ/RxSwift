@@ -3,7 +3,7 @@ My learning playgrounds and practice projects of book [RxSwift: Reactive Program
 
 ## Contents
 
-![](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/20200610154126.png)
+![image-20200629090607414](https://gitee.com/coder-zjq/ImageHost/raw/master/jokerz.me/image-20200629090607414.png)
 
 ## Usage
 
