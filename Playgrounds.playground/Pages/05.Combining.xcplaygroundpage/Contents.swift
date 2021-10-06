@@ -151,6 +151,7 @@ example(of: "zip") {
 
 /*:
  ![withLatestFrom](withLatestFrom.png)
+ withLatestFrom 操作符将两个 Observables 中最新的元素通过一个函数组合起来，然后将这个组合的结果发出来。当第一个 Observable 发出一个元素时，就立即取出第二个 Observable 中最新的元素，通过一个组合函数将两个最新的元素合并后发送出去。
  */
 example(of: "withLatestFrom") {
     let button = PublishSubject<Void>()
@@ -172,6 +173,8 @@ example(of: "withLatestFrom") {
 
 /*:
  ![sample](sample.png)
+ 
+ sample 操作符将不定期的对源 Observable 进行取样操作。通过第二个 Observable 来控制取样时机。一旦第二个 Observable 发出一个元素，就从源 Observable 中取出最后产生的元素。
  */
 example(of: "sample") {
     let button = PublishSubject<Void>()
@@ -192,6 +195,8 @@ example(of: "sample") {
 
 /*:
  ![amb](amb.png)
+ 
+ 当你传入多个 Observables 到 amb 操作符时，它将取其中一个 Observable：第一个产生事件的那个 Observable，可以是一个 next，error 或者 completed 事件。 amb 将忽略掉其他的 Observables。
  */
 example(of: "amb") {
     let left = PublishSubject<String>()
@@ -250,6 +255,14 @@ example(of: "switchLatest") {
 
 /*:
  ![reduce](reduce.png)
+ 
+ 持续的将 Observable 的每一个元素应用一个函数，然后发出最终结果
+ 
+ reduce 操作符将对第一个元素应用一个函数。然后，将结果作为参数填入到第二个元素的应用函数中。以此类推，直到遍历完全部的元素后发出最终结果。
+
+ 这种操作符在其他地方有时候被称作是 accumulator，aggregate，compress，fold 或者 inject。
+
+
  */
 example(of: "reduce") {
     let source = Observable.of(1, 3, 5, 7, 9)
@@ -262,6 +275,12 @@ example(of: "reduce") {
 
 /*:
  ![scan](scan.png)
+ 
+ 持续的将 Observable 的每一个元素应用一个函数，然后发出每一次函数返回的结果
+ 
+ scan 操作符将对第一个元素应用一个函数，将结果作为第一个元素发出。然后，将结果作为参数填入到第二个元素的应用函数中，创建第二个元素。以此类推，直到遍历完全部的元素。
+
+ 这种操作符在其他地方有时候被称作是 accumulator。
  */
 example(of: "scan") {
     let source = Observable.of(1, 3, 5, 7, 9)
@@ -297,10 +316,4 @@ example(of: "Challenge - scan") {
     })
 }
 
-
-
-
-
-
-
-//: [Next](@next) | [Previous](@previous)
+//: [Previous](@previous) | [Next](@next)

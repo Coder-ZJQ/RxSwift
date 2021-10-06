@@ -1,0 +1,6 @@
+framework module Pods_BaseTarget_12_QuickTodo_mvvm {
+  umbrella header "Pods-BaseTarget-12.QuickTodo-mvvm-umbrella.h"
+
+  export *
+  module * { export * }
+}

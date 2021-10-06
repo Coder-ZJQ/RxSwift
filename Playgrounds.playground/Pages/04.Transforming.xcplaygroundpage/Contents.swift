@@ -233,4 +233,5 @@ example(of: "Challenge") {
     
     input.onNext("9")
 }
-//: [Next](@next) | [Previous](@previous)
+
+//: [Previous](@previous) | [Next](@next)

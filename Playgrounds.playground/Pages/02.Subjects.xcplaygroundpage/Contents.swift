@@ -278,4 +278,4 @@ example(of: "Challenge 2") {
     }
 }
 
-//: [Next](@next) | [Previous](@previous)
+//: [Previous](@previous) | [Next](@next)

@@ -102,3 +102,5 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
+
+//: [Previous](@previous) | [Next](@next)
