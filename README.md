@@ -21,9 +21,11 @@ You can select `Show Rendered Markup` to show the rich content of playgrounds:
 
 ![image-20200610162345328](https://gitee.com/coder-zjq/ImageHost/raw/master/jqz3.tech/image-20200610162345328.png)
 
-If you want to run the playground examples, build the `00.Playgrounds-Support` scheme first.
+If you want to run the playground examples,  make `00.Playgrounds-Support` scheme active, and turn on `Build Active Scheme`.
 
 ![](https://gitee.com/coder-zjq/ImageHost/raw/master/jqz3.tech/20200610161348.png)
+
+<img src="/Users/Joker/Library/Application Support/typora-user-images/image-20211028171650189.png" alt="image-20211028171650189" style="zoom: 50%;" />
 
 ## Useful Links
 
