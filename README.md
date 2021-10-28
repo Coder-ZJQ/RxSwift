@@ -25,7 +25,7 @@ If you want to run the playground examples,  make `00.Playgrounds-Support` schem
 
 ![](https://gitee.com/coder-zjq/ImageHost/raw/master/jqz3.tech/20200610161348.png)
 
-<img src="/Users/Joker/Library/Application Support/typora-user-images/image-20211028171650189.png" alt="image-20211028171650189" style="zoom: 50%;" />
+<img src="https://gitee.com/coder-zjq/ImageHost/raw/master/jqz3.tech/image-20211028171650189.png" alt="image-20211028171650189" style="zoom: 50%;" />
 
 ## Useful Links
 
