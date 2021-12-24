@@ -1,6 +1,0 @@
-framework module Pods_BaseTarget_10_iGif {
-  umbrella header "Pods-BaseTarget-10.iGif-umbrella.h"
-
-  export *
-  module * { export * }
-}

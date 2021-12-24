@@ -42,7 +42,7 @@ button.rx.tap
 button
   .rx.tap
   .map { _ in "•" }
-  .timeout(5, other: Observable.just("X"), scheduler: MainScheduler.instance)
+  .timeout(.seconds(5), other: Observable.just("X"), scheduler: MainScheduler.instance)
   .subscribe(tapsTimeline)
 
 let hostView = setupHostView()

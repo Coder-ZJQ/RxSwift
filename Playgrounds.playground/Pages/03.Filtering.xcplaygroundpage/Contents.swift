@@ -33,7 +33,7 @@ example(of: "elementAt") {
     let strikes = PublishSubject<String>()
     let disposeBag = DisposeBag()
     
-    strikes.elementAt(2).subscribe(onNext: {
+    strikes.element(at: 2).subscribe(onNext: {
         print("You're out. \($0)")
     }).disposed(by: disposeBag)
     
@@ -79,7 +79,7 @@ example(of: "skipWhile") {
     let disposeBag = DisposeBag()
     
     Observable.of(2, 2, 3, 4, 4)
-        .skipWhile { $0 % 2 == 0}
+        .skip(while: { $0 % 2 == 0})
         .subscribe(onNext: {
             print($0)
         })
@@ -94,7 +94,7 @@ example(of: "skipUntil") {
     let subject = PublishSubject<String>()
     let trigger = PublishSubject<String>()
     
-    subject.skipUntil(trigger)
+    subject.skip(until: trigger)
         .subscribe(onNext: {
             print($0)
         })
@@ -128,7 +128,7 @@ example(of: "takeWhile") {
     let disposeBag = DisposeBag()
     
     Observable.of(2, 2, 4, 4, 6, 6)
-        .takeWhile { $0 < 4 }
+        .take(while: { $0 < 4 })
         .subscribe(onNext: {
             print($0)
         })
@@ -144,7 +144,7 @@ example(of: "takeUntil") {
     let subject = PublishSubject<String>()
     let trigger = PublishSubject<String>()
     
-    subject.takeUntil(trigger)
+    subject.take(until: trigger)
         .subscribe(onNext: {
             print($0)
         })
@@ -232,17 +232,21 @@ example(of: "Challenge") {
     // Add your code here
     
     input
-        .skipWhile({ $0 == 0 })
+        .skip(while: { $0 == 0 })
         .filter({ $0 < 10 })
         .take(10)
         .toArray()
-        .subscribe(onNext: {
-            print($0)
-            let phone = phoneNumber(from: $0)
-            if let contact = contacts[phone] {
-                print("Dialing \(contact) (\(phone))...")
-            } else {
-                print("Contact not found")
+        .subscribe({
+            switch $0 {
+            case .success(let arr):
+                let phone = phoneNumber(from: arr)
+                if let contact = contacts[phone] {
+                    print("Dialing \(contact) (\(phone))...")
+                } else {
+                    print("Contact not found")
+                }
+            default:
+                break
             }
         })
         .disposed(by: disposeBag)
@@ -255,7 +259,7 @@ example(of: "Challenge") {
     input.onNext(1)
     
     // Confirm that 7 results in "Contact not found", and then change to 2 and confirm that Junior is found
-    input.onNext(7)
+    input.onNext(2)
     
     "5551212".forEach {
       if let number = (Int("\($0)")) {

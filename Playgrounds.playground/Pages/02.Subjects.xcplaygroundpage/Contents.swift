@@ -133,6 +133,16 @@ example(of: "PublishRelay") {
         }).disposed(by: disposeBag)
     
     relay.accept("1")
+    relay.subscribe { str in
+        print(str)
+    } onError: { error in
+        print(error)
+    } onCompleted: {
+        print("complele")
+    } onDisposed: {
+        print("dispose")
+    }.disposed(by: disposeBag)
+
 //    relay.accept(MyError.anError)
 //    relay.onCompleted()
 }
@@ -159,6 +169,28 @@ example(of: "BehaviorRelay") {
     print(relay.value)
 }
 
+example(of: "ReplayRelay") {
+    let relay = ReplayRelay<String>.create(bufferSize: 2)
+    let disposeBag = DisposeBag()
+    relay.accept("1")
+    relay.accept("2")
+    relay.accept("3")
+    
+    relay.subscribe {
+        print(label: "1)", event: $0)
+    }.disposed(by: disposeBag)
+    
+    relay.subscribe {
+        print(label: "2)", event: $0)
+    }.disposed(by: disposeBag)
+    
+    relay.accept("4")
+
+    relay.subscribe {
+        print(label: "3)", event: $0)
+    }.disposed(by: disposeBag)
+    
+}
 /*:
  ### Challenge 1: Create a blackjack card dealer using a publish subject
  

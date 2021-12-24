@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         .filter({ !$0.isEmpty })
         .flatMapLatest {
             ApiController.shared.currentWeather(city: $0)
-                .catchErrorJustReturn(ApiController.Weather.empty)
+                .catchAndReturn(ApiController.Weather.empty)
         }
         .asDriver(onErrorJustReturn: ApiController.Weather.empty)
     

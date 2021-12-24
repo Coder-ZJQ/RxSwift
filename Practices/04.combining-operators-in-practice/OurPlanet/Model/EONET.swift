@@ -42,7 +42,7 @@ class EONET {
       .map { (categories: [EOCategory]) -> [EOCategory] in
         categories.sorted { $0.name < $1.name }
       }
-      .catchErrorJustReturn([])
+      .catchAndReturn([])
       .share(replay: 1, scope: .forever)
   }()
   
@@ -96,7 +96,7 @@ class EONET {
       "status": (closed ? "closed" : "open")
     ]
     let request: Observable<[EOEvent]> = EONET.request(endpoint: endpoint, query: query, contentIdentifier: "events")
-    return request.catchErrorJustReturn([])
+    return request.catchAndReturn([])
   }
 
   static func events(forLast days: Int = 360, category: EOCategory) -> Observable<[EOEvent]> {

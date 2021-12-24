@@ -12,8 +12,8 @@ workspace 'RxSwift.xcworkspace'
 
 abstract_target 'BaseTarget' do
   platform :ios, '12.0'
-  pod 'RxSwift', '4.4.1'
-  pod 'RxCocoa', '4.4.1'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
   
   target '00.Playgrounds-Support' do
     project 'Practices/00.playgrounds-support/00.Playgrounds-Support.xcodeproj'
@@ -48,79 +48,79 @@ abstract_target 'BaseTarget' do
     project 'Practices/07.error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
   end
 
-  target '08.Schedulers' do
-    platform :osx, '10.14'
-    project 'Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj'
-  end
+#  target '08.Schedulers' do
+#    platform :osx, '10.14'
+#    project 'Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj'
+#  end
+#
+#  target '09.Testing' do
+#    project 'Practices/09.testing-with-rxtest/09.Testing.xcodeproj'
+#    pod 'Hue'
+#
+#    target 'TestingTests' do
+#      pod 'RxTest', '6.2.0'
+#      pod 'RxBlocking', '6.2.0'
+#    end
+#  end
 
-  target '09.Testing' do
-    project 'Practices/09.testing-with-rxtest/09.Testing.xcodeproj'
-    pod 'Hue'
-
-    target 'TestingTests' do
-      pod 'RxTest', '4.4.1'
-      pod 'RxBlocking', '4.4.1'
-    end
-  end
-
-  target '10.iGif' do
-    project 'Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj'
-    pod 'SwiftyJSON'
-    pod 'Gifu', :git => 'https://gitee.com/coder-zjq/Gifu.git'
-
-    target 'iGifTests' do
-      pod 'Nimble'
-      pod 'RxNimble'
-      pod 'RxBlocking', '4.4.1'
-      pod 'OHHTTPStubs'
-      pod 'OHHTTPStubs/Swift'
-    end
-    
-  end
-
-  target '12.QuickTodo-mvvm' do
-    project 'Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj'
-    # core RxSwift
-    pod 'RxDataSources', '3.1.0'
-
-    # Community projects
-    pod 'Action', '~> 3.9'
-    pod 'NSObject+Rx', '~> 4.4'
-    
-    # Realm database
-    pod 'RealmSwift', '3.18.0'
-    pod 'RxRealm', '0.7.6'
-  end
+#  target '10.iGif' do
+#    project 'Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj'
+#    pod 'SwiftyJSON'
+#    pod 'Gifu'
+#
+#    target 'iGifTests' do
+#      pod 'Nimble'
+#      pod 'RxNimble'
+#      pod 'RxBlocking', '6.2.0'
+#      pod 'OHHTTPStubs'
+#      pod 'OHHTTPStubs/Swift'
+#    end
+#
+#  end
+#
+#  target '12.QuickTodo-mvvm' do
+#    project 'Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj'
+#    # core RxSwift
+#    pod 'RxDataSources', '3.1.0'
+#
+#    # Community projects
+#    pod 'Action', '~> 3.9'
+#    pod 'NSObject+Rx', '~> 4.4'
+#
+#    # Realm database
+#    pod 'RealmSwift', '3.18.0'
+#    pod 'RxRealm', '0.7.6'
+#  end
 
 end
 
-abstract_target 'TweetieAbstract' do
-  project 'Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
-  pod 'Alamofire'
-  pod 'RxSwift', '4.4.1'
-  pod 'RxCocoa', '4.4.1'
-  pod 'RealmSwift', '3.18.0'
-  pod 'RxRealm', '0.7.6'
-  pod 'Unbox', '3.0.0'
-  pod 'Then', '2.2.1'
-  pod 'Reachability', '3.2.0'
-  pod 'RxRealmDataSources', '0.2.10'
-
-  target '11.Tweetie' do
-    platform :ios, '12.0'
-    pod 'RxDataSources', '3.1.0'
-  end
-  
-  target '11.MacTweetie' do
-    platform :osx, '10.14'
-  end
-  
-  target 'TweetieTests' do
-    platform :ios, '12.0'
-    pod 'RxTest', '4.4.1'
-    pod 'RxBlocking', '4.4.1'
-  end
-end
+#abstract_target 'TweetieAbstract' do
+#  project 'Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
+#  pod 'Alamofire'
+#  pod 'RxSwift', '6.2.0'
+#  pod 'RxCocoa', '6.2.0'
+#  pod 'RealmSwift', '3.18.0'
+#  pod 'RxRealm', '0.7.6'
+#  pod 'Unbox', '3.0.0'
+#  pod 'Then', '2.2.1'
+#  pod 'Reachability', '3.2.0'
+#  pod 'RxRealmDataSources'
+#
+#  target '11.Tweetie' do
+#    platform :ios, '12.0'
+#    pod 'RxDataSources', '3.1.0'
+#  end
+#
+#  target '11.MacTweetie' do
+#    platform :osx, '10.14'
+#  end
+#
+#  target 'TweetieTests' do
+#    platform :ios, '12.0'
+#    pod 'RxTest', '6.2.0'
+#    pod 'RxBlocking', '6.2.0'
+#  end
+#end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

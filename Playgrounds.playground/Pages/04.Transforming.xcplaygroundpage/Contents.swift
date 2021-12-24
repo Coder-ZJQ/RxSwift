@@ -1,6 +1,5 @@
 import RxSwift
 
-
 /*:
  ![toArray](toArray.png)
  */
@@ -9,7 +8,7 @@ example(of: "toArray") {
     
     Observable.of("A", "B", "C")
         .toArray()
-        .subscribe(onNext: {
+        .subscribe(onSuccess: {
             print($0)
         })
         .disposed(by: disposeBag)
@@ -208,12 +207,12 @@ example(of: "Challenge") {
         .map(convert)
         .filter { $0 != nil }
         .map { $0! }
-        .skipWhile({ $0 == 0 })
+        .skip(while: { $0 == 0 })
         .take(10)
         .toArray()
         .map(format)
         .map(dial)
-        .subscribe(onNext: {
+        .subscribe(onSuccess: {
             print($0)
         })
         .disposed(by: disposeBag)

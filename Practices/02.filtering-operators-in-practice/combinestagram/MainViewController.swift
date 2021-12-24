@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
 
     let shareImages = images.asObservable()
-      .throttle(0.5, scheduler: MainScheduler.instance)
+      .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
       .share()
       
     shareImages
@@ -88,7 +88,7 @@ class MainViewController: UIViewController {
       .subscribe(onSuccess: { [weak self] id in
         self?.showMessage("Saved with id: \(id)")
         self?.actionClear()
-        }, onError: { [weak self] error in
+      }, onFailure: { [weak self] error in
           self?.showMessage("Error", description: error.localizedDescription)
       })
       .disposed(by: bag)
@@ -104,7 +104,7 @@ class MainViewController: UIViewController {
 
     let newPhotos = photosViewController.selectedPhotos.share()
     newPhotos
-      .takeWhile({ [weak self] image -> Bool in
+      .take(while: { [weak self] image -> Bool in
         let count = self?.images.value.count ?? 0
         return count < 6
       })
@@ -120,11 +120,11 @@ class MainViewController: UIViewController {
         return true
       })
       .subscribe(onNext: { [weak self] newImage in
-      guard let images = self?.images else { return }
-      images.accept(images.value + [newImage])
-    }) {
-      print("completed photo selection")
-    }.disposed(by: bag)
+        guard let images = self?.images else { return }
+        images.accept(images.value + [newImage])
+      }, onDisposed:  {
+        print("completed photo selection")
+      }).disposed(by: bag)
     
     newPhotos
       .ignoreElements()

@@ -49,7 +49,7 @@ class PhotoWriter {
           if success, let id = savedAssetId {
             observer(.success(id))
           } else {
-            observer(.error(error ?? Errors.couldNotSavePhoto))
+            observer(.failure(error ?? Errors.couldNotSavePhoto))
           }
         }
       })

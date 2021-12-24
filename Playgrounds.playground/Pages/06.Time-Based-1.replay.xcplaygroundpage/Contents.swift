@@ -24,23 +24,24 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
  */
 let elementsPerSecond = 1
 let maxElements = 20
-let replayedElements = 1
+let replayedElements = 2
 let replayDelay: TimeInterval = 3
-/*
-let sourceObservable = Observable<Int>.create { observable -> Disposable in
-    var value = 1
-    let timer = DispatchSource.timer(interval: 1.0 / Double(elementsPerSecond), queue: .main) {
-        if value <= maxElements {
-            observable.onNext(value)
-            value += 1
-        }
-    }
-    return Disposables.create {
-        timer.suspend()
-    }
-}.replay(replayedElements)
-*/
-let sourceObservable = Observable<Int>.interval(1.0 / Double(elementsPerSecond), scheduler: MainScheduler.instance).replay(replayedElements)
+
+//let sourceObservable = Observable<Int>.create { observable -> Disposable in
+//    var value = 1
+//    let timer = DispatchSource.timer(interval: 1.0 / Double(elementsPerSecond), queue: .main) {
+//        if value <= maxElements {
+//            observable.onNext(value)
+//            value += 1
+//        }
+//    }
+//
+//    return Disposables.create {
+//        timer.suspend()
+//    }
+//}.replay(replayedElements)
+
+let sourceObservable = Observable<Int>.interval(.milliseconds(1000 / elementsPerSecond), scheduler: MainScheduler.instance).take(maxElements).replay(replayedElements)
 
 let sourceTimeLine = TimelineView<Int>.make()
 let replayedTimeLine = TimelineView<Int>.make()

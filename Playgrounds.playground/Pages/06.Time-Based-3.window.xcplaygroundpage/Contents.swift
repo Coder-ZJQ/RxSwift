@@ -26,7 +26,7 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
  */
 
 let elementsPerSecond = 3
-let windowTimeSpan: RxTimeInterval = 4.0
+let windowTimeSpan: RxTimeInterval = .seconds(4)
 let windowMaxCount = 10
 let sourceObservable = PublishSubject<String>()
 

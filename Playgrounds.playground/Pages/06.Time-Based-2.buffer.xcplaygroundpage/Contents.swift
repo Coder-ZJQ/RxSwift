@@ -24,7 +24,7 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
 /*:
  ![buffer](buffer.png)
  */
-let bufferTimeSpan: RxTimeInterval = 4.0
+let bufferTimeSpan: RxTimeInterval = .seconds(4)
 let bufferMaxCount = 2
 
 let sourceObservable = PublishSubject<String>()

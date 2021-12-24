@@ -59,6 +59,29 @@ example(of: "never") {
     }, onCompleted: {
         print("Completed")
     })
+    
+}
+
+/*:
+* Callout(error): 返回一个只发射 error 的 Observable Sequence（只会执行 error 事件）
+ 
+ ![error](error.png)
+ */
+example(of: "error") {
+    enum MyError: Error {
+        case anError
+    }
+    let observable = Observable<Void>.error(MyError.anError)
+    observable.subscribe {
+        print("onNext")
+    } onError: { error in
+        print(error)
+    } onCompleted: {
+        print("onCompleted")
+    } onDisposed: {
+        print("onDisposed")
+    }.dispose()
+
 }
 
 /*:
@@ -73,6 +96,26 @@ example(of: "range") {
         let fibonacci = Int(((pow(1.61803, n) - pow(0.61803, n)) / 2.23606).rounded())
         print(fibonacci)
     })
+}
+
+/*:
+* Callout(repeatElement): 创建多次发射特定项目的可观察对象
+ 
+ ![repeat](repeat.png)
+ */
+example(of: "repeatElement") {
+    // take(10) 只取 10 个元素防止一直发射元素电脑卡死
+    let observable = Observable.repeatElement("a").take(10)
+        
+    observable.subscribe {
+        print($0)
+    } onError: { error in
+        print(error)
+    } onCompleted: {
+        print("onCompleted")
+    } onDisposed: {
+        print("onDisposed")
+    }
 }
 
 /*:
@@ -117,11 +160,11 @@ example(of: "create") {
         case anError
     }
 
-//    let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     Observable<String>.create { observer -> Disposable in
         observer.onNext("1")
-//        observer.onError(MyError.anError)
-//        observer.onCompleted()
+        observer.onError(MyError.anError)
+        observer.onCompleted()
         observer.onNext("?")
         return Disposables.create()
     }.subscribe(onNext: {
@@ -133,8 +176,58 @@ example(of: "create") {
     }, onDisposed: {
         print("Disposed")
     })
-//        .disposed(by: disposeBag)
+        .disposed(by: disposeBag)
 }
+
+example(of: "generate") {
+    Observable.generate(
+        initialState: 1,
+        condition: { $0 <= 10 },
+        iterate: { $0 + 2 }
+    ).subscribe(onNext: {
+        print($0)
+    }, onCompleted: {
+        print("onCompleted")
+    }, onDisposed: {
+        print("onDisposed")
+    }).dispose()
+        
+}
+
+//example(of: "interval") {
+//    let observable = Observable<Int>
+//        .interval(.seconds(1), scheduler: MainScheduler.instance)
+//        .subscribe {
+//            print($0)
+//        } onError: {
+//            print($0)
+//        } onCompleted: {
+//            print("onCompleted")
+//        } onDisposed: {
+//            print("onDisposed")
+//        }
+//
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//        observable.dispose()
+//    }
+//}
+
+Observable<Int>
+    .timer(.seconds(1), period: .seconds(1), scheduler: MainScheduler.instance)
+    .subscribe {
+        print($0)
+    } onError: {
+        print($0)
+    } onCompleted: {
+        print("onCompleted")
+    } onDisposed: {
+        print("onDisposed")
+    }
+
+
+
+
+
 /*:
  **直到订阅发生，才创建 `Observable`，并且为每位订阅者创建全新的 `Observable`**
 
@@ -164,9 +257,9 @@ example(of: "deferred") {
 }
 
 /*:
- **Single** 是 `Observable` 的另外一个版本。不像 `Observable` 可以发出多个元素，它要么只能发出一个元素(success)，要么产生一个 `error` 事件。
+ **Single** 是 `Observable` 的另外一个版本。不像 `Observable` 可以发出多个元素，它要么只能发出一个元素(success)，要么产生一个 `failure` 事件。
 
- - 发出一个 `success` 事件，或一个 `error` 事件
+ - 发出一个 `success` 事件，或一个 `failure` 事件
  - 不会[共享附加作用](https://beeth0ven.github.io/RxSwift-Chinese-Documentation/content/recipes/share_side_effects.html)
  
  ![Single](Single.png)
@@ -181,15 +274,15 @@ example(of: "Single") {
             print("single create")
             let disposable = Disposables.create()
             guard let path = Bundle.main.path(forResource: name, ofType: "txt") else {
-                single(.error(FileReadError.fileNotFound))
+                single(.failure(FileReadError.fileNotFound))
                 return disposable
             }
             guard let data = FileManager.default.contents(atPath: path) else {
-                single(.error(FileReadError.unreadable))
+                single(.failure(FileReadError.unreadable))
                 return disposable
             }
             guard let contents = String(data: data, encoding: .utf8) else {
-                single(.error(FileReadError.encodingFailed))
+                single(.failure(FileReadError.encodingFailed))
                 return disposable
             }
             single(.success(contents))
@@ -203,7 +296,7 @@ example(of: "Single") {
         switch $0 {
         case .success(let string):
             print(string)
-        case .error(let error):
+        case .failure(let error):
             print(error)
         }
     }
@@ -213,7 +306,7 @@ example(of: "Single") {
         switch $0 {
         case .success(let string):
             print(string)
-        case .error(let error):
+        case .failure(let error):
             print(error)
         }
     }
