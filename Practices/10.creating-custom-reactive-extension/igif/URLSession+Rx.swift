@@ -103,8 +103,8 @@ extension Reactive where Base: URLSession {
     }
 }
 
-extension ObservableType where E == (HTTPURLResponse, Data) {
-    func cache() -> Observable<E> {
+extension ObservableType where Element == (HTTPURLResponse, Data) {
+    func cache() -> Observable<Element> {
         return self.do(onNext: { (response, data) in
             guard let url = response.url?.absoluteString, 200..<300 ~= response.statusCode else {
                 return

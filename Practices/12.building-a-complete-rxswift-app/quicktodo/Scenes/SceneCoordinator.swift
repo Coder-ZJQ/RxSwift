@@ -49,7 +49,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   }
 
   @discardableResult
-  func transition(to scene: Scene, type: SceneTransitionType) -> Completable {
+  func transition(to scene: Scene, type: SceneTransitionType) -> Observable<Never> {
     let subject = PublishSubject<Void>()
     let viewController = scene.viewController()
     switch type {
@@ -83,7 +83,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   }
 
   @discardableResult
-  func pop(animated: Bool) -> Completable {
+  func pop(animated: Bool) -> Observable<Never> {
     let subject = PublishSubject<Void>()
     if let presenter = currentViewController.presentingViewController {
       // dismiss a modal controller

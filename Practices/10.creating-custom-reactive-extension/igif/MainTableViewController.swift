@@ -46,7 +46,7 @@ class MainTableViewController: UITableViewController {
     tableView.tableHeaderView = searchController.searchBar
     
     search.filter { $0.count >= 3 }
-      .throttle(0.3, scheduler: MainScheduler.instance)
+    .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .distinctUntilChanged()
       .flatMapLatest { query -> Observable<[GiphyGif]> in
         return ApiController.shared.search(text: query)

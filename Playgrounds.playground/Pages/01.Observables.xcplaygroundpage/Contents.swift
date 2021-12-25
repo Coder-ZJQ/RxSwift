@@ -175,8 +175,7 @@ example(of: "create") {
         print("Completed")
     }, onDisposed: {
         print("Disposed")
-    })
-        .disposed(by: disposeBag)
+    }).disposed(by: disposeBag)
 }
 
 example(of: "generate") {
@@ -194,35 +193,39 @@ example(of: "generate") {
         
 }
 
-//example(of: "interval") {
-//    let observable = Observable<Int>
-//        .interval(.seconds(1), scheduler: MainScheduler.instance)
-//        .subscribe {
-//            print($0)
-//        } onError: {
-//            print($0)
-//        } onCompleted: {
-//            print("onCompleted")
-//        } onDisposed: {
-//            print("onDisposed")
-//        }
-//
-//    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//        observable.dispose()
-//    }
-//}
+example(of: "interval") {
+    let observable = Observable<Int>
+        .interval(.seconds(1), scheduler: MainScheduler.instance)
+        .take(10)
+        .subscribe {
+            print($0)
+        } onError: {
+            print($0)
+        } onCompleted: {
+            print("onCompleted")
+        } onDisposed: {
+            print("onDisposed")
+        }
 
-Observable<Int>
-    .timer(.seconds(1), period: .seconds(1), scheduler: MainScheduler.instance)
-    .subscribe {
-        print($0)
-    } onError: {
-        print($0)
-    } onCompleted: {
-        print("onCompleted")
-    } onDisposed: {
-        print("onDisposed")
+    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        observable.dispose()
     }
+}
+
+example(of: "timer") {
+    Observable<Int>
+        .timer(.seconds(1), period: .seconds(1), scheduler: MainScheduler.instance)
+        .take(10)
+        .subscribe {
+            print($0)
+        } onError: {
+            print($0)
+        } onCompleted: {
+            print("onCompleted")
+        } onDisposed: {
+            print("onDisposed")
+        }.dispose()
+}
 
 
 
@@ -243,6 +246,7 @@ example(of: "deferred") {
     var flip = false
     
     let factory = Observable<Int>.deferred { () -> Observable<Int> in
+        print("deferred closure")
         flip.toggle()
         return flip ? Observable.of(1, 2, 3) : Observable.of(4, 5, 6)
     }
@@ -250,8 +254,7 @@ example(of: "deferred") {
     for _ in 0...3 {
         factory.subscribe(onNext: {
             print($0, terminator: "")
-        })
-            .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         print()
     }
 }
@@ -270,6 +273,7 @@ example(of: "Single") {
         case fileNotFound, unreadable, encodingFailed
     }
     func loadText(from name: String) -> Single<String> {
+        
         return Single.create { single in
             print("single create")
             let disposable = Disposables.create()
@@ -291,7 +295,7 @@ example(of: "Single") {
     }
     
     let single = loadText(from: "Copyright")
-
+    
     single.subscribe {
         switch $0 {
         case .success(let string):
@@ -384,21 +388,30 @@ example(of: "Completable") {
  And while you’re at it, create a dispose bag and add the subscription to it.
  */
 example(of: "Challenge 1") {
-    let observable = Observable<Any>.never()
+    let observable = Observable<Void>.never()
     let disposeBag = DisposeBag()
     
-    observable
-        .do(onSubscribe: {
-            print("Subscribed")
-        })
-        .subscribe(onNext: { element in
-            print(element)
-        }, onCompleted: {
-            print("Completed")
-        }, onDisposed: {
-            print("Disposed")
-        })
-        .disposed(by: disposeBag)
+    let side_effect = observable.do(onSubscribe: {
+        print("Subscribed")
+    })
+
+    side_effect.subscribe(onNext: { element in
+        print(element)
+    }, onCompleted: {
+        print("Completed")
+    }, onDisposed: {
+        print("Disposed")
+    })
+    .disposed(by: disposeBag)
+    
+    
+    side_effect.subscribe(onNext: { element in
+        print(element)
+    }, onCompleted: {
+        print("Completed")
+    }, onDisposed: {
+        print("Disposed")
+    }).dispose()
 }
 /*:
  ### Challenge 2: Print debug info
@@ -410,7 +423,7 @@ example(of: "Challenge 1") {
  Continuing to work in the playground from the previous challenge, complete this challenge by replacing the use of the do operator with debug and provide a string identifier to it as a parameter. Observe the debug output in Xcode's console.
  */
 example(of: "Challenge 2") {
-    let observable = Observable<Any>.never()
+    let observable = Observable<Void>.never()
     let disposeBag = DisposeBag()
 
     observable

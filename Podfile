@@ -4,6 +4,7 @@ pre_install do |installer|
     def original_sand.project_path
         return @root + 'Rx.xcodeproj'
     end
+    puts installer.sandbox.project_path
 end
 
 use_frameworks!
@@ -48,67 +49,71 @@ abstract_target 'BaseTarget' do
     project 'Practices/07.error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
   end
 
-#  target '08.Schedulers' do
-#    platform :osx, '10.14'
-#    project 'Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj'
-#  end
-#
-#  target '09.Testing' do
-#    project 'Practices/09.testing-with-rxtest/09.Testing.xcodeproj'
-#    pod 'Hue'
-#
-#    target 'TestingTests' do
-#      pod 'RxTest', '6.2.0'
-#      pod 'RxBlocking', '6.2.0'
-#    end
-#  end
+  
+  target '08.Schedulers' do
+    platform :osx, '10.14'
+    project 'Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj'
+    pod 'RxSwift', '6.2.0'
+    pod 'RxCocoa', '6.2.0'
+  end
+  
+  target '09.Testing' do
+    project 'Practices/09.testing-with-rxtest/09.Testing.xcodeproj'
+    pod 'Hue'
 
-#  target '10.iGif' do
-#    project 'Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj'
-#    pod 'SwiftyJSON'
-#    pod 'Gifu'
-#
-#    target 'iGifTests' do
-#      pod 'Nimble'
-#      pod 'RxNimble'
-#      pod 'RxBlocking', '6.2.0'
-#      pod 'OHHTTPStubs'
-#      pod 'OHHTTPStubs/Swift'
-#    end
-#
-#  end
-#
-#  target '12.QuickTodo-mvvm' do
-#    project 'Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj'
-#    # core RxSwift
-#    pod 'RxDataSources', '3.1.0'
-#
-#    # Community projects
-#    pod 'Action', '~> 3.9'
-#    pod 'NSObject+Rx', '~> 4.4'
-#
-#    # Realm database
-#    pod 'RealmSwift', '3.18.0'
-#    pod 'RxRealm', '0.7.6'
-#  end
+    target 'TestingTests' do
+      pod 'RxTest', '6.2.0'
+      pod 'RxBlocking', '6.2.0'
+    end
+  end
+
+  target '10.iGif' do
+    project 'Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj'
+    pod 'SwiftyJSON'
+    pod 'Gifu'
+
+    target 'iGifTests' do
+      pod 'Nimble'
+      pod 'RxNimble'
+      pod 'RxBlocking', '6.2.0'
+      pod 'OHHTTPStubs'
+      pod 'OHHTTPStubs/Swift'
+    end
+
+  end
+
+  target '12.QuickTodo-mvvm' do
+    project 'Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj'
+    # core RxSwift
+    pod 'RxDataSources'
+
+    # Community projects
+    pod 'Action'
+    pod 'NSObject+Rx'
+
+    # Realm database
+    pod 'RealmSwift'
+    pod 'RxRealm'
+  end
 
 end
 
 #abstract_target 'TweetieAbstract' do
 #  project 'Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
-#  pod 'Alamofire'
-#  pod 'RxSwift', '6.2.0'
-#  pod 'RxCocoa', '6.2.0'
-#  pod 'RealmSwift', '3.18.0'
-#  pod 'RxRealm', '0.7.6'
-#  pod 'Unbox', '3.0.0'
-#  pod 'Then', '2.2.1'
+#  pod 'Alamofire', '4.9.1'
+#
+#  pod 'RxSwift', '5.1.1'
+#  pod 'RxCocoa', '5.1.1'
+#  pod 'RealmSwift', '5.1.0'
+#  pod 'RxRealm', '3.0.0'
+#  pod 'Unbox', '4.0.0'
+#  pod 'Then', '2.7.0'
 #  pod 'Reachability', '3.2.0'
-#  pod 'RxRealmDataSources'
+#  pod 'RxRealmDataSources', '0.3.0'
 #
 #  target '11.Tweetie' do
 #    platform :ios, '12.0'
-#    pod 'RxDataSources', '3.1.0'
+#    pod 'RxDataSources', '4.0.1'
 #  end
 #
 #  target '11.MacTweetie' do
@@ -117,8 +122,8 @@ end
 #
 #  target 'TweetieTests' do
 #    platform :ios, '12.0'
-#    pod 'RxTest', '6.2.0'
-#    pod 'RxBlocking', '6.2.0'
+#    pod 'RxTest', '5.1.1'
+#    pod 'RxBlocking', '5.1.1'
 #  end
 #end
 

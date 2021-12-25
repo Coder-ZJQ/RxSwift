@@ -32,16 +32,16 @@ import RxSwift
 protocol SceneCoordinatorType {
   /// transition to another scene
   @discardableResult
-  func transition(to scene: Scene, type: SceneTransitionType) -> Completable
+  func transition(to scene: Scene, type: SceneTransitionType) -> Observable<Never>
 
   /// pop scene from navigation stack or dismiss current modal
   @discardableResult
-  func pop(animated: Bool) -> Completable
+  func pop(animated: Bool) -> Observable<Never>
 }
 
 extension SceneCoordinatorType {
   @discardableResult
-  func pop() -> Completable {
+  func pop() -> Observable<Never> {
     return pop(animated: true)
   }
 }

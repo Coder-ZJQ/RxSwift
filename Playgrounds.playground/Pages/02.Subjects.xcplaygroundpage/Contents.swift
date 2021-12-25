@@ -9,6 +9,11 @@ import RxCocoa
  如果源 `Observable` 因为产生了一个 `error` 事件而中止， **PublishSubject** 就不会发出任何元素，而是将这个 `error` 事件发送出来。
  */
 example(of: "PublishSubject") {
+    
+    enum MyError: Error {
+        case SomeError
+    }
+    
     let subject = PublishSubject<String>()
     subject.onNext("Is anyone listening?")
     let subscriptionOne = subject.subscribe(onNext: {
@@ -23,7 +28,7 @@ example(of: "PublishSubject") {
     subject.onNext("3")
     subscriptionOne.dispose()
     subject.onNext("4")
-    subject.onCompleted()
+    subject.onError(MyError.SomeError)
     subject.onNext("5")
     subscriptionTwo.dispose()
     

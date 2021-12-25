@@ -123,9 +123,9 @@ class ApiController {
   let baseURL = URL(string: "http://api.openweathermap.org/data/2.5")!
 
   init() {
-    Logging.URLRequests = { request in
-      return true
-    }
+//    Logging.URLRequests = { request in
+//      return true
+//    }
   }
 
   // MARK: - Api Calls

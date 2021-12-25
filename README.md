@@ -30,7 +30,8 @@ If you want to run the playground examples,  make `00.Playgrounds-Support` schem
 ## Useful Links
 
 - [https://github.com/ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift)
-- [http://reactivex.io](http://reactivex.io/)
+- [http://community.rxswift.org/](http://community.rxswift.org/)
 - [RxSwift 中文文档](https://beeth0ven.github.io/RxSwift-Chinese-Documentation/)
+- [http://reactivex.io](http://reactivex.io/)
 - [RxMarbles: Rx standard sequence operators visualized(visualization tool)](http://rxmarbles.com/)
 - [RxMarbles for iOS](https://github.com/RxSwiftCommunity/RxMarbles)

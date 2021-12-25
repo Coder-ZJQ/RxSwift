@@ -1,6 +1,0 @@
-framework module Pods_BaseTarget_05_Wundercast_beginning_rxcocoa {
-  umbrella header "Pods-BaseTarget-05.Wundercast-beginning-rxcocoa-umbrella.h"
-
-  export *
-  module * { export * }
-}
