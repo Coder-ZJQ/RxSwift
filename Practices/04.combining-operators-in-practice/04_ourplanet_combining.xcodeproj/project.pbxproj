@@ -32,6 +32,8 @@
 		3D46E62E1E258DFC0090C97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D46E6311E258DFC0090C97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D46E6331E258DFC0090C97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E1D60456B0766D69ED01C17 /* Pods-BaseTarget-04_ourplanet_combining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-04_ourplanet_combining.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-04_ourplanet_combining/Pods-BaseTarget-04_ourplanet_combining.debug.xcconfig"; sourceTree = "<group>"; };
+		525F8C0813C945826BA89AD9 /* Pods-BaseTarget-04_ourplanet_combining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-04_ourplanet_combining.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-04_ourplanet_combining/Pods-BaseTarget-04_ourplanet_combining.release.xcconfig"; sourceTree = "<group>"; };
 		5AC97A663BBCFC7C476A567A /* Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig"; sourceTree = "<group>"; };
 		8703A3197A90F9C7AEE7542E /* Pods-BaseTarget-04.ourplanet-combining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-04.ourplanet-combining.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining.release.xcconfig"; sourceTree = "<group>"; };
 		CE298B0C4176A8DE62C86A1E /* Pods-04.ourplanet-combining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-04.ourplanet-combining.debug.xcconfig"; path = "Target Support Files/Pods-04.ourplanet-combining/Pods-04.ourplanet-combining.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 				D6F423E07D542C86B4F5AD62 /* Pods-04.ourplanet-combining.release.xcconfig */,
 				5AC97A663BBCFC7C476A567A /* Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig */,
 				8703A3197A90F9C7AEE7542E /* Pods-BaseTarget-04.ourplanet-combining.release.xcconfig */,
+				4E1D60456B0766D69ED01C17 /* Pods-BaseTarget-04_ourplanet_combining.debug.xcconfig */,
+				525F8C0813C945826BA89AD9 /* Pods-BaseTarget-04_ourplanet_combining.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -207,7 +211,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-04_ourplanet_combining/Pods-BaseTarget-04_ourplanet_combining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
@@ -220,7 +224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-04.ourplanet-combining/Pods-BaseTarget-04.ourplanet-combining-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-04_ourplanet_combining/Pods-BaseTarget-04_ourplanet_combining-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D52230883AED9E77C8A8BE86 /* [CP] Check Pods Manifest.lock */ = {
@@ -238,7 +242,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-04.ourplanet-combining-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-04_ourplanet_combining-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -395,7 +399,7 @@
 		};
 		3D46E6371E258DFC0090C97B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AC97A663BBCFC7C476A567A /* Pods-BaseTarget-04.ourplanet-combining.debug.xcconfig */;
+			baseConfigurationReference = 4E1D60456B0766D69ED01C17 /* Pods-BaseTarget-04_ourplanet_combining.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -409,7 +413,7 @@
 		};
 		3D46E6381E258DFC0090C97B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8703A3197A90F9C7AEE7542E /* Pods-BaseTarget-04.ourplanet-combining.release.xcconfig */;
+			baseConfigurationReference = 525F8C0813C945826BA89AD9 /* Pods-BaseTarget-04_ourplanet_combining.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

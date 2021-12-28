@@ -18,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		08FAE0319EC2865709FD4CB7 /* Pods-03.GitFeed-transforming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03.GitFeed-transforming.release.xcconfig"; path = "Target Support Files/Pods-03.GitFeed-transforming/Pods-03.GitFeed-transforming.release.xcconfig"; sourceTree = "<group>"; };
+		1CFCAD73EE8D73CC108BC804 /* Pods-BaseTarget-03_GitFeed_transforming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-03_GitFeed_transforming.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-03_GitFeed_transforming/Pods-BaseTarget-03_GitFeed_transforming.release.xcconfig"; sourceTree = "<group>"; };
+		278B7FEA184A02A5B9E6E1B9 /* Pods-BaseTarget-03_GitFeed_transforming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-03_GitFeed_transforming.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-03_GitFeed_transforming/Pods-BaseTarget-03_GitFeed_transforming.debug.xcconfig"; sourceTree = "<group>"; };
 		2921B84F62B4EDFB9E6225D6 /* Pods-03.GitFeed-transforming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03.GitFeed-transforming.debug.xcconfig"; path = "Target Support Files/Pods-03.GitFeed-transforming/Pods-03.GitFeed-transforming.debug.xcconfig"; sourceTree = "<group>"; };
 		739307AC177804CB38C8FCED /* Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig"; sourceTree = "<group>"; };
 		7F60B90C874414B062336C46 /* Pods_BaseTarget_03_GitFeed_transforming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_03_GitFeed_transforming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,8 @@
 				08FAE0319EC2865709FD4CB7 /* Pods-03.GitFeed-transforming.release.xcconfig */,
 				739307AC177804CB38C8FCED /* Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig */,
 				8646F171AF1108A5317EC373 /* Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig */,
+				278B7FEA184A02A5B9E6E1B9 /* Pods-BaseTarget-03_GitFeed_transforming.debug.xcconfig */,
+				1CFCAD73EE8D73CC108BC804 /* Pods-BaseTarget-03_GitFeed_transforming.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -188,7 +192,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-03_GitFeed_transforming/Pods-BaseTarget-03_GitFeed_transforming-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
@@ -203,7 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-03.GitFeed-transforming/Pods-BaseTarget-03.GitFeed-transforming-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-03_GitFeed_transforming/Pods-BaseTarget-03_GitFeed_transforming-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A34E976856432E2AA7397918 /* [CP] Check Pods Manifest.lock */ = {
@@ -221,7 +225,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-03.GitFeed-transforming-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-03_GitFeed_transforming-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,7 +378,7 @@
 		};
 		9C8332841DF73BA90067DC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 739307AC177804CB38C8FCED /* Pods-BaseTarget-03.GitFeed-transforming.debug.xcconfig */;
+			baseConfigurationReference = 278B7FEA184A02A5B9E6E1B9 /* Pods-BaseTarget-03_GitFeed_transforming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39Z8MCG9JF;
@@ -389,7 +393,7 @@
 		};
 		9C8332851DF73BA90067DC80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8646F171AF1108A5317EC373 /* Pods-BaseTarget-03.GitFeed-transforming.release.xcconfig */;
+			baseConfigurationReference = 1CFCAD73EE8D73CC108BC804 /* Pods-BaseTarget-03_GitFeed_transforming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39Z8MCG9JF;

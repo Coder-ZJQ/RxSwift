@@ -16,49 +16,49 @@ abstract_target 'BaseTarget' do
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
   
-  target '00.Playgrounds-Support' do
-    project 'Practices/00.playgrounds-support/00.Playgrounds-Support.xcodeproj'
+  target '00_Playgrounds_Support' do
+    project 'Practices/00.playgrounds-support/00_Playgrounds_Support.xcodeproj'
   end
 
-  target '01.Combinestagram-observables' do
-    project 'Practices/01.observables-in-practice/01.Combinestagram-observables.xcodeproj'
+  target '01_Combinestagram_observables' do
+    project 'Practices/01.observables-in-practice/01_Combinestagram_observables.xcodeproj'
   end
 
-  target '02.Combinestagram-filtering' do
-    project 'Practices/02.filtering-operators-in-practice/02.Combinestagram-filtering.xcodeproj'
+  target '02_Combinestagram_filtering' do
+    project 'Practices/02.filtering-operators-in-practice/02_Combinestagram_filtering.xcodeproj'
   end
 
-  target '03.GitFeed-transforming' do
-    project 'Practices/03.transformng-operators-in-practice/03.GitFeed-transforming.xcodeproj'
+  target '03_GitFeed_transforming' do
+    project 'Practices/03.transformng-operators-in-practice/03_GitFeed_transforming.xcodeproj'
     pod 'Kingfisher'
   end
 
-  target '04.ourplanet-combining' do
-    project 'Practices/04.combining-operators-in-practice/04.ourplanet-combining.xcodeproj'
+  target '04_ourplanet_combining' do
+    project 'Practices/04.combining-operators-in-practice/04_ourplanet_combining.xcodeproj'
   end
 
-  target '05.Wundercast-beginning-rxcocoa' do
-    project 'Practices/05.beginning-rxcocoa/05.Wundercast-beginning-rxcocoa.xcodeproj'
+  target '05_Wundercast_beginning_rxcocoa' do
+    project 'Practices/05.beginning-rxcocoa/05_Wundercast_beginning_rxcocoa.xcodeproj'
   end
 
-  target '06.Wundercast-intermediate-rxcocoa' do
-    project 'Practices/06.intermediate-rxcocoa/06.Wundercast-intermediate-rxcocoa.xcodeproj'
+  target '06_Wundercast_intermediate_rxcocoa' do
+    project 'Practices/06.intermediate-rxcocoa/06_Wundercast_intermediate_rxcocoa.xcodeproj'
   end
 
-  target '07.Wundercast-error-handling' do
-    project 'Practices/07.error-handling-in-practice/07.Wundercast-error-handling.xcodeproj'
+  target '07_Wundercast_error_handling' do
+    project 'Practices/07.error-handling-in-practice/07_Wundercast_error_handling.xcodeproj'
   end
 
   
-  target '08.Schedulers' do
+  target '08_Schedulers' do
     platform :osx, '10.14'
-    project 'Practices/08.intro-to-schedulers/08.Schedulers.xcodeproj'
+    project 'Practices/08.intro-to-schedulers/08_Schedulers.xcodeproj'
     pod 'RxSwift', '6.2.0'
     pod 'RxCocoa', '6.2.0'
   end
   
-  target '09.Testing' do
-    project 'Practices/09.testing-with-rxtest/09.Testing.xcodeproj'
+  target '09_Testing' do
+    project 'Practices/09.testing-with-rxtest/09_Testing.xcodeproj'
     pod 'Hue'
 
     target 'TestingTests' do
@@ -67,8 +67,8 @@ abstract_target 'BaseTarget' do
     end
   end
 
-  target '10.iGif' do
-    project 'Practices/10.creating-custom-reactive-extension/10.iGif-extension.xcodeproj'
+  target '10_iGif_extension' do
+    project 'Practices/10.creating-custom-reactive-extension/10_iGif_extension.xcodeproj'
     pod 'SwiftyJSON'
     pod 'Gifu'
 
@@ -82,8 +82,8 @@ abstract_target 'BaseTarget' do
 
   end
 
-  target '12.QuickTodo-mvvm' do
-    project 'Practices/12.building-a-complete-rxswift-app/12.QuickTodo-mvvm.xcodeproj'
+  target '12_QuickTodo_mvvm' do
+    project 'Practices/12.building-a-complete-rxswift-app/12_QuickTodo_mvvm.xcodeproj'
     # core RxSwift
     pod 'RxDataSources'
 
@@ -99,7 +99,7 @@ abstract_target 'BaseTarget' do
 end
 
 #abstract_target 'TweetieAbstract' do
-#  project 'Practices/11.mvvm-with-rxswift/11.Tweetie-mvvm.xcodeproj'
+#  project 'Practices/11.mvvm-with-rxswift/11_Tweetie_mvvm.xcodeproj'
 #  pod 'Alamofire', '4.9.1'
 #
 #  pod 'RxSwift', '5.1.1'
@@ -111,12 +111,12 @@ end
 #  pod 'Reachability', '3.2.0'
 #  pod 'RxRealmDataSources', '0.3.0'
 #
-#  target '11.Tweetie' do
+#  target '11_Tweetie' do
 #    platform :ios, '12.0'
 #    pod 'RxDataSources', '4.0.1'
 #  end
 #
-#  target '11.MacTweetie' do
+#  target '11_MacTweetie' do
 #    platform :osx, '10.14'
 #  end
 #

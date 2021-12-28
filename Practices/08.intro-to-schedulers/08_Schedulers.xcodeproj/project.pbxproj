@@ -27,10 +27,12 @@
 /* Begin PBXFileReference section */
 		099CE0D7F82BADD2866502FD /* Pods-08.Schedulers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-08.Schedulers.release.xcconfig"; path = "Target Support Files/Pods-08.Schedulers/Pods-08.Schedulers.release.xcconfig"; sourceTree = "<group>"; };
 		59C848877FA8EF23EDB537DA /* Pods_08_Schedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_08_Schedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD13EC2D65E9556B9AB30C33 /* Pods-08_Schedulers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-08_Schedulers.debug.xcconfig"; path = "Target Support Files/Pods-08_Schedulers/Pods-08_Schedulers.debug.xcconfig"; sourceTree = "<group>"; };
 		C56CBA9F20B3D9D68F1C2D44 /* Pods-08.Schedulers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-08.Schedulers.debug.xcconfig"; path = "Target Support Files/Pods-08.Schedulers/Pods-08.Schedulers.debug.xcconfig"; sourceTree = "<group>"; };
 		CBFDE2071E4E699B00F207F0 /* 08_Schedulers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 08_Schedulers; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFDE20A1E4E699B00F207F0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CBFDE2111E4E6F5F00F207F0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DB417A18872A673A32A065F2 /* Pods-08_Schedulers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-08_Schedulers.release.xcconfig"; path = "Target Support Files/Pods-08_Schedulers/Pods-08_Schedulers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,8 @@
 			children = (
 				C56CBA9F20B3D9D68F1C2D44 /* Pods-08.Schedulers.debug.xcconfig */,
 				099CE0D7F82BADD2866502FD /* Pods-08.Schedulers.release.xcconfig */,
+				AD13EC2D65E9556B9AB30C33 /* Pods-08_Schedulers.debug.xcconfig */,
+				DB417A18872A673A32A065F2 /* Pods-08_Schedulers.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -161,7 +165,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-08.Schedulers-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-08_Schedulers-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -290,7 +294,7 @@
 		};
 		CBFDE20F1E4E699B00F207F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C56CBA9F20B3D9D68F1C2D44 /* Pods-08.Schedulers.debug.xcconfig */;
+			baseConfigurationReference = AD13EC2D65E9556B9AB30C33 /* Pods-08_Schedulers.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				OTHER_LDFLAGS = (
@@ -298,7 +302,7 @@
 					"-framework",
 					"\"RxSwift\"",
 					"-rpath",
-					$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/,
+					"$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -307,7 +311,7 @@
 		};
 		CBFDE2101E4E699B00F207F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 099CE0D7F82BADD2866502FD /* Pods-08.Schedulers.release.xcconfig */;
+			baseConfigurationReference = DB417A18872A673A32A065F2 /* Pods-08_Schedulers.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				OTHER_LDFLAGS = (
@@ -315,7 +319,7 @@
 					"-framework",
 					"\"RxSwift\"",
 					"-rpath",
-					$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/,
+					"$DT_TOOLCHAIN_DIR/usr/lib/swift/macosx/",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

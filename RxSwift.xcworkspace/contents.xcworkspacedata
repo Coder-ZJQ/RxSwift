@@ -50,4 +50,40 @@
    <FileRef
       location = "group:Pods/Rx.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Practices/00.playgrounds-support/00_Playgrounds_Support.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/01.observables-in-practice/01_Combinestagram_observables.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/02.filtering-operators-in-practice/02_Combinestagram_filtering.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/03.transformng-operators-in-practice/03_GitFeed_transforming.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/04.combining-operators-in-practice/04_ourplanet_combining.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/05.beginning-rxcocoa/05_Wundercast_beginning_rxcocoa.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/06.intermediate-rxcocoa/06_Wundercast_intermediate_rxcocoa.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/07.error-handling-in-practice/07_Wundercast_error_handling.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/08.intro-to-schedulers/08_Schedulers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/09.testing-with-rxtest/09_Testing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/10.creating-custom-reactive-extension/10_iGif_extension.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Practices/12.building-a-complete-rxswift-app/12_QuickTodo_mvvm.xcodeproj">
+   </FileRef>
 </Workspace>

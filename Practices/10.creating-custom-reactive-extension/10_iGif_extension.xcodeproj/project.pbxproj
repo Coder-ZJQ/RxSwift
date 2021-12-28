@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		199377E5744163BA8AF16DB3 /* Pods_BaseTarget_10_iGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEB7A7D89384FD4D90422C3 /* Pods_BaseTarget_10_iGif.framework */; };
 		A27009322210B60200BDFEEC /* GiphyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27009312210B60200BDFEEC /* GiphyGif.swift */; };
 		A27009342210B6E500BDFEEC /* GiphySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27009332210B6E500BDFEEC /* GiphySearchResponse.swift */; };
+		B9B758902D4AA4862F825101 /* Pods_BaseTarget_10_iGif_extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D22523CD9C3E42CC04FF21 /* Pods_BaseTarget_10_iGif_extension.framework */; };
 		CB8945F61E41C9B600F46229 /* GifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8945F51E41C9B600F46229 /* GifTableViewCell.swift */; };
 		CB8945F81E424A5500F46229 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8945F71E424A5500F46229 /* MainTableViewController.swift */; };
 		CBB17E091E41227B0016EBA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB17E081E41227B0016EBA9 /* AppDelegate.swift */; };
@@ -19,7 +19,7 @@
 		CBB17E1E1E41227C0016EBA9 /* iGifTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB17E1D1E41227C0016EBA9 /* iGifTests.swift */; };
 		CBB17E2F1E41B8790016EBA9 /* URLSession+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB17E2E1E41B8790016EBA9 /* URLSession+Rx.swift */; };
 		CBB17E311E41B8AF0016EBA9 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB17E301E41B8AF0016EBA9 /* ApiController.swift */; };
-		DFBD90CD6405AEF953FA7484 /* Pods_BaseTarget_10_iGif_iGifTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3839D389342C97F8CBCF694 /* Pods_BaseTarget_10_iGif_iGifTests.framework */; };
+		E8ED11F7174A01423A339103 /* Pods_BaseTarget_10_iGif_extension_iGifTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2A7223A9991DD2CD6D50DF /* Pods_BaseTarget_10_iGif_extension_iGifTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +34,21 @@
 
 /* Begin PBXFileReference section */
 		06B17E3FD4D1F2E8ABD5F34C /* Pods-BaseTarget-iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif/Pods-BaseTarget-iGif.release.xcconfig"; sourceTree = "<group>"; };
+		0C2A7223A9991DD2CD6D50DF /* Pods_BaseTarget_10_iGif_extension_iGifTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_10_iGif_extension_iGifTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A03F5AAF68A613D05C65ACF /* Pods-BaseTarget-iGif-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif-iGifTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif-iGifTests/Pods-BaseTarget-iGif-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
 		40F99F01656536E08A620C8F /* Pods-BaseTarget-iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif/Pods-BaseTarget-iGif.debug.xcconfig"; sourceTree = "<group>"; };
 		69876ECC13DC57449540EFB5 /* Pods-iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif/Pods-iGif.debug.xcconfig"; sourceTree = "<group>"; };
-		6AEB7A7D89384FD4D90422C3 /* Pods_BaseTarget_10_iGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_10_iGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCD66354300F2627975536A /* Pods-iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif/Pods-iGif.release.xcconfig"; sourceTree = "<group>"; };
 		793A93D635F21620BAD12C9D /* Pods-BaseTarget-iGif-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif-iGifTests/Pods-BaseTarget-iGif-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D442BE0025DB832B400677F /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension.release.xcconfig"; sourceTree = "<group>"; };
+		85F04DD6E35B2C7A41592D32 /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
 		96AD364C630A748D9F72A756 /* Pods-BaseTarget-10.iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif/Pods-BaseTarget-10.iGif.debug.xcconfig"; sourceTree = "<group>"; };
 		A27009312210B60200BDFEEC /* GiphyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyGif.swift; sourceTree = "<group>"; };
 		A27009332210B6E500BDFEEC /* GiphySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphySearchResponse.swift; sourceTree = "<group>"; };
+		ADD64680C23382D2B6EC2671 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF9308D6BFD686E1EB8160A5 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension.debug.xcconfig"; sourceTree = "<group>"; };
+		B1D22523CD9C3E42CC04FF21 /* Pods_BaseTarget_10_iGif_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_10_iGif_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3173B02A0D825722EF9C063 /* Pods-BaseTarget-10.iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif/Pods-BaseTarget-10.iGif.release.xcconfig"; sourceTree = "<group>"; };
-		B3839D389342C97F8CBCF694 /* Pods_BaseTarget_10_iGif_iGifTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_10_iGif_iGifTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD48EE14DF392F7BF21707DF /* Pods-iGif-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif-iGifTests/Pods-iGif-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
 		C81B58246BA4220CFF42CD5F /* Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif-iGifTests/Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB8945F51E41C9B600F46229 /* GifTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199377E5744163BA8AF16DB3 /* Pods_BaseTarget_10_iGif.framework in Frameworks */,
+				B9B758902D4AA4862F825101 /* Pods_BaseTarget_10_iGif_extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFBD90CD6405AEF953FA7484 /* Pods_BaseTarget_10_iGif_iGifTests.framework in Frameworks */,
+				E8ED11F7174A01423A339103 /* Pods_BaseTarget_10_iGif_extension_iGifTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,10 @@
 				B3173B02A0D825722EF9C063 /* Pods-BaseTarget-10.iGif.release.xcconfig */,
 				D4CEB2A0AD4B6EB3ECC046D8 /* Pods-BaseTarget-10.iGif-iGifTests.debug.xcconfig */,
 				C81B58246BA4220CFF42CD5F /* Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig */,
+				AF9308D6BFD686E1EB8160A5 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */,
+				7D442BE0025DB832B400677F /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */,
+				ADD64680C23382D2B6EC2671 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */,
+				85F04DD6E35B2C7A41592D32 /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -185,8 +193,8 @@
 		CF3EBD2F2A1138EF99549AF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6AEB7A7D89384FD4D90422C3 /* Pods_BaseTarget_10_iGif.framework */,
-				B3839D389342C97F8CBCF694 /* Pods_BaseTarget_10_iGif_iGifTests.framework */,
+				B1D22523CD9C3E42CC04FF21 /* Pods_BaseTarget_10_iGif_extension.framework */,
+				0C2A7223A9991DD2CD6D50DF /* Pods_BaseTarget_10_iGif_extension_iGifTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,9 +202,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CBB17E041E41227B0016EBA9 /* 10.iGif */ = {
+		CBB17E041E41227B0016EBA9 /* 10_iGif_extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBB17E221E41227C0016EBA9 /* Build configuration list for PBXNativeTarget "10.iGif" */;
+			buildConfigurationList = CBB17E221E41227C0016EBA9 /* Build configuration list for PBXNativeTarget "10_iGif_extension" */;
 			buildPhases = (
 				46D22B3577C5F66527A44115 /* [CP] Check Pods Manifest.lock */,
 				CBB17E011E41227B0016EBA9 /* Sources */,
@@ -208,7 +216,7 @@
 			);
 			dependencies = (
 			);
-			name = 10.iGif;
+			name = 10_iGif_extension;
 			productName = iGif;
 			productReference = CBB17E051E41227B0016EBA9 /* iGif.app */;
 			productType = "com.apple.product-type.application";
@@ -268,7 +276,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBB17E041E41227B0016EBA9 /* 10.iGif */,
+				CBB17E041E41227B0016EBA9 /* 10_iGif_extension */,
 				CBB17E181E41227C0016EBA9 /* iGifTests */,
 			);
 		};
@@ -301,7 +309,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10.iGif-iGifTests/Pods-BaseTarget-10.iGif-iGifTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
@@ -326,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10.iGif-iGifTests/Pods-BaseTarget-10.iGif-iGifTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		047298B4D1AF6545A5E15374 /* [CP] Check Pods Manifest.lock */ = {
@@ -344,7 +352,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-10.iGif-iGifTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-10_iGif_extension-iGifTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,7 +374,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-10.iGif-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-10_iGif_extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -379,7 +387,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10.iGif/Pods-BaseTarget-10.iGif-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
@@ -396,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10.iGif/Pods-BaseTarget-10.iGif-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -429,7 +437,7 @@
 /* Begin PBXTargetDependency section */
 		CBB17E1B1E41227C0016EBA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBB17E041E41227B0016EBA9 /* 10.iGif */;
+			target = CBB17E041E41227B0016EBA9 /* 10_iGif_extension */;
 			targetProxy = CBB17E1A1E41227C0016EBA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -563,7 +571,7 @@
 		};
 		CBB17E231E41227C0016EBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96AD364C630A748D9F72A756 /* Pods-BaseTarget-10.iGif.debug.xcconfig */;
+			baseConfigurationReference = AF9308D6BFD686E1EB8160A5 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -578,7 +586,7 @@
 		};
 		CBB17E241E41227C0016EBA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3173B02A0D825722EF9C063 /* Pods-BaseTarget-10.iGif.release.xcconfig */;
+			baseConfigurationReference = 7D442BE0025DB832B400677F /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -593,7 +601,7 @@
 		};
 		CBB17E261E41227C0016EBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4CEB2A0AD4B6EB3ECC046D8 /* Pods-BaseTarget-10.iGif-iGifTests.debug.xcconfig */;
+			baseConfigurationReference = ADD64680C23382D2B6EC2671 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -608,7 +616,7 @@
 		};
 		CBB17E271E41227C0016EBA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C81B58246BA4220CFF42CD5F /* Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig */;
+			baseConfigurationReference = 85F04DD6E35B2C7A41592D32 /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -633,7 +641,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBB17E221E41227C0016EBA9 /* Build configuration list for PBXNativeTarget "10.iGif" */ = {
+		CBB17E221E41227C0016EBA9 /* Build configuration list for PBXNativeTarget "10_iGif_extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBB17E231E41227C0016EBA9 /* Debug */,

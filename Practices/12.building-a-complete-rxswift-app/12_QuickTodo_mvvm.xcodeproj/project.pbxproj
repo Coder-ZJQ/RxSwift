@@ -40,6 +40,7 @@
 		3D932B091E4D245600E4BC3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D932B0C1E4D245600E4BC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D932B0E1E4D245600E4BC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		644C6D73C441FEEAB501B699 /* Pods-BaseTarget-12_QuickTodo_mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-12_QuickTodo_mvvm.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-12_QuickTodo_mvvm/Pods-BaseTarget-12_QuickTodo_mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		B80691F4541A66AEC3D137A6 /* Pods_BaseTarget_12_QuickTodo_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_12_QuickTodo_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FB0112612BA42000719E47 /* Pods-12.QuickTodo-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12.QuickTodo-mvvm.debug.xcconfig"; path = "Target Support Files/Pods-12.QuickTodo-mvvm/Pods-12.QuickTodo-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
 		D8D4B0622FCB80BA64F522B8 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		E2959CA489AE2FC9049A88E3 /* Pods-12.QuickTodo-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12.QuickTodo-mvvm.release.xcconfig"; path = "Target Support Files/Pods-12.QuickTodo-mvvm/Pods-12.QuickTodo-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		F3C40CF3249B01C2008ADBAF /* PushedEditTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PushedEditTaskViewModel.swift; path = quicktodo/Controllers/PushedEditTaskViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F3C40CF5249B0280008ADBAF /* PushedEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PushedEditTaskViewController.swift; path = quicktodo/Controllers/PushedEditTaskViewController.swift; sourceTree = SOURCE_ROOT; };
+		F70C08EE25BC795E562D7854 /* Pods-BaseTarget-12_QuickTodo_mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-12_QuickTodo_mvvm.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-12_QuickTodo_mvvm/Pods-BaseTarget-12_QuickTodo_mvvm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,8 @@
 				E2959CA489AE2FC9049A88E3 /* Pods-12.QuickTodo-mvvm.release.xcconfig */,
 				1099C1410070D40C34337B4D /* Pods-BaseTarget-12.QuickTodo-mvvm.debug.xcconfig */,
 				DB5E59756396235D8745D99C /* Pods-BaseTarget-12.QuickTodo-mvvm.release.xcconfig */,
+				F70C08EE25BC795E562D7854 /* Pods-BaseTarget-12_QuickTodo_mvvm.debug.xcconfig */,
+				644C6D73C441FEEAB501B699 /* Pods-BaseTarget-12_QuickTodo_mvvm.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -277,7 +281,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-12.QuickTodo-mvvm-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-12_QuickTodo_mvvm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -290,7 +294,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-12.QuickTodo-mvvm/Pods-BaseTarget-12.QuickTodo-mvvm-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-12_QuickTodo_mvvm/Pods-BaseTarget-12_QuickTodo_mvvm-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
@@ -317,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-12.QuickTodo-mvvm/Pods-BaseTarget-12.QuickTodo-mvvm-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseTarget-12_QuickTodo_mvvm/Pods-BaseTarget-12_QuickTodo_mvvm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -481,7 +485,7 @@
 		};
 		3D932B121E4D245600E4BC3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1099C1410070D40C34337B4D /* Pods-BaseTarget-12.QuickTodo-mvvm.debug.xcconfig */;
+			baseConfigurationReference = F70C08EE25BC795E562D7854 /* Pods-BaseTarget-12_QuickTodo_mvvm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -496,7 +500,7 @@
 		};
 		3D932B131E4D245600E4BC3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB5E59756396235D8745D99C /* Pods-BaseTarget-12.QuickTodo-mvvm.release.xcconfig */;
+			baseConfigurationReference = 644C6D73C441FEEAB501B699 /* Pods-BaseTarget-12_QuickTodo_mvvm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

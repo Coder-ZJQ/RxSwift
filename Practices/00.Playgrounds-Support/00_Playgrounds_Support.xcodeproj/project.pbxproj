@@ -11,6 +11,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E3C387F7E17EB127BBF24BD /* Pods-BaseTarget-00_Playgrounds_Support.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-00_Playgrounds_Support.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-00_Playgrounds_Support/Pods-BaseTarget-00_Playgrounds_Support.release.xcconfig"; sourceTree = "<group>"; };
+		46B5A050B5A5492E06260B1E /* Pods-BaseTarget-00_Playgrounds_Support.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-00_Playgrounds_Support.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-00_Playgrounds_Support/Pods-BaseTarget-00_Playgrounds_Support.debug.xcconfig"; sourceTree = "<group>"; };
 		67916BEAE9A51E8B26A94F27 /* Pods_BaseTarget_00_Playgrounds_Support.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_00_Playgrounds_Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70498BB3E7573B6BB035619C /* Pods-00.Playgrounds-Support.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-00.Playgrounds-Support.release.xcconfig"; path = "Target Support Files/Pods-00.Playgrounds-Support/Pods-00.Playgrounds-Support.release.xcconfig"; sourceTree = "<group>"; };
 		782A8BCB56FD8E28BDE4F4E4 /* Pods-BaseTarget-00.Playgrounds-Support.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-00.Playgrounds-Support.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-00.Playgrounds-Support/Pods-BaseTarget-00.Playgrounds-Support.debug.xcconfig"; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 				70498BB3E7573B6BB035619C /* Pods-00.Playgrounds-Support.release.xcconfig */,
 				782A8BCB56FD8E28BDE4F4E4 /* Pods-BaseTarget-00.Playgrounds-Support.debug.xcconfig */,
 				E66550A5BF5AA4F617A6A171 /* Pods-BaseTarget-00.Playgrounds-Support.release.xcconfig */,
+				46B5A050B5A5492E06260B1E /* Pods-BaseTarget-00_Playgrounds_Support.debug.xcconfig */,
+				1E3C387F7E17EB127BBF24BD /* Pods-BaseTarget-00_Playgrounds_Support.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -168,7 +172,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-00.Playgrounds-Support-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseTarget-00_Playgrounds_Support-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,7 +314,7 @@
 		};
 		F37626D92490C3D000D0A296 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 782A8BCB56FD8E28BDE4F4E4 /* Pods-BaseTarget-00.Playgrounds-Support.debug.xcconfig */;
+			baseConfigurationReference = 46B5A050B5A5492E06260B1E /* Pods-BaseTarget-00_Playgrounds_Support.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -336,7 +340,7 @@
 		};
 		F37626DA2490C3D000D0A296 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E66550A5BF5AA4F617A6A171 /* Pods-BaseTarget-00.Playgrounds-Support.release.xcconfig */;
+			baseConfigurationReference = 1E3C387F7E17EB127BBF24BD /* Pods-BaseTarget-00_Playgrounds_Support.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

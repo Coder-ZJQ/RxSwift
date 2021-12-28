@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBB17E041E41227B0016EBA9"
                BuildableName = "iGif.app"
-               BlueprintName = "10.iGif"
+               BlueprintName = "10_iGif_extension"
                ReferencedContainer = "container:10_iGif_extension.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -70,7 +70,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBB17E041E41227B0016EBA9"
             BuildableName = "iGif.app"
-            BlueprintName = "10.iGif"
+            BlueprintName = "10_iGif_extension"
             ReferencedContainer = "container:10_iGif_extension.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -87,7 +87,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBB17E041E41227B0016EBA9"
             BuildableName = "iGif.app"
-            BlueprintName = "10.iGif"
+            BlueprintName = "10_iGif_extension"
             ReferencedContainer = "container:10_iGif_extension.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
