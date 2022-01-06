@@ -89,7 +89,7 @@ example(of: "flatMapLatest") {
     let student = PublishSubject<Student>()
     
     student
-        .flatMapLatest({ $0.score })
+        .flatMapFirst({ $0.score })
         .subscribe(onNext: {
             print($0)
         })
@@ -104,6 +104,33 @@ example(of: "flatMapLatest") {
     laura.score.onNext(95)
     
     charlotte.score.onNext(100)
+}
+
+/*:
+![groupBy](groupBy.png)
+ */
+example(of: "groupBy") {
+    let observable = Observable.of(0, 1, 2, 3, 4, 5)
+    let groupby = observable.groupBy {
+        return $0 % 2
+    }
+    groupby.subscribe {
+        print($0)
+    }.dispose()
+    
+    print("-------")
+    groupby.flatMapLatest {
+        return $0
+    }.subscribe {
+        print($0)
+    }.dispose()
+    
+    print("-------")
+    groupby.flatMapFirst {
+        return $0
+    }.subscribe {
+        print($0)
+    }.dispose()
 }
 
 /*:
@@ -127,7 +154,7 @@ example(of: "materialize and dematerialize") {
     studentScore
         .filter({
             guard $0.error == nil else {
-                print($0.error!)
+//                print($0.error!)
                 return false
             }
             return true
@@ -139,6 +166,7 @@ example(of: "materialize and dematerialize") {
         .disposed(by: disposeBag)
     
     laura.score.onNext(85)
+//    laura.score.onCompleted()
     laura.score.onError(MyError.anError)
     laura.score.onNext(90)
     student.onNext(charlotte)

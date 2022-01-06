@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2020 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -35,17 +39,6 @@ class EONET {
   static let categoriesEndpoint = "/categories"
   static let eventsEndpoint = "/events"
 
-  static var categories: Observable<[EOCategory]> = {
-    let request: Observable<[EOCategory]> = EONET.request(endpoint: categoriesEndpoint, contentIdentifier: "categories")
-    
-    return request
-      .map { (categories: [EOCategory]) -> [EOCategory] in
-        categories.sorted { $0.name < $1.name }
-      }
-      .catchAndReturn([])
-      .share(replay: 1, scope: .forever)
-  }()
-  
   static func jsonDecoder(contentIdentifier: String) -> JSONDecoder {
     let decoder = JSONDecoder()
     decoder.userInfo[.contentIdentifier] = contentIdentifier
@@ -62,51 +55,80 @@ class EONET {
       .sorted(by: EOEvent.compareDates)
   }
   
-  static func request<T: Decodable>(endpoint: String, query: [String: Any] = [:], contentIdentifier: String) -> Observable<T> {
+  static func request<T: Decodable>(endpoint: String,
+                                    query: [String: Any] = [:],
+                                    contentIdentifier: String) -> Observable<T> {
     do {
       guard let url = URL(string: API)?.appendingPathComponent(endpoint),
-      var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
+      var component = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
         throw EOError.invalidURL(endpoint)
       }
-      components.queryItems = try query.compactMap({ (key, value) in
+      component.queryItems = try query.compactMap({ key, value in
         guard let v = value as? CustomStringConvertible else {
           throw EOError.invalidParameter(key, value)
         }
         return URLQueryItem(name: key, value: v.description)
       })
-      guard let finalURL = components.url else {
+      guard let finalUrl = component.url else {
         throw EOError.invalidURL(endpoint)
       }
-      
-      let request = URLRequest(url: finalURL)
+      let request = URLRequest(url: finalUrl)
       return URLSession.shared.rx.response(request: request)
-        .map { (response, data) -> T in
+        .map { response, data -> T in
           let decoder = self.jsonDecoder(contentIdentifier: contentIdentifier)
-          let envelope = try decoder.decode(EOEnvelope<T>.self, from: data)
-          return envelope.content
-      }
+          let eoenvelop = try decoder.decode(EOEnvelope<T>.self, from: data)
+          return eoenvelop.content
+        }
     } catch {
       return Observable.empty()
     }
   }
   
-  private static func events(forLast days: Int, closed: Bool, endpoint: String) -> Observable<[EOEvent]> {
+  static var categories: Observable<[EOCategory]> = {
+    let request: Observable<[EOCategory]> = EONET.request(endpoint: categoriesEndpoint, contentIdentifier: "categories")
+    return request
+      .map({ categories in
+        categories.sorted {
+          $0.name < $1.name
+        }
+      })
+      .catchErrorJustReturn([])
+      .share(replay: 1, scope: .forever)
+  }()
+  
+  private static func events(forLast days: Int, closed: Bool) -> Observable<[EOEvent]> {
     let query: [String: Any] = [
       "days": days,
-      "status": (closed ? "closed" : "open")
+      "status": closed ? "closed" : "open"
     ]
-    let request: Observable<[EOEvent]> = EONET.request(endpoint: endpoint, query: query, contentIdentifier: "events")
-    return request.catchAndReturn([])
+    let request: Observable<[EOEvent]> = EONET.request(endpoint: eventsEndpoint, query: query, contentIdentifier: "events")
+    return request.catchErrorJustReturn([])
   }
-
-  static func events(forLast days: Int = 360, category: EOCategory) -> Observable<[EOEvent]> {
-    let openEvents = events(forLast: days, closed: false, endpoint: category.endpoint)
-    let closeEvents = events(forLast: days, closed: true, endpoint: category.endpoint)
-    
-    return Observable.of(openEvents, closeEvents)
+  
+  static func events(forLast days: Int = 360) -> Observable<[EOEvent]> {
+    let open = events(forLast: days, closed: false)
+    let closed = events(forLast: days, closed: true)
+    return Observable.of(open, closed)
       .merge()
       .reduce([], accumulator: +)
   }
   
   
+  private static func events(forLast days: Int, closed: Bool, endpoint: String) -> Observable<[EOEvent]> {
+    let query: [String: Any] = [
+      "days": days,
+      "status": closed ? "closed" : "open"
+    ]
+    let request: Observable<[EOEvent]> = EONET.request(endpoint: endpoint, query: query, contentIdentifier: "events")
+    return request.catchErrorJustReturn([])
+  }
+  
+  static func events(forLast days: Int = 360, category: EOCategory) -> Observable<[EOEvent]> {
+    let open = events(forLast: days, closed: false, endpoint: category.endpoint)
+    let closed = events(forLast: days, closed: true, endpoint: category.endpoint)
+    return Observable.of(open, closed)
+      .merge()
+      .reduce([], accumulator: +)
+  }
+
 }

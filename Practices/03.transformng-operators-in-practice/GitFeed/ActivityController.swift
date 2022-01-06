@@ -1,32 +1,34 @@
-/*
- * Copyright (c) 2016-present Razeware LLC
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
- * distribute, sublicense, create a derivative work, and/or sell copies of the
- * Software in any work that is designed, intended, or marketed for pedagogical or
- * instructional purposes related to programming, coding, application development,
- * or information technology.  Permission for such use, copying, modification,
- * merger, publication, distribution, sublicensing, creation of derivative works,
- * or sale is expressly withheld.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
+/// Copyright (c) 2020 Razeware LLC
+/// 
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+/// 
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+/// 
+/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+/// distribute, sublicense, create a derivative work, and/or sell copies of the
+/// Software in any work that is designed, intended, or marketed for pedagogical or
+/// instructional purposes related to programming, coding, application development,
+/// or information technology.  Permission for such use, copying, modification,
+/// merger, publication, distribution, sublicensing, creation of derivative works,
+/// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
 
 import UIKit
 import RxSwift
@@ -34,7 +36,10 @@ import RxCocoa
 import Kingfisher
 
 func cachedFileURL(_ fileName: String) -> URL {
-  return FileManager.default.urls(for: .cachesDirectory, in: .allDomainsMask).first!.appendingPathComponent(fileName)
+  return FileManager.default
+    .urls(for: .cachesDirectory, in: .allDomainsMask)
+    .first!
+    .appendingPathComponent(fileName)
 }
 
 class ActivityController: UITableViewController {
@@ -44,7 +49,7 @@ class ActivityController: UITableViewController {
   private let bag = DisposeBag()
   private let eventsFileURL = cachedFileURL("events.json")
   private let modifiedFileURL = cachedFileURL("modified.txt")
-  private let lastModified = BehaviorRelay<String>(value: "")
+  private let lastModified = BehaviorRelay<String?>(value: nil)
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,153 +63,131 @@ class ActivityController: UITableViewController {
     refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
     refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
 
+    refresh()
+    
+    // 从缓存中读取数据
+    if let data = try? Data(contentsOf: eventsFileURL),
+        let persistEvents = try? JSONDecoder().decode([Event].self, from: data) {
+      events.accept(persistEvents)
+    }
+    
     if let lastModifiedString = try? String(contentsOf: modifiedFileURL, encoding: .utf8) {
       lastModified.accept(lastModifiedString)
     }
-    
-    refresh()
   }
 
   @objc func refresh() {
-    let decoder = JSONDecoder()
-    if let data = try? Data(contentsOf: eventsFileURL), let persistedEvents = try? decoder.decode([Event].self, from: data) {
-      events.accept(persistedEvents)
-    }
-    
     DispatchQueue.global(qos: .default).async { [weak self] in
       guard let self = self else { return }
       self.fetchEvents(repo: self.repo)
     }
   }
 
-  
   func fetchEvents(repo: String) {
-    /*
+    // string -> url -> url request -> (response, data)
+    /* final
     let response = Observable.from([repo])
-      .map { urlString -> URL in
-        return URL(string: "https://api.github.com/repos/\(urlString)/events")!
+      .compactMap { urlString in
+        URL(string: "https://api.github.com/repos/\(urlString)/events")
       }
-      .map { [weak self] url -> URLRequest in
+      .map { [weak self] url in
         var request = URLRequest(url: url)
-        if let modifiedHeader = self?.lastModified.value {
-          request.addValue(modifiedHeader, forHTTPHeaderField: "Last-Modified")
+        
+        if let lastModified = self?.lastModified.value {
+          request.addValue(lastModified, forHTTPHeaderField: "Last-Modified")
         }
         return request
       }
-      .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
-        return URLSession.shared.rx.response(request: request)
+      .flatMap {
+        URLSession.shared.rx.response(request: $0)
       }
       .share(replay: 1)
+     */
     
-    response
-      .filter {
-        // ~=: 判断范围操作符
-        return 200..<300 ~= $0.response.statusCode
-      }
-      .map { couple -> [Event] in
-        let decoder = JSONDecoder()
-        let events = try? decoder.decode([Event].self, from: couple.data)
-        return events ?? []
-      }
-      .filter { !$0.isEmpty }
-      .subscribe(onNext: { [weak self] events in
-        self?.processEvents(events)
+    // challenge
+    let response = Observable.from(["https://api.github.com/search/repositories?q=language:swift&per_page=5"])
+      .compactMap({
+        URL(string: $0)
       })
-      .disposed(by: bag)
-    
-    response
-      .filter { 200..<400 ~= $0.response.statusCode }
-      .flatMap { couple -> Observable<String> in
-        guard let value = couple.response.allHeaderFields["Last-Modified"] as? String else {
-          return Observable.empty()
-        }
-        return Observable.just(value)
-      }
-      .subscribe(onNext: { [weak self] header in
-        guard let self = self else { return }
-        self.lastModified.accept(header)
-        try?  header.write(to: self.modifiedFileURL, atomically: true, encoding: .utf8)
+      .map({
+        URLRequest(url: $0)
       })
-      .disposed(by: bag)
-    */
-    
-    let response =
-    Observable
-      .from(["https://api.github.com/search/repositories?q=language:swift&per_page=5"])
-      .map { URL(string: $0)! }
-      .flatMap { url -> Observable<Any> in
-        return URLSession.shared.rx.json(request: URLRequest(url: url))
-      }
-      .flatMap { response -> Observable<String> in
+      .flatMap({
+        URLSession.shared.rx.json(request: $0)
+      })
+      .flatMap({ response -> Observable<String> in
         guard let response = response as? [String: Any],
-          let items = response["items"] as? [[String: Any]] else {
-          return Observable.empty()
-        }
-        return Observable.from(items.map { $0["full_name"] as! String })
-      }
-      .map { URL(string: "https://api.github.com/repos/\($0)/events?per_page=5")! }
-      .map { [weak self] url -> URLRequest in
+              let items = response["items"] as? [[String: Any]] else {
+                return Observable.empty()
+              }
+        return Observable.from(items.map({ $0["full_name"] as! String}))
+      })
+      .compactMap({
+        URL(string: "https://api.github.com/repos/\($0)/events?per_page=5")
+      })
+      .map({ [weak self] url -> URLRequest in
         var request = URLRequest(url: url)
-        if let modifiedHeader = self?.lastModified.value {
-          request.addValue(modifiedHeader, forHTTPHeaderField: "Last-Modified")
+        if let lastModified = self?.lastModified.value {
+          request.addValue(lastModified, forHTTPHeaderField: "Last-Modified")
         }
         return request
-      }
-      .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
-        return URLSession.shared.rx.response(request: request)
-      }
+      })
+      .flatMap({
+        URLSession.shared.rx.response(request: $0)
+      })
       .share(replay: 1)
     
-    
     response
-      .filter {
-        // ~=: 判断范围操作符
-        return 200..<300 ~= $0.response.statusCode
+      .filter { response, _ in
+        200..<300 ~= response.statusCode
       }
-      .map { couple -> [Event] in
-        let decoder = JSONDecoder()
-        let events = try? decoder.decode([Event].self, from: couple.data)
-        return events ?? []
+      .compactMap { _, data -> [Event]? in
+        try? JSONDecoder().decode([Event].self, from: data)
       }
-      .filter { !$0.isEmpty }
       .subscribe(onNext: { [weak self] events in
         self?.processEvents(events)
       })
       .disposed(by: bag)
     
     response
-      .filter { 200..<400 ~= $0.response.statusCode }
-      .flatMap { couple -> Observable<String> in
-        guard let value = couple.response.allHeaderFields["Last-Modified"] as? String else {
-          return Observable.empty()
+      .filter { response, _ in
+        200..<400 ~= response.statusCode
+      }
+      .flatMap({ response, _ -> Observable<String> in
+        guard let value = response.allHeaderFields["Last-Modified"] as? String else {
+          return Observable<String>.empty()
         }
         return Observable.just(value)
-      }
-      .subscribe(onNext: { [weak self] header in
+      })
+      .subscribe(onNext: { [weak self] lastModified in
         guard let self = self else { return }
-        self.lastModified.accept(header)
-        try?  header.write(to: self.modifiedFileURL, atomically: true, encoding: .utf8)
+        self.lastModified.accept(lastModified)
+        try? lastModified.write(to: self.modifiedFileURL, atomically: true, encoding: .utf8)
       })
       .disposed(by: bag)
-    
-    
-    
+
   }
   
   func processEvents(_ newEvents: [Event]) {
+    
     var updatedEvents = newEvents + events.value
     if updatedEvents.count > 50 {
       updatedEvents = [Event](updatedEvents.prefix(upTo: 50))
     }
+    
+    // 向 Observer 发送元素
     events.accept(updatedEvents)
+    
+    // 回到主线程刷新数据
     DispatchQueue.main.async {
       self.tableView.reloadData()
       self.refreshControl?.endRefreshing()
     }
     
+    // 缓存获取的数据
     let encoder = JSONEncoder()
     if let data = try? encoder.encode(updatedEvents) {
-      try? data.write(to: eventsFileURL, options: .atomicWrite)
+      try? data.write(to: eventsFileURL, options: .atomic)
     }
   }
 

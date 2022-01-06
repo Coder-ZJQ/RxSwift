@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="asm-KJ-jxX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="asm-KJ-jxX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Events View Controller-->
         <scene sceneID="YSW-O0-16m">
             <objects>
-                <viewController storyboardIdentifier="events" id="RA6-xv-Ca6" customClass="EventsViewController" customModule="_4_ourplanet_combining" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="events" id="RA6-xv-Ca6" customClass="EventsViewController" customModule="OurPlanet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yEI-PB-Ue2"/>
                         <viewControllerLayoutGuide type="bottom" id="a4r-cL-wlu"/>
@@ -36,7 +36,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="84" id="Ebo-Ni-PUN" customClass="EventCell" customModule="_4_ourplanet_combining" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="84" id="Ebo-Ni-PUN" customClass="EventCell" customModule="OurPlanet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ebo-Ni-PUN" id="rYr-ny-QIf">
@@ -104,7 +104,7 @@
                             <constraint firstItem="Fff-xl-qii" firstAttribute="leading" secondItem="iuO-Dc-7KD" secondAttribute="trailing" constant="18" id="P28-LZ-eXz"/>
                             <constraint firstItem="Fff-xl-qii" firstAttribute="top" secondItem="yEI-PB-Ue2" secondAttribute="bottom" constant="15" id="TuP-ny-Csx"/>
                             <constraint firstItem="q76-MT-nKI" firstAttribute="top" secondItem="Fff-xl-qii" secondAttribute="bottom" constant="19" id="cel-12-87P"/>
-                            <constraint firstItem="a4r-cL-wlu" firstAttribute="top" secondItem="q76-MT-nKI" secondAttribute="bottom" id="iEM-xz-Ba4"/>
+                            <constraint firstAttribute="bottom" secondItem="q76-MT-nKI" secondAttribute="bottom" id="iEM-xz-Ba4"/>
                             <constraint firstItem="iuO-Dc-7KD" firstAttribute="width" secondItem="AYe-sO-GPO" secondAttribute="width" multiplier="0.3" id="lqa-Z3-Z2U"/>
                             <constraint firstItem="NpN-g7-Sau" firstAttribute="leading" secondItem="AYe-sO-GPO" secondAttribute="leading" id="rI1-v6-y32"/>
                             <constraint firstItem="q76-MT-nKI" firstAttribute="top" secondItem="NpN-g7-Sau" secondAttribute="bottom" constant="8" id="zHc-2D-m9r"/>
@@ -145,7 +145,7 @@
         <!--Our Planet - Categories-->
         <scene sceneID="cRA-sE-wcD">
             <objects>
-                <viewController id="Q6U-rn-aS4" customClass="CategoriesViewController" customModule="_4_ourplanet_combining" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q6U-rn-aS4" customClass="CategoriesViewController" customModule="OurPlanet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6aq-6Y-V04"/>
                         <viewControllerLayoutGuide type="bottom" id="SAw-wu-kJ4"/>
@@ -176,23 +176,14 @@
                                     <outlet property="delegate" destination="Q6U-rn-aS4" id="bQJ-Xf-x45"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yaz-2f-g27" customClass="DownloadView" customModule="_4_ourplanet_combining" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="585" width="375" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="fhL-rw-mKd"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Yaz-2f-g27" secondAttribute="trailing" id="4oe-Pf-oHY"/>
-                            <constraint firstItem="SAw-wu-kJ4" firstAttribute="top" secondItem="Db6-PF-SbJ" secondAttribute="bottom" id="7n8-t1-Uti"/>
-                            <constraint firstItem="SAw-wu-kJ4" firstAttribute="top" secondItem="Pkg-Wr-lWe" secondAttribute="bottom" id="H5a-qM-c5E"/>
-                            <constraint firstItem="Yaz-2f-g27" firstAttribute="leading" secondItem="3bC-1T-vlo" secondAttribute="leading" id="Q9i-ny-8cG"/>
+                            <constraint firstAttribute="bottom" secondItem="Db6-PF-SbJ" secondAttribute="bottom" id="7n8-t1-Uti"/>
                             <constraint firstItem="Pkg-Wr-lWe" firstAttribute="leading" secondItem="3bC-1T-vlo" secondAttribute="leading" id="Uh7-ko-SbB"/>
                             <constraint firstAttribute="trailing" secondItem="Pkg-Wr-lWe" secondAttribute="trailing" id="Y7b-sQ-45H"/>
                             <constraint firstItem="Pkg-Wr-lWe" firstAttribute="top" secondItem="3bC-1T-vlo" secondAttribute="top" id="ZvL-kZ-M8e"/>
-                            <constraint firstAttribute="bottom" secondItem="Yaz-2f-g27" secondAttribute="bottom" id="bT8-Sz-Iks"/>
+                            <constraint firstAttribute="bottom" secondItem="Pkg-Wr-lWe" secondAttribute="bottom" id="eh8-cd-YA5"/>
                             <constraint firstItem="Db6-PF-SbJ" firstAttribute="leading" secondItem="3bC-1T-vlo" secondAttribute="leading" id="njs-Gb-omd"/>
                             <constraint firstItem="Db6-PF-SbJ" firstAttribute="top" secondItem="6aq-6Y-V04" secondAttribute="bottom" id="y3O-Q6-rsG"/>
                             <constraint firstAttribute="trailing" secondItem="Db6-PF-SbJ" secondAttribute="trailing" id="zmy-So-35W"/>
@@ -204,7 +195,6 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="downloadView" destination="Yaz-2f-g27" id="EbE-qw-qik"/>
                         <outlet property="tableView" destination="Pkg-Wr-lWe" id="btg-cL-5YD"/>
                     </connections>
                 </viewController>

@@ -5,6 +5,26 @@ import RxSwift
 of: 根据传入的多参数创建 Observable Sequence；\
 from: 根据传入的数组创建 Observable Sequence。
  */
+
+example(of: "share") {
+    let subject = PublishSubject<Void>()
+    let observable = subject.flatMap {
+        // 模拟数据请求
+        Observable<Void>.create { observer -> Disposable in
+            print("Creating observable")
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1) {
+                observer.onNext(())
+            }
+            return Disposables.create()
+        }
+    }.share()
+    
+    observable.debug("A").subscribe()
+    observable.debug("B").subscribe()
+    
+    subject.onNext(())
+}
+
 example(of: "just, of, from") {
     let one = 1
     let two = 2
@@ -213,7 +233,7 @@ example(of: "interval") {
 }
 
 example(of: "timer") {
-    Observable<Int>
+    let timer = Observable<Int>
         .timer(.seconds(1), period: .seconds(1), scheduler: MainScheduler.instance)
         .take(10)
         .subscribe {
@@ -224,7 +244,11 @@ example(of: "timer") {
             print("onCompleted")
         } onDisposed: {
             print("onDisposed")
-        }.dispose()
+        }
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        timer.dispose()
+    }
 }
 
 

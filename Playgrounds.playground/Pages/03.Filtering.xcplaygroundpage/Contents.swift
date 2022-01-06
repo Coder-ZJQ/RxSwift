@@ -11,6 +11,60 @@ import RxSwift
  如果你并不关心 `Observable` 的任何元素，你只想知道 `Observable` 在什么时候终止，那就可以使用 **ignoreElements** 操作符。
  */
 
+example(of: "share") {
+    var start = 0
+    func getStartNumber() -> Int {
+        start += 1
+        return start
+    }
+    
+    let numbers = Observable<Int>.create { observer in
+        print("create")
+        let start = getStartNumber()
+        observer.onNext(start)
+        observer.onNext(start + 1)
+        observer.onNext(start + 2)
+        observer.onCompleted()
+        return Disposables.create()
+    }
+    /* without share
+    numbers.subscribe(onNext: {
+        print("subscribe 1: \($0)")
+    }, onCompleted: {
+        print("subscribe 1 completed")
+    }, onDisposed: {
+        print("subscribe 1 disposed")
+    }).dispose()
+    
+    numbers.subscribe(onNext: {
+        print("subscribe 2: \($0)")
+    }, onCompleted: {
+        print("subscribe 2 completed")
+    }, onDisposed: {
+        print("subscribe 2 disposed")
+    }).dispose()
+     */
+    
+    let share = numbers.share()
+    
+    share.subscribe(onNext: {
+        print("subscribe 1: \($0)")
+    }, onCompleted: {
+        print("subscribe 1 completed")
+    }, onDisposed: {
+        print("subscribe 1 disposed")
+    }).dispose()
+    
+    share.subscribe(onNext: {
+        print("subscribe 2: \($0)")
+    }, onCompleted: {
+        print("subscribe 2 completed")
+    }, onDisposed: {
+        print("subscribe 2 disposed")
+    }).dispose()
+}
+
+
 example(of: "ignoreElements") {
     let strikes = PublishSubject<String>()
     
@@ -156,7 +210,61 @@ example(of: "takeUntil") {
     trigger.onNext("X")
     subject.onNext("3")
     
+}
+
+/// 仅在过了一段指定的时间还没发射数据时才发射一个数据
+///
+/// 例如：1 2 3 4 5 [...5s 间隔...] 6
+///
+/// debounce(4)
+/// 5
+example(of: "debounce") {
+    let subject = PublishSubject<Int>()
     
+    // 模拟每 1 秒发送一个元素
+    let observable = Observable<Int>.timer(.seconds(1), period: .seconds(2), scheduler: MainScheduler.instance)
+    let disposable = observable.subscribe(onNext: {
+        subject.onNext($0)
+    })
+    
+    subject.debounce(.seconds(2), scheduler: MainScheduler.instance)
+        .subscribe(onNext: {
+            print($0)
+        })
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        disposable.dispose()
+        subject.dispose()
+    }
+    
+}
+
+/// 每间隔一段时间发射一次元素，如果间隔时间内没有发射元素则不发送
+/// 例如：0 1 2 3 4 5 6 (间隔为 1s)
+///
+/// throttle(2)
+/// 0 2 4 6
+example(of: "throttle") {
+    
+    let subject = PublishSubject<Int>()
+    
+    // 模拟每 1 秒发送一个元素
+    let observable = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+    let disposable = observable.subscribe(onNext: {
+        subject.onNext($0)
+    })
+    
+    subject.throttle(.seconds(2), scheduler: MainScheduler.instance)
+        .subscribe(onNext: {
+            print($0)
+        })
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        disposable.dispose()
+    }
+    DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
+        subject.dispose()
+    }
 }
 
 /*:
@@ -199,6 +307,37 @@ example(of: "distinctUntilChanged(_:)") {
             print($0)
         })
         .disposed(by: disposeBag)
+}
+
+example(of: "first") {
+    Observable<Int>.from([])
+//    Observable<Int>.from([1,2,3,4,5])
+        .first()
+        .subscribe {
+            print($0 ?? 0)
+        } onFailure: {
+            print($0)
+        } onDisposed: {
+            print("onDisposed")
+        }.dispose()
+
+}
+
+example(of: "single") {
+    
+    Observable<Int>.from([])          // Sequence doesn't contain any elements.
+//    Observable<Int>.from([1,2,3,4,5]) // Sequence contains more than one element.
+//    Observable<Int>.from([1])
+        .single()
+        .subscribe(onNext: {
+            print($0)
+        }, onError: {
+            print($0)
+        }, onCompleted: {
+            print("onCompleted")
+        }, onDisposed: {
+            print("onDisposed")
+        }).dispose()
 }
 
 example(of: "Challenge") {

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Combinestagram.xcodeproj">
+      location = "self:/Users/Joker/Desktop/.Desktop/Learning/Book/2020-RxSwift.Reactive.Programming.with.Swift.4th/rxs-materials-editions-4.0/04-observables-in-practice/projects/starter/01_Combinestagram_observables.xcodeproj">
    </FileRef>
 </Workspace>

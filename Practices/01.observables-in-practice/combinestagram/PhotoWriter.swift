@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2020 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -35,43 +39,41 @@ class PhotoWriter {
   enum Errors: Error {
     case couldNotSavePhoto
   }
-  
-  static func save(_ image: UIImage) -> Observable<String> {
-    return Observable.create { observer in
-      var saveAssetId: String?
-      PHPhotoLibrary.shared().performChanges({
-        let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
-        saveAssetId = request.placeholderForCreatedAsset?.localIdentifier
-      }) { success, error in
-        DispatchQueue.main.async {
-          if success, let id = saveAssetId {
-            observer.onNext(id)
-            observer.onCompleted()
-          } else {
-            observer.onError(error ?? Errors.couldNotSavePhoto)
-          }
-        }
-      }
-      return Disposables.create()
-    }
-  }
+
   static func save(_ image: UIImage) -> Single<String> {
-    return Single.create { single -> Disposable in
-      var saveAssetId: String?
-      PHPhotoLibrary.shared().performChanges({
+    return Single.create { single in
+      var savedAssetId: String?
+      PHPhotoLibrary.shared().performChanges {
         let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
-        saveAssetId = request.placeholderForCreatedAsset?.localIdentifier
-      }) { success, error in
+        savedAssetId = request.placeholderForCreatedAsset?.localIdentifier
+      } completionHandler: { success, error in
         DispatchQueue.main.async {
-          if success, let id = saveAssetId {
-            single(.success(id))
+          if success, let assetId = savedAssetId {
+            single(.success(assetId))
           } else {
             single(.failure(error ?? Errors.couldNotSavePhoto))
           }
         }
       }
-      
       return Disposables.create()
     }
+//    return Observable<String>.create { observer in
+//      var savedAssetId: String?
+//      PHPhotoLibrary.shared().performChanges({
+//        let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
+//        savedAssetId = request.placeholderForCreatedAsset?.localIdentifier
+//      }, completionHandler: { success, error in
+//        DispatchQueue.main.async {
+//          if success, let id = savedAssetId {
+//            observer.onNext(id)
+//            observer.onCompleted()
+//          } else {
+//            observer.onError(error ?? Errors.couldNotSavePhoto)
+//          }
+//        }
+//      })
+//      return Disposables.create()
+//    }
   }
+
 }

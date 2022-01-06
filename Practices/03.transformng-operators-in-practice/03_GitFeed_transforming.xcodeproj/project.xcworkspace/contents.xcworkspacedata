@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/Joker/Desktop/RxSwift-playground/Practices/03-transformng-operators-in-practice/03.GitFeed.xcodeproj">
+      location = "self:GitFeed.xcodeproj">
    </FileRef>
 </Workspace>
