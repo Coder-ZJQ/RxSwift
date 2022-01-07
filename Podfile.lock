@@ -5,7 +5,7 @@ PODS:
   - Differentiator (5.0.0)
   - Gifu (3.3.1)
   - Hue (5.0.0)
-  - Kingfisher (7.1.1)
+  - Kingfisher (7.1.2)
   - Nimble (9.2.1)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
@@ -24,11 +24,11 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (9.1.0)
   - OHHTTPStubs/Swift (9.1.0):
     - OHHTTPStubs/Default
-  - Realm (10.18.0):
-    - Realm/Headers (= 10.18.0)
-  - Realm/Headers (10.18.0)
-  - RealmSwift (10.18.0):
-    - Realm (= 10.18.0)
+  - Realm (10.20.1):
+    - Realm/Headers (= 10.20.1)
+  - Realm/Headers (10.20.1)
+  - RealmSwift (10.20.1):
+    - Realm (= 10.20.1)
   - RxBlocking (6.2.0):
     - RxSwift (= 6.2.0)
   - RxCocoa (6.2.0):
@@ -104,12 +104,12 @@ SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
-  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
-  Realm: b8b0a36bf48c39c50fd8cee7ac34005e6d887ddd
-  RealmSwift: fe2f33d731f47aaf4c3618930f9f7cf7b935c33f
+  Realm: fac5ecd031fcb81171627b74944c885662d4b266
+  RealmSwift: 9b02d25acb46a14756bde9893abb99e2e3675923
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf

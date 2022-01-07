@@ -22,10 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C35DC1B8AE29CFC687219A7 /* Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-02_Combinestagram_filtering/Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig"; sourceTree = "<group>"; };
 		7990F0CBF55D7ACED22F31FD /* Pods_BaseTarget_02_Combinestagram_filtering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_02_Combinestagram_filtering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		880034BF3C8016EC4894890E /* Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-02_Combinestagram_filtering/Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig"; sourceTree = "<group>"; };
-		8A52A6F344CA5D86A0EA728D /* Pods-Combinestagram-filtering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-filtering.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Combinestagram-filtering/Pods-Combinestagram-filtering.debug.xcconfig"; sourceTree = "<group>"; };
+		8EEDD800E9664206BAAB8114 /* Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-02_Combinestagram_filtering/Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig"; sourceTree = "<group>"; };
 		9C2951961F780F0100FD8830 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		9CDD7B031DE5AABE0058B2D5 /* UIImage+Collage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIImage+Collage.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CDD7B051DE5BC660058B2D5 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotosViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -38,11 +36,7 @@
 		9CE7E5E51DE5A40A00C8BA5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CE7E5E81DE5A40A00C8BA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CE7E5EA1DE5A40A00C8BA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E3EED28398093ED2D6A44A5 /* Pods-BaseTarget-02.Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-02.Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-02.Combinestagram-filtering/Pods-BaseTarget-02.Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
-		BB96E9CB6957FD42497975F6 /* Pods-Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Combinestagram-filtering/Pods-Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
-		E74E094EB85267CE3CD8CF01 /* Pods-02.Combinestagram-filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02.Combinestagram-filtering.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering.release.xcconfig"; sourceTree = "<group>"; };
-		E9097075FDC6479E5C8CCBE6 /* Pods-BaseTarget-02.Combinestagram-filtering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-02.Combinestagram-filtering.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-02.Combinestagram-filtering/Pods-BaseTarget-02.Combinestagram-filtering.debug.xcconfig"; sourceTree = "<group>"; };
-		EE9EF99B78CAD23671A849AA /* Pods-02.Combinestagram-filtering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02.Combinestagram-filtering.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-02.Combinestagram-filtering/Pods-02.Combinestagram-filtering.debug.xcconfig"; sourceTree = "<group>"; };
+		E5B99811E8189FD12318A585 /* Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-02_Combinestagram_filtering/Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig"; sourceTree = "<group>"; };
 		F3A015922486215A00BBB89E /* PHPhotoLibrary+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,19 +60,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4DC7296738112799682B67C6 /* Pods */ = {
+		5BE618DD563FCF5D0B0545B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8A52A6F344CA5D86A0EA728D /* Pods-Combinestagram-filtering.debug.xcconfig */,
-				BB96E9CB6957FD42497975F6 /* Pods-Combinestagram-filtering.release.xcconfig */,
-				EE9EF99B78CAD23671A849AA /* Pods-02.Combinestagram-filtering.debug.xcconfig */,
-				E74E094EB85267CE3CD8CF01 /* Pods-02.Combinestagram-filtering.release.xcconfig */,
-				E9097075FDC6479E5C8CCBE6 /* Pods-BaseTarget-02.Combinestagram-filtering.debug.xcconfig */,
-				9E3EED28398093ED2D6A44A5 /* Pods-BaseTarget-02.Combinestagram-filtering.release.xcconfig */,
-				4C35DC1B8AE29CFC687219A7 /* Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig */,
-				880034BF3C8016EC4894890E /* Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig */,
+				8EEDD800E9664206BAAB8114 /* Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig */,
+				E5B99811E8189FD12318A585 /* Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
+			path = ../../Pods;
 			sourceTree = "<group>";
 		};
 		9CDD7B091DE6E37C0058B2D5 /* Assets */ = {
@@ -107,8 +96,8 @@
 			children = (
 				9CE7E5DB1DE5A40900C8BA5A /* Combinestagram */,
 				9CE7E5DA1DE5A40900C8BA5A /* Products */,
-				4DC7296738112799682B67C6 /* Pods */,
 				0461A7F49609FA1A1211AFBD /* Frameworks */,
+				5BE618DD563FCF5D0B0545B3 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -404,7 +393,7 @@
 		};
 		9CE7E5EE1DE5A40A00C8BA5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C35DC1B8AE29CFC687219A7 /* Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig */;
+			baseConfigurationReference = 8EEDD800E9664206BAAB8114 /* Pods-BaseTarget-02_Combinestagram_filtering.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -422,7 +411,7 @@
 		};
 		9CE7E5EF1DE5A40A00C8BA5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 880034BF3C8016EC4894890E /* Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig */;
+			baseConfigurationReference = E5B99811E8189FD12318A585 /* Pods-BaseTarget-02_Combinestagram_filtering.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
