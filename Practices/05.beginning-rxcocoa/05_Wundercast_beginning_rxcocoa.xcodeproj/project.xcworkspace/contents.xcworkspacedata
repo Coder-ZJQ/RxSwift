@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/Joker/Desktop/RxSwift-playground/Practices/05-beginning-rxcocoa/05.Wundercast-rxcocoa.xcodeproj">
+      location = "self:Wundercast.xcodeproj">
    </FileRef>
 </Workspace>
