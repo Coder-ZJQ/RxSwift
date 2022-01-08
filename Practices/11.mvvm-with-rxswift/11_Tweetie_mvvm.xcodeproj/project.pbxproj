@@ -109,8 +109,10 @@
 		465AC9558347BA6F969DF385 /* Pods_TweetieAbstract_11_Tweetie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetieAbstract_11_Tweetie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6793AAC53CE4A6A35C050578 /* Pods-TweetieAbstract-MacTweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-MacTweetie.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-MacTweetie/Pods-TweetieAbstract-MacTweetie.debug.xcconfig"; sourceTree = "<group>"; };
 		68AD5F1E8D502405C6A28F14 /* Pods_TweetieAbstract_11_MacTweetie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetieAbstract_11_MacTweetie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69CB7BD391E7ACE5C56D886A /* Pods-TweetieAbstract-11_MacTweetie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-11_MacTweetie.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-11_MacTweetie/Pods-TweetieAbstract-11_MacTweetie.release.xcconfig"; sourceTree = "<group>"; };
 		6EC9F88A36205A2E125697A6 /* Pods-TweetieAbstract-11.MacTweetie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-11.MacTweetie.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-11.MacTweetie/Pods-TweetieAbstract-11.MacTweetie.release.xcconfig"; sourceTree = "<group>"; };
 		71A008FF98B10452F58B1D65 /* Pods-TweetieAbstract-MacTweetie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-MacTweetie.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-MacTweetie/Pods-TweetieAbstract-MacTweetie.release.xcconfig"; sourceTree = "<group>"; };
+		951B3D89D24A3CC6BC0AF119 /* Pods-TweetieAbstract-11_Tweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-11_Tweetie.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-11_Tweetie/Pods-TweetieAbstract-11_Tweetie.debug.xcconfig"; sourceTree = "<group>"; };
 		9C07B8041DECC926005301ED /* TimelineFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineFetcher.swift; sourceTree = "<group>"; };
 		9C07B8071DED7C16005301ED /* Reachability+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+.swift"; sourceTree = "<group>"; };
 		9C1EEAD11DF424B5009705BD /* TweetieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +127,7 @@
 		9C2F4C761DE9C8A400307687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C2F4C791DE9C8A400307687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C2F4C7B1DE9C8A400307687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C2F4C851DE9C8CE00307687 /* 11.MacTweetie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11.MacTweetie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2F4C851DE9C8CE00307687 /* 11_MacTweetie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11_MacTweetie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C2F4C871DE9C8CF00307687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C2F4C8B1DE9C8CF00307687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C2F4C8E1DE9C8CF00307687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,8 +176,10 @@
 		AC6C34BE93CA3B4EDFFFBE6E /* Pods-TweetieAbstract-11.Tweetie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-11.Tweetie.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-11.Tweetie/Pods-TweetieAbstract-11.Tweetie.release.xcconfig"; sourceTree = "<group>"; };
 		B7A53CFE5DAA3FAAA5211E80 /* Pods-MacTweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTweetie.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-MacTweetie/Pods-MacTweetie.debug.xcconfig"; sourceTree = "<group>"; };
 		C0EA86D16F6944447A26F845 /* Pods-Tweetie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tweetie.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Tweetie/Pods-Tweetie.release.xcconfig"; sourceTree = "<group>"; };
+		C76A1113809128CC19446B8C /* Pods-TweetieAbstract-11_Tweetie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-11_Tweetie.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-11_Tweetie/Pods-TweetieAbstract-11_Tweetie.release.xcconfig"; sourceTree = "<group>"; };
 		CB676E81526885F752FAEC77 /* Pods-TweetieAbstract-TweetieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-TweetieTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-TweetieTests/Pods-TweetieAbstract-TweetieTests.release.xcconfig"; sourceTree = "<group>"; };
 		E26B8191C3647CE1EE62549F /* Pods-TweetieAbstract-Tweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-Tweetie/Pods-TweetieAbstract-Tweetie.debug.xcconfig"; sourceTree = "<group>"; };
+		EA55198117F1956E727D49CF /* Pods-TweetieAbstract-11_MacTweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-11_MacTweetie.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-TweetieAbstract-11_MacTweetie/Pods-TweetieAbstract-11_MacTweetie.debug.xcconfig"; sourceTree = "<group>"; };
 		F8F0003D7CF54F63BB7B3913 /* Pods_TweetieAbstract_TweetieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetieAbstract_TweetieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -226,6 +230,10 @@
 				6EC9F88A36205A2E125697A6 /* Pods-TweetieAbstract-11.MacTweetie.release.xcconfig */,
 				360AFF62ED3F658A8E1C1057 /* Pods-TweetieAbstract-11.Tweetie.debug.xcconfig */,
 				AC6C34BE93CA3B4EDFFFBE6E /* Pods-TweetieAbstract-11.Tweetie.release.xcconfig */,
+				EA55198117F1956E727D49CF /* Pods-TweetieAbstract-11_MacTweetie.debug.xcconfig */,
+				69CB7BD391E7ACE5C56D886A /* Pods-TweetieAbstract-11_MacTweetie.release.xcconfig */,
+				951B3D89D24A3CC6BC0AF119 /* Pods-TweetieAbstract-11_Tweetie.debug.xcconfig */,
+				C76A1113809128CC19446B8C /* Pods-TweetieAbstract-11_Tweetie.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -275,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				9C2F4C6A1DE9C8A400307687 /* Tweetie.app */,
-				9C2F4C851DE9C8CE00307687 /* 11.MacTweetie.app */,
+				9C2F4C851DE9C8CE00307687 /* 11_MacTweetie.app */,
 				9C1EEAD11DF424B5009705BD /* TweetieTests.xctest */,
 			);
 			name = Products;
@@ -540,9 +548,9 @@
 			productReference = 9C1EEAD11DF424B5009705BD /* TweetieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9C2F4C691DE9C8A300307687 /* 11.Tweetie */ = {
+		9C2F4C691DE9C8A300307687 /* 11_Tweetie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C2F4C7E1DE9C8A400307687 /* Build configuration list for PBXNativeTarget "11.Tweetie" */;
+			buildConfigurationList = 9C2F4C7E1DE9C8A400307687 /* Build configuration list for PBXNativeTarget "11_Tweetie" */;
 			buildPhases = (
 				F46FB69CEF052126BB23F0F8 /* [CP] Check Pods Manifest.lock */,
 				9C2F4C661DE9C8A300307687 /* Sources */,
@@ -554,14 +562,14 @@
 			);
 			dependencies = (
 			);
-			name = 11.Tweetie;
+			name = 11_Tweetie;
 			productName = Tweetie;
 			productReference = 9C2F4C6A1DE9C8A400307687 /* Tweetie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C2F4C841DE9C8CE00307687 /* 11.MacTweetie */ = {
+		9C2F4C841DE9C8CE00307687 /* 11_MacTweetie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C2F4C911DE9C8CF00307687 /* Build configuration list for PBXNativeTarget "11.MacTweetie" */;
+			buildConfigurationList = 9C2F4C911DE9C8CF00307687 /* Build configuration list for PBXNativeTarget "11_MacTweetie" */;
 			buildPhases = (
 				0844DF4ADD853259E3A3DCB6 /* [CP] Check Pods Manifest.lock */,
 				9C2F4C811DE9C8CE00307687 /* Sources */,
@@ -573,9 +581,9 @@
 			);
 			dependencies = (
 			);
-			name = 11.MacTweetie;
+			name = 11_MacTweetie;
 			productName = MacTweetie;
-			productReference = 9C2F4C851DE9C8CE00307687 /* 11.MacTweetie.app */;
+			productReference = 9C2F4C851DE9C8CE00307687 /* 11_MacTweetie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -617,8 +625,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C2F4C691DE9C8A300307687 /* 11.Tweetie */,
-				9C2F4C841DE9C8CE00307687 /* 11.MacTweetie */,
+				9C2F4C691DE9C8A300307687 /* 11_Tweetie */,
+				9C2F4C841DE9C8CE00307687 /* 11_MacTweetie */,
 				9C1EEAD01DF424B5009705BD /* TweetieTests */,
 			);
 		};
@@ -691,7 +699,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TweetieAbstract-11.MacTweetie-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TweetieAbstract-11_MacTweetie-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -727,8 +735,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-TweetieTests/Pods-TweetieAbstract-TweetieTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm-iOS/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS/RealmSwift.framework",
@@ -743,8 +751,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -768,9 +776,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11.MacTweetie/Pods-TweetieAbstract-11.MacTweetie-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic-macOS/RxAtomic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11_MacTweetie/Pods-TweetieAbstract-11_MacTweetie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-macOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay-macOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-macOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm-macOS/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift-macOS/RealmSwift.framework",
@@ -783,8 +791,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -797,7 +805,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11.MacTweetie/Pods-TweetieAbstract-11.MacTweetie-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11_MacTweetie/Pods-TweetieAbstract-11_MacTweetie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E90915B1C6F8A21C9927BA00 /* [CP] Embed Pods Frameworks */ = {
@@ -806,9 +814,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11.Tweetie/Pods-TweetieAbstract-11.Tweetie-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11_Tweetie/Pods-TweetieAbstract-11_Tweetie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm-iOS/Realm.framework",
@@ -823,8 +831,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -839,7 +847,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11.Tweetie/Pods-TweetieAbstract-11.Tweetie-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetieAbstract-11_Tweetie/Pods-TweetieAbstract-11_Tweetie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F46FB69CEF052126BB23F0F8 /* [CP] Check Pods Manifest.lock */ = {
@@ -857,7 +865,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TweetieAbstract-11.Tweetie-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TweetieAbstract-11_Tweetie-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -943,7 +951,7 @@
 /* Begin PBXTargetDependency section */
 		9C1EEAD71DF424B5009705BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C2F4C691DE9C8A300307687 /* 11.Tweetie */;
+			target = 9C2F4C691DE9C8A300307687 /* 11_Tweetie */;
 			targetProxy = 9C1EEAD61DF424B5009705BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1122,7 +1130,7 @@
 		};
 		9C2F4C7F1DE9C8A400307687 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 360AFF62ED3F658A8E1C1057 /* Pods-TweetieAbstract-11.Tweetie.debug.xcconfig */;
+			baseConfigurationReference = 951B3D89D24A3CC6BC0AF119 /* Pods-TweetieAbstract-11_Tweetie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1140,7 +1148,7 @@
 		};
 		9C2F4C801DE9C8A400307687 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC6C34BE93CA3B4EDFFFBE6E /* Pods-TweetieAbstract-11.Tweetie.release.xcconfig */;
+			baseConfigurationReference = C76A1113809128CC19446B8C /* Pods-TweetieAbstract-11_Tweetie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1158,7 +1166,7 @@
 		};
 		9C2F4C921DE9C8CF00307687 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 110AE05AF40E771ED84F2A24 /* Pods-TweetieAbstract-11.MacTweetie.debug.xcconfig */;
+			baseConfigurationReference = EA55198117F1956E727D49CF /* Pods-TweetieAbstract-11_MacTweetie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -1176,7 +1184,7 @@
 		};
 		9C2F4C931DE9C8CF00307687 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EC9F88A36205A2E125697A6 /* Pods-TweetieAbstract-11.MacTweetie.release.xcconfig */;
+			baseConfigurationReference = 69CB7BD391E7ACE5C56D886A /* Pods-TweetieAbstract-11_MacTweetie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -1213,7 +1221,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C2F4C7E1DE9C8A400307687 /* Build configuration list for PBXNativeTarget "11.Tweetie" */ = {
+		9C2F4C7E1DE9C8A400307687 /* Build configuration list for PBXNativeTarget "11_Tweetie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C2F4C7F1DE9C8A400307687 /* Debug */,
@@ -1222,7 +1230,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C2F4C911DE9C8CF00307687 /* Build configuration list for PBXNativeTarget "11.MacTweetie" */ = {
+		9C2F4C911DE9C8CF00307687 /* Build configuration list for PBXNativeTarget "11_MacTweetie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C2F4C921DE9C8CF00307687 /* Debug */,

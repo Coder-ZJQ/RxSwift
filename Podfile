@@ -98,34 +98,34 @@ abstract_target 'BaseTarget' do
 
 end
 
-#abstract_target 'TweetieAbstract' do
-#  project 'Practices/11.mvvm-with-rxswift/11_Tweetie_mvvm.xcodeproj'
-#  pod 'Alamofire', '4.9.1'
-#
-#  pod 'RxSwift', '5.1.1'
-#  pod 'RxCocoa', '5.1.1'
-#  pod 'RealmSwift', '5.1.0'
-#  pod 'RxRealm', '3.0.0'
-#  pod 'Unbox', '4.0.0'
-#  pod 'Then', '2.7.0'
-#  pod 'Reachability', '3.2.0'
-#  pod 'RxRealmDataSources', '0.3.0'
-#
-#  target '11_Tweetie' do
-#    platform :ios, '12.0'
-#    pod 'RxDataSources', '4.0.1'
-#  end
-#
-#  target '11_MacTweetie' do
-#    platform :osx, '10.14'
-#  end
-#
-#  target 'TweetieTests' do
-#    platform :ios, '12.0'
-#    pod 'RxTest', '5.1.1'
-#    pod 'RxBlocking', '5.1.1'
-#  end
-#end
+abstract_target 'TweetieAbstract' do
+  project 'Practices/11.mvvm-with-rxswift/11_Tweetie_mvvm.xcodeproj'
+  pod 'Alamofire', '4.9.1'
+
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+  pod 'RealmSwift'
+  pod 'RxRealm'
+  pod 'Unbox'
+  pod 'Then'
+  pod 'Reachability'
+  pod 'RxRealmDataSources', :git => 'git@github.com:Coder-ZJQ/RxRealmDataSources.git'
+
+  target '11_Tweetie' do
+    platform :ios, '12.0'
+    pod 'RxDataSources'
+  end
+
+  target '11_MacTweetie' do
+    platform :osx, '10.14'
+  end
+
+  target 'TweetieTests' do
+    platform :ios, '12.0'
+    pod 'RxTest', '6.2.0'
+    pod 'RxBlocking', '6.2.0'
+  end
+end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

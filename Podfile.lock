@@ -2,6 +2,7 @@ PODS:
   - Action (5.0.0):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
+  - Alamofire (4.9.1)
   - Differentiator (5.0.0)
   - Gifu (3.3.1)
   - Hue (5.0.0)
@@ -24,6 +25,7 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (9.1.0)
   - OHHTTPStubs/Swift (9.1.0):
     - OHHTTPStubs/Default
+  - Reachability (3.2)
   - Realm (10.20.1):
     - Realm/Headers (= 10.20.1)
   - Realm/Headers (10.20.1)
@@ -51,15 +53,23 @@ PODS:
     - RealmSwift (~> 10.7)
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
+  - RxRealmDataSources (0.4):
+    - RealmSwift (~> 10.0)
+    - RxCocoa (~> 6.0)
+    - RxRealm (~> 5.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
   - RxTest (6.2.0):
     - RxSwift (= 6.2.0)
   - SwiftyJSON (5.0.1)
+  - Then (2.7.0)
+  - Unbox (4.0.0)
 
 DEPENDENCIES:
   - Action
+  - Alamofire (= 4.9.1)
   - Gifu
   - Hue
   - Kingfisher
@@ -67,19 +77,24 @@ DEPENDENCIES:
   - "NSObject+Rx"
   - OHHTTPStubs
   - OHHTTPStubs/Swift
+  - Reachability
   - RealmSwift
   - RxBlocking (= 6.2.0)
   - RxCocoa (= 6.2.0)
   - RxDataSources
   - RxNimble
   - RxRealm
+  - "RxRealmDataSources (from `git@github.com:Coder-ZJQ/RxRealmDataSources.git`)"
   - RxSwift (= 6.2.0)
   - RxTest (= 6.2.0)
   - SwiftyJSON
+  - Then
+  - Unbox
 
 SPEC REPOS:
   trunk:
     - Action
+    - Alamofire
     - Differentiator
     - Gifu
     - Hue
@@ -87,6 +102,7 @@ SPEC REPOS:
     - Nimble
     - "NSObject+Rx"
     - OHHTTPStubs
+    - Reachability
     - Realm
     - RealmSwift
     - RxBlocking
@@ -98,9 +114,21 @@ SPEC REPOS:
     - RxSwift
     - RxTest
     - SwiftyJSON
+    - Then
+    - Unbox
+
+EXTERNAL SOURCES:
+  RxRealmDataSources:
+    :git: "git@github.com:Coder-ZJQ/RxRealmDataSources.git"
+
+CHECKOUT OPTIONS:
+  RxRealmDataSources:
+    :commit: ab07090c037d025b298b0f976b8d02a151de8774
+    :git: "git@github.com:Coder-ZJQ/RxRealmDataSources.git"
 
 SPEC CHECKSUMS:
   Action: 47f1825511907b4fcd79dd7a7db9526c20f78018
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
@@ -108,6 +136,7 @@ SPEC CHECKSUMS:
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Realm: fac5ecd031fcb81171627b74944c885662d4b266
   RealmSwift: 9b02d25acb46a14756bde9893abb99e2e3675923
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
@@ -115,11 +144,14 @@ SPEC CHECKSUMS:
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxNimble: 60c8162b1518306a11d0c272a65ade133b209670
   RxRealm: d9fedf16e3ead54b0be2077d2ff4a1b2dc27be39
+  RxRealmDataSources: a38f1ee4fcc1bca42e444f549045006a140a67cd
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxTest: 0c692fa672b694373ba86d2b00033595297a2831
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  Unbox: d2677af8fde59a30141e02981b11cb6a0e3b6bc5
 
-PODFILE CHECKSUM: 3b1519fd06e9aeeed6d485a2aa7582f07e60cec5
+PODFILE CHECKSUM: 6f73c408ca2eb5b955ab48a8664bf202600d778a
 
 COCOAPODS: 1.11.2
