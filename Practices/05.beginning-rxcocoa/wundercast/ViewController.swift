@@ -52,24 +52,24 @@ class ViewController: UIViewController {
       // 结束或退出编辑时
       let editingChange = searchCityName.rx
           .controlEvent(.editingDidEndOnExit)
-          .asObservable()
-      
-      // 切换开关状态时
-      let switchChange = tempSwitch.rx
-          .controlEvent(.valueChanged)
-          .asObservable()
-      
-      // 合并两个 Observable
-      let merge = Observable.merge(editingChange, switchChange)
-      
-      // 映射过滤，并转换为 Driver
-      let search = merge
           .map({ self.searchCityName.text ?? "" })
           .filter({ !$0.isEmpty })
           .flatMapLatest {
               ApiController.shared.currentWeather(for: $0)
-                  .catchErrorJustReturn(.empty)
+                  .catchAndReturn(.empty)
           }
+      
+      
+      // 切换开关状态时
+      let switchChange = BehaviorRelay(value: ())
+      
+      tempSwitch.rx
+          .controlEvent(.valueChanged)
+          .bind(to: switchChange)
+          .disposed(by: bag)
+      
+      // 两个 Observable 结合
+      let search = Observable.combineLatest(editingChange, switchChange).map(\.0)
           .asDriver(onErrorJustReturn: .empty)
       
       search.map {
