@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2020 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -49,106 +53,61 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-
     style()
-    
-    mapButton.rx.tap
-        .subscribe(onNext: {
-            self.mapView.isHidden.toggle()
-        })
-        .disposed(by: bag)
-    
-    /// 当前定位 Observable
-    let currentLocation = locationManager.rx.didUpdateLocations
-        .map { $0[0] }
-        .filter { $0.horizontalAccuracy < kCLLocationAccuracyHundredMeters }
-    
-    /// 点击按钮开始定位，获取位置信息
-    let geoInput = geoLocationButton.rx.tap.asObservable()
-        .do(onNext: {
-            self.locationManager.requestWhenInUseAuthorization()
-            self.locationManager.startUpdatingLocation()
-        })
-    
-    /// 点击一次只获取一次定位
-    let geoLocation = geoInput.flatMap { currentLocation.take(1) }
-    
-    /// 根据定位请求接口获取 ApiController.Weather
-    let geoSearch = geoLocation.flatMap { location in
-        return ApiController.shared.currentWeather(at: location.coordinate)
-            .catchErrorJustReturn(.dummy)
-        }
-    
-    /// 搜索输入框点击回车
-    let searchInput = searchCityName.rx.controlEvent(.editingDidEndOnExit)
-      .map { self.searchCityName.text ?? "" }
-      .filter { !$0.isEmpty }
-    
-    let mapInput = mapView.rx.regionDidChangeAnimated
-        .skip(1)
-        .map { [unowned self] _ in self.mapView.centerCoordinate }
-    
-    let mapSearch = mapInput.flatMap {
-        ApiController.shared.currentWeather(at: $0)
-            .catchErrorJustReturn(.dummy)
-        }
-    
-    mapSearch.asDriver(onErrorJustReturn: .dummy)
-        .map({ weather in
-            weather.cityName
-        })
-        .drive(searchCityName.rx.text)
-        .disposed(by: bag)
-    
-    /// 根据输入的城市请求接口获取 ApiController.Weather
-    let textSearch = searchInput.flatMap { text in
-        return ApiController.shared.currentWeather(city: text)
-            .catchErrorJustReturn(.dummy)
-    }
-    
-    textSearch.asDriver(onErrorJustReturn: .dummy)
-        .map { $0.coordinate }
-        .drive(mapView.rx.centerCoordinate)
-        .disposed(by: bag)
-    
-    /// 合并
-    let search = Observable.merge(geoSearch, textSearch, mapSearch)
-        .asDriver(onErrorJustReturn: .dummy)
-    
-    let running = Observable.merge(
+
+      let searchInput = searchCityName.rx
+          .controlEvent(.editingDidEndOnExit)
+          .map { self.searchCityName.text ?? "" }
+          .filter { !$0.isEmpty }
+      
+      let mapInput = mapView.rx.regionDidChangeAnimated
+          .skip(1)
+          .map { _ in
+              CLLocation(latitude: self.mapView.centerCoordinate.latitude,
+                             longitude: self.mapView.centerCoordinate.longitude)
+          }
+      
+      let geoInput = geoLocationButton.rx.tap
+          .flatMapLatest({ _ in
+              self.locationManager.rx.getCurrentLocation()
+          })
+      
+      let geoSearch = Observable.merge(geoInput, mapInput)
+          .flatMapLatest({ location in
+              ApiController.shared.currentWeather(at: location.coordinate)
+                  .catchErrorJustReturn(.empty)
+          })
+      
+    let textSearch = searchInput
+      .flatMapLatest { text in
+        ApiController.shared
+          .currentWeather(for: text)
+          .catchErrorJustReturn(.empty)
+      }
+      
+      let search = Observable.merge(geoSearch, textSearch)
+          .asDriver(onErrorJustReturn: .empty)
+      
+      
+      let animating = Observable.merge(
         searchInput.map { _ in true },
         geoInput.map { _ in true },
-        mapSearch.map { _ in true },
-        search.map { _ in false}.asObservable())
-        .startWith(true)
-        .asDriver(onErrorJustReturn: false)
-    
-    running
-        .skip(1)
-        .drive(activityIndicator.rx.isAnimating)
-        .disposed(by: bag)
-    
-    running
-        .drive(tempLabel.rx.isHidden)
-        .disposed(by: bag)
-    
-    running
-        .drive(iconLabel.rx.isHidden)
-        .disposed(by: bag)
-    
-    running
-        .drive(humidityLabel.rx.isHidden)
-        .disposed(by: bag)
-    
-    running
-        .drive(cityNameLabel.rx.isHidden)
-        .disposed(by: bag)
-    
+        mapInput.map { _ in true },
+        search.map { _ in false }.asObservable()
+      )
+          .startWith(true)
+          .asDriver(onErrorJustReturn: false)
+      
+      animating
+          .skip(1)
+          .drive(activityIndicator.rx.isAnimating)
+          .disposed(by: bag)
+
     search.map { "\($0.temperature)° C" }
       .drive(tempLabel.rx.text)
       .disposed(by: bag)
 
-    search.map { $0.icon }
+    search.map(\.icon)
       .drive(iconLabel.rx.text)
       .disposed(by: bag)
 
@@ -156,23 +115,25 @@ class ViewController: UIViewController {
       .drive(humidityLabel.rx.text)
       .disposed(by: bag)
 
-    search.map { $0.cityName }
+    search.map(\.cityName)
       .drive(cityNameLabel.rx.text)
       .disposed(by: bag)
-    
-    mapView.rx.setDelegate(self).disposed(by: bag)
-    
-    search.map { [$0.overlay()] }
-        .drive(mapView.rx.overlays)
-        .disposed(by: bag)
-    
-    mapInput.flatMap {
-        ApiController.shared.currentWeatherArround(location: $0).catchErrorJustReturn([])
-        }
-        .asDriver(onErrorJustReturn: [])
-        .map { $0.map { $0.overlay() }}
-        .drive(mapView.rx.overlays)
-        .disposed(by: bag)
+      
+      mapButton.rx.tap
+          .subscribe(onNext: {
+              self.mapView.isHidden.toggle()
+          })
+          .disposed(by: bag)
+      
+      mapView.rx.setDelegate(self)
+          .disposed(by: bag)
+      
+      search
+          .map {
+              $0.overlay()
+          }
+          .drive(mapView.rx.overlay)
+          .disposed(by: bag)
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -198,6 +159,8 @@ class ViewController: UIViewController {
 
   private func style() {
     view.backgroundColor = UIColor.aztec
+    searchCityName.attributedPlaceholder = NSAttributedString(string: "City's Name",
+                                                              attributes: [.foregroundColor: UIColor.textGrey])
     searchCityName.textColor = UIColor.ufoGreen
     tempLabel.textColor = UIColor.cream
     humidityLabel.textColor = UIColor.cream
@@ -211,7 +174,6 @@ extension ViewController: MKMapViewDelegate {
         guard let overlay = overlay as? ApiController.Weather.Overlay else {
             return MKOverlayRenderer()
         }
-        let overlayView = ApiController.Weather.OverlayView(overlay: overlay, overlayIcon: overlay.icon)
-        return overlayView
+        return ApiController.Weather.OverlayView(overlay: overlay, overlayIcon: overlay.icon)
     }
 }

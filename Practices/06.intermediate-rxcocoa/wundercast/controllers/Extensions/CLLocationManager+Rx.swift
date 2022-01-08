@@ -31,20 +31,21 @@ import CoreLocation
 import RxSwift
 import RxCocoa
 
+// HasDelegate 表示该类型有 delegate 成员变量
 extension CLLocationManager: HasDelegate {
-    public typealias Delegate = CLLocationManagerDelegate
+
 }
 
 class RxCLLocationManagerDelegateProxy: DelegateProxy<CLLocationManager, CLLocationManagerDelegate>, DelegateProxyType, CLLocationManagerDelegate {
     weak public private(set) var locationManager: CLLocationManager?
-    
+
     public init(locationManager: ParentObject) {
         self.locationManager = locationManager
         super.init(parentObject: locationManager, delegateProxy: RxCLLocationManagerDelegateProxy.self)
     }
     
     static func registerKnownImplementations() {
-        self.register {
+        register {
             RxCLLocationManagerDelegateProxy(locationManager: $0)
         }
     }
@@ -52,13 +53,39 @@ class RxCLLocationManagerDelegateProxy: DelegateProxy<CLLocationManager, CLLocat
 
 public extension Reactive where Base: CLLocationManager {
     var delegate: DelegateProxy<CLLocationManager, CLLocationManagerDelegate> {
-        return RxCLLocationManagerDelegateProxy.proxy(for: base)
+        RxCLLocationManagerDelegateProxy.proxy(for: base)
     }
     
     var didUpdateLocations: Observable<[CLLocation]> {
-        return delegate.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didUpdateLocations:)))
-            .map { parameters in
-                return parameters[1] as! [CLLocation]
-        }
+        delegate.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didUpdateLocations:)))
+            .map { params in
+                params[1] as! [CLLocation]
+            }
+    }
+    
+    var authorizationStatus: Observable<CLAuthorizationStatus> {
+        delegate.methodInvoked(#selector(CLLocationManagerDelegate.locationManager(_:didChangeAuthorization:)))
+            .map { params in
+                CLAuthorizationStatus(rawValue: params[1] as! Int32)!
+            }
+            .startWith(CLLocationManager.authorizationStatus())
+    }
+    
+    func getCurrentLocation() -> Observable<CLLocation> {
+        let location = authorizationStatus
+            .filter { status in
+                status == .authorizedAlways || status == .authorizedWhenInUse
+            }
+            .flatMap { _ in
+                self.didUpdateLocations.compactMap(\.first)
+            }
+            .take(1)
+            .do(onDispose: { [weak base] in
+                base?.stopUpdatingLocation()
+            })
+                
+        base.requestWhenInUseAuthorization()
+        base.startUpdatingLocation()
+        return location
     }
 }

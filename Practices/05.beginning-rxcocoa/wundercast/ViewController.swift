@@ -61,12 +61,9 @@ class ViewController: UIViewController {
       
       
       // 切换开关状态时
-      let switchChange = BehaviorRelay(value: ())
-      
-      tempSwitch.rx
+      let switchChange = tempSwitch.rx
           .controlEvent(.valueChanged)
-          .bind(to: switchChange)
-          .disposed(by: bag)
+          .startWith(())
       
       // 两个 Observable 结合
       let search = Observable.combineLatest(editingChange, switchChange).map(\.0)

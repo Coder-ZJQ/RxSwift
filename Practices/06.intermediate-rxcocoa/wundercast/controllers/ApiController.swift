@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2020 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -45,14 +49,6 @@ class ApiController {
       temperature: -1000,
       humidity: 0,
       icon: iconNameToChar(icon: "e"),
-      coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    )
-
-    static let dummy = Weather(
-      cityName: "RxCity",
-      temperature: 20,
-      humidity: 90,
-      icon: iconNameToChar(icon: "01d"),
       coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)
     )
 
@@ -111,48 +107,30 @@ class ApiController {
 
   /// The api key to communicate with openweathermap.org
   /// Create you own on https://home.openweathermap.org/users/sign_up
-  private let apiKey = ""
+  private let apiKey = "<#Your Key#>"
 
   /// API base URL
   let baseURL = URL(string: "http://api.openweathermap.org/data/2.5")!
 
   init() {
-//    Logging.URLRequests = { request in
-//      return true
-//    }
   }
 
   // MARK: - Api Calls
-  func currentWeather(city: String) -> Observable<Weather> {
-    return buildRequest(pathComponent: "weather", params: [("q", city)])
+  func currentWeather(for city: String) -> Observable<Weather> {
+    buildRequest(pathComponent: "weather", params: [("q", city)])
       .map { data in
-        let decoder = JSONDecoder()
-        return try decoder.decode(Weather.self, from: data)
+        try JSONDecoder().decode(Weather.self, from: data)
       }
   }
 
   func currentWeather(at coordinate: CLLocationCoordinate2D) -> Observable<Weather> {
-    return buildRequest(pathComponent: "weather", params: [("lat", "\(coordinate.latitude)"),
-                                                           ("lon", "\(coordinate.longitude)")])
+    buildRequest(pathComponent: "weather",
+                 params: [("lat", "\(coordinate.latitude)"),
+                          ("lon", "\(coordinate.longitude)")])
       .map { data in
-        let decoder = JSONDecoder()
-        return try decoder.decode(Weather.self, from: data)
+        try JSONDecoder().decode(Weather.self, from: data)
       }
   }
-    
-    func currentWeatherArround(location: CLLocationCoordinate2D) -> Observable<[Weather]> {
-        var weathers = [Observable<Weather>]()
-        
-        for i in -1...1 {
-            for j in -1...1 {
-                let coordinate = CLLocationCoordinate2D(latitude: location.latitude + Double(i), longitude: location.longitude + Double(j))
-                weathers.append(currentWeather(at: coordinate))
-            }
-        }
-        
-        return Observable.from(weathers).merge().toArray().asObservable()
-        
-    }
 
   // MARK: - Private Methods
 
@@ -281,5 +259,10 @@ extension ApiController.Weather {
       context.draw(imageReference!, in: theRect)
     }
   }
-    
 }
+
+//extension ApiController {
+//    func currentWeather(at: CLLocationCoordinate2D) -> Observable<Weather> {
+//        
+//    }
+//}

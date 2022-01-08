@@ -31,21 +31,18 @@ import MapKit
 import RxSwift
 import RxCocoa
 
-
-extension MKMapView : HasDelegate {
-    public typealias Delegate = MKMapViewDelegate
-}
+extension MKMapView: HasDelegate {}
 
 class RxMKMapViewDelegateProxy: DelegateProxy<MKMapView, MKMapViewDelegate>, DelegateProxyType, MKMapViewDelegate {
     weak public private(set) var mapView: MKMapView?
     
-    public init(mapView: ParentObject) {
+    init(mapView: ParentObject) {
         self.mapView = mapView
         super.init(parentObject: mapView, delegateProxy: RxMKMapViewDelegateProxy.self)
     }
     
     static func registerKnownImplementations() {
-        self.register {
+        register {
             RxMKMapViewDelegateProxy(mapView: $0)
         }
     }
@@ -53,30 +50,26 @@ class RxMKMapViewDelegateProxy: DelegateProxy<MKMapView, MKMapViewDelegate>, Del
 
 public extension Reactive where Base: MKMapView {
     var delegate: DelegateProxy<MKMapView, MKMapViewDelegate> {
-        return RxMKMapViewDelegateProxy.proxy(for: base)
+        RxMKMapViewDelegateProxy.proxy(for: base)
     }
     
     func setDelegate(_ delegate: MKMapViewDelegate) -> Disposable {
-        return RxMKMapViewDelegateProxy.installForwardDelegate(delegate, retainDelegate: false, onProxyForObject: self.base)
+        RxMKMapViewDelegateProxy.installForwardDelegate(delegate, retainDelegate: false, onProxyForObject: base)
     }
     
-    var overlays: Binder<[MKOverlay]> {
-        return Binder(self.base) { mapView, overlays in
+    var overlay: Binder<MKOverlay> {
+        Binder(base) { mapView, overlay in
             mapView.removeOverlays(mapView.overlays)
-            mapView.addOverlays(overlays)
-        }
-    }
-    
-    var centerCoordinate: Binder<CLLocationCoordinate2D> {
-        return Binder(self.base) { mapView, centerCoordinate in
-            let span = MKCoordinateSpan(latitudeDelta: 2, longitudeDelta: 2)
-            mapView.region = MKCoordinateRegion(center: centerCoordinate, span: span)
+            mapView.addOverlay(overlay)
         }
     }
     
     var regionDidChangeAnimated: ControlEvent<Bool> {
         let source = delegate.methodInvoked(#selector(MKMapViewDelegate.mapView(_:regionDidChangeAnimated:)))
-            .map { $0[1] as? Bool ?? false }
+            .map { params  in
+                return (params[1] as? Bool) ?? false
+            }
         return ControlEvent(events: source)
     }
+    
 }
