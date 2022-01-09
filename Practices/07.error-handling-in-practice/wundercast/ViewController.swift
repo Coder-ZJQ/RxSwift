@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2020 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -48,82 +52,89 @@ class ViewController: UIViewController {
   private let bag = DisposeBag()
   private let locationManager = CLLocationManager()
   private var cache = [String: Weather]()
+  
 
   var keyTextField: UITextField?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
 
     style()
+    
+    if !RxReachability.shared.startMonitor("openweathermap.org") {
+      print("Reachability failed!")
+    }
 
     keyButton.rx.tap
-      .subscribe(onNext: {
-        self.requestKey()
+      .subscribe(onNext: { [weak self] _ in
+        self?.requestKey()
       })
       .disposed(by:bag)
 
     let currentLocation = locationManager.rx.didUpdateLocations
-      .map() { locations in locations[0] }
-      .filter() { location in
+      .map { locations in locations[0] }
+      .filter { location in
         return location.horizontalAccuracy == kCLLocationAccuracyNearestTenMeters
       }
 
     let geoInput = geoLocationButton.rx.tap
-      .do(onNext: {
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+      .do(onNext: { [weak self] _ in
+        self?.locationManager.requestWhenInUseAuthorization()
+        self?.locationManager.startUpdatingLocation()
 
-        self.searchCityName.text = "Current Location"
+        self?.searchCityName.text = "Current Location"
       })
 
     let geoLocation = geoInput.flatMap {
       return currentLocation.take(1)
     }
 
-    let geoSearch = geoLocation.flatMap() { location in
+    let geoSearch = geoLocation.flatMap { location in
       return ApiController.shared.currentWeather(at: location.coordinate)
         .catchErrorJustReturn(.empty)
     }
 
     let searchInput = searchCityName.rx.controlEvent(.editingDidEndOnExit)
-      .map { self.searchCityName.text ?? "" }
+      .map { [weak self] _ in self?.searchCityName.text ?? "" }
       .filter { !$0.isEmpty }
 
-    let maxAttempts = 4
+    let maxAttempt = 4
     let retryHandler: (Observable<Error>) -> Observable<Int> = { e in
-        return e.enumerated().flatMap { (attempt, error) -> Observable<Int> in
-            if attempt >= maxAttempts - 1 {
-                return Observable.error(error)
-            } else if let casted = error as? ApiController.ApiError, casted == .invalidKey {
-                return ApiController.shared.apiKey.filter { !$0.isEmpty }.map { _ in 1 }
-            } else if (error as NSError).code == -1009 {
-                return RxReachability.shared.status
-                    .filter { $0 == .online }
-                    .map { _ in 1 }
-            }
-            print("== retrying after \(attempt + 1) seconds ==")
-            return Observable<Int>.timer(.seconds(attempt + 1), scheduler: MainScheduler.instance).take(1)
+      e.enumerated().flatMap { attempt, error -> Observable<Int> in
+        // 超过最大尝试数则直接发送 error 事件
+        if attempt >= maxAttempt - 1 {
+          return Observable.error(error)
+          
+        } else if let casted = error as? ApiController.ApiError, casted == .invalidKey {
+          return ApiController.shared.apiKey.filter {
+            !$0.isEmpty
+          }.map { _ in
+            1
+          }
+        } else if (error as NSError).code == -1009 {
+          return RxReachability.shared.status
+            .filter { $0 == .online }
+            .map { _ in 1 }
         }
+        return Observable<Int>.timer(.seconds(attempt + 1), scheduler: MainScheduler.instance)
+      }
     }
-    
     let textSearch = searchInput.flatMap { text in
       return ApiController.shared.currentWeather(city: text)
-        .do(onNext: { weather in
-            self.cache[text] = weather
-        }, onError: { e in
+        .do(
+          onNext: { [weak self] data in
+            self?.cache[text] = data
+          },
+          onError: { error in
             DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                self.showError(error: e)
+              guard let self = self else { return }
+              self.showError(error)
             }
-        })
-        .retryWhen(retryHandler)
-        .catchError { error in
-            guard let cachedData = self.cache[text] else {
-                return Observable.just(.empty)
-            }
-            return Observable.just(cachedData)
-        }
+          })
+          .retryWhen(retryHandler)
+          .catchError({ [weak self] error in
+            Observable.just(self?.cache[text] ?? .empty)
+          })
     }
 
     let search = Observable.merge(geoSearch, textSearch)
@@ -139,7 +150,7 @@ class ViewController: UIViewController {
       .drive(tempLabel.rx.text)
       .disposed(by:bag)
 
-    search.map { $0.icon }
+    search.map(\.icon)
       .drive(iconLabel.rx.text)
       .disposed(by:bag)
 
@@ -147,7 +158,7 @@ class ViewController: UIViewController {
       .drive(humidityLabel.rx.text)
       .disposed(by:bag)
 
-    search.map { $0.cityName }
+    search.map(\.cityName)
       .drive(cityNameLabel.rx.text)
       .disposed(by:bag)
 
@@ -157,24 +168,20 @@ class ViewController: UIViewController {
     running.drive(humidityLabel.rx.isHidden).disposed(by:bag)
     running.drive(cityNameLabel.rx.isHidden).disposed(by:bag)
   }
-
-    private func showError(error: Error) {
-        guard let e = error as? ApiController.ApiError else {
-            InfoView.showIn(viewController: self, message: "An error occurred")
-            return
-        }
-        switch e {
-        case .cityNotFound:
-            InfoView.showIn(viewController: self, message: "City Name is invalid")
-        case .serverFailure:
-            InfoView.showIn(viewController: self, message: "Server error")
-        case .invalidKey:
-            InfoView.showIn(viewController: self, message: "Key is invalid")
-        }
-        
+  
+  private func showError(_ e: Error) {
+    guard let error = e as? ApiController.ApiError else {
+      InfoView.showIn(viewController: self, message: "An error occurred.")
+      return
     }
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+    switch error {
+    case .cityNotFound:
+      InfoView.showIn(viewController: self, message: "City Name is invalid.")
+    case .serverFailure:
+      InfoView.showIn(viewController: self, message: "Server error.")
+    case .invalidKey:
+      InfoView.showIn(viewController: self, message: "The key is invalid.")
+    }
   }
 
   override func viewDidLayoutSubviews() {
@@ -185,11 +192,6 @@ class ViewController: UIViewController {
 
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
 
   func requestKey() {
@@ -223,4 +225,3 @@ class ViewController: UIViewController {
     cityNameLabel.textColor = UIColor.cream
   }
 }
-

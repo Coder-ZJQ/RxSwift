@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2020 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+/// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -116,16 +120,13 @@ class ApiController {
   static var shared = ApiController()
 
   /// The api key to communicate with openweathermap.org
-  /// Create you own on https://home.openweathermap.org/users/sign_up
-  let apiKey = BehaviorSubject(value: "")
+  /// Create your own on https://home.openweathermap.org/users/sign_up
+  let apiKey = BehaviorSubject(value: "<#Your Key#>")
 
   /// API base URL
   let baseURL = URL(string: "http://api.openweathermap.org/data/2.5")!
 
   init() {
-//    Logging.URLRequests = { request in
-//      return true
-//    }
   }
 
   // MARK: - Api Calls
@@ -152,7 +153,7 @@ class ApiController {
    * Private method to build a request with RxCocoa
    */
   private func buildRequest(method: String = "GET", pathComponent: String, params: [(String, String)]) -> Observable<Data> {
-    let request: Observable<URLRequest> = Observable.create() { observer in
+    let request: Observable<URLRequest> = Observable.create { observer in
       let url = self.baseURL.appendingPathComponent(pathComponent)
       var request = URLRequest(url: url)
       let keyQueryItem = URLQueryItem(name: "appid", value: try? self.apiKey.value())
@@ -183,18 +184,19 @@ class ApiController {
     }
 
     let session = URLSession.shared
-    return request.flatMap() { request in
-        return session.rx.response(request: request).map { (response, data) in
-            switch response.statusCode {
-            case 200..<300:
-                return data
-            case 401:
-                throw ApiError.invalidKey
-            case 400..<500:
-                throw ApiError.cityNotFound
-            default:
-                throw ApiError.serverFailure
-            }
+    return request.flatMap { request in
+      return session.rx.response(request: request)
+        .map { response, data in
+          switch response.statusCode {
+          case 200..<300:
+            return data
+          case 401:
+            throw ApiError.invalidKey
+          case 400..<500:
+            throw ApiError.cityNotFound
+          default:
+            throw ApiError.serverFailure
+          }
         }
     }
   }
