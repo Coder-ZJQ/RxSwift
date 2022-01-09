@@ -196,6 +196,13 @@ example(of: "ReplayRelay") {
     }.disposed(by: disposeBag)
     
 }
+
+/*:
+ * Callout(区别):
+ ![difference](difference.png)
+ */
+
+
 /*:
  ### Challenge 1: Create a blackjack card dealer using a publish subject
  
