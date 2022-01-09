@@ -50,7 +50,7 @@ class Tweet: Object, Unboxable {
     id = try unboxer.unbox(key: "id")
     text = try unboxer.unbox(key: "text")
     name = try unboxer.unbox(keyPath: "user.name")
-    created = unboxer.unbox(key: "created_at", formatter: DateFormatter.twitter)
+    created = try unboxer.unbox(key: "created_at", formatter: DateFormatter.twitter)
     imageUrl = try unboxer.unbox(keyPath: "user.profile_image_url_https")
   }
 

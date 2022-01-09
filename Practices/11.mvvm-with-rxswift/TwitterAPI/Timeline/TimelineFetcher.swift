@@ -38,7 +38,7 @@ import Unbox
 
 class TimelineFetcher {
 
-  private let timerDelay: TimeInterval = 30
+  private let timerDelay: RxTimeInterval = .seconds(30)
   private let bag = DisposeBag()
   private let feedCursor = BehaviorRelay<TimelineCursor>(value: .none)
 
@@ -82,7 +82,7 @@ class TimelineFetcher {
 
     // timer that emits a reachable logged account
     let reachableTimerWithAccount = Observable.combineLatest(
-      Observable<Int>.timer(0, period: timerDelay, scheduler: MainScheduler.instance),
+      Observable<Int>.timer(.seconds(0), period: timerDelay, scheduler: MainScheduler.instance),
       Reachability.rx.reachable,
       currentAccount,
       paused.asObservable(),

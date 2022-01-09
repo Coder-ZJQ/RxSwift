@@ -32,13 +32,14 @@ import RxSwift
 print("\n\n\n===== Schedulers =====\n")
 
 let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
+let mainScheduler = MainScheduler.instance
 let bag = DisposeBag()
 let animal = BehaviorSubject(value: "[dog]")
 
 animal
-  .subscribeOn(MainScheduler.instance)
+  .subscribe(on: mainScheduler)
   .dump()
-  .observeOn(globalScheduler)
+  .observe(on: globalScheduler)
   .dumpingSubscription()
   .disposed(by: bag)
 
@@ -52,9 +53,9 @@ let fruit = Observable<String>.create { observer in
 }
 
 fruit
-  .subscribeOn(globalScheduler)
+  .subscribe(on: globalScheduler)
   .dump()
-  .observeOn(MainScheduler.instance)
+  .observe(on: mainScheduler)
   .dumpingSubscription()
   .disposed(by: bag)
 
@@ -72,4 +73,5 @@ let animalsThread = Thread() {
 animalsThread.name = "Animals Thread"
 animalsThread.start()
 
+// 防止立即退出
 RunLoop.main.run(until: Date(timeIntervalSinceNow: 13))

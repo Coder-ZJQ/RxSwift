@@ -59,7 +59,7 @@ class ListTimelineViewModel {
     // fetch and store tweets
     fetcher = TimelineFetcher(account: account, list: list, apiType: apiType)
     fetcher.timeline
-      .subscribe(Realm.rx.add(update: true))
+      .subscribe(Realm.rx.add(update: .all))
       .disposed(by: bag)
     
     self.account = account

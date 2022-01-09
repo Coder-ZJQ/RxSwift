@@ -41,7 +41,8 @@ class MainTableViewController: UITableViewController {
     title = "iGif"
     
     searchController.searchResultsUpdater = self
-    searchController.dimsBackgroundDuringPresentation = false
+//    searchController.dimsBackgroundDuringPresentation = false
+    searchController.obscuresBackgroundDuringPresentation = false
     definesPresentationContext = true
     tableView.tableHeaderView = searchController.searchBar
     
@@ -50,9 +51,9 @@ class MainTableViewController: UITableViewController {
       .distinctUntilChanged()
       .flatMapLatest { query -> Observable<[GiphyGif]> in
         return ApiController.shared.search(text: query)
-          .catchErrorJustReturn([])
+          .catchAndReturn([])
       }
-      .observeOn(MainScheduler.instance)
+      .observe(on: MainScheduler.instance)
       .subscribe(onNext: { result in
         self.gifs = result
         self.tableView.reloadData()

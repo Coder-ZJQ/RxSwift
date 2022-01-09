@@ -60,7 +60,7 @@ class ListTimelineViewController: UIViewController {
 
   func bindUI() {
     // Bind button to the people view controller
-    navigationItem.rightBarButtonItem!.rx.tap.throttle(0.5, scheduler: MainScheduler.instance)
+    navigationItem.rightBarButtonItem!.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance)
       .subscribe(onNext: { [weak self] _ in
         guard let self = self else { return }
         self.navigator.show(segue: .listPeople(self.viewModel.account, self.viewModel.list), sender: self)

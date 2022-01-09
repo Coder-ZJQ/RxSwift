@@ -33,24 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06B17E3FD4D1F2E8ABD5F34C /* Pods-BaseTarget-iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif/Pods-BaseTarget-iGif.release.xcconfig"; sourceTree = "<group>"; };
 		0C2A7223A9991DD2CD6D50DF /* Pods_BaseTarget_10_iGif_extension_iGifTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_10_iGif_extension_iGifTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A03F5AAF68A613D05C65ACF /* Pods-BaseTarget-iGif-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif-iGifTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif-iGifTests/Pods-BaseTarget-iGif-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
-		40F99F01656536E08A620C8F /* Pods-BaseTarget-iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif/Pods-BaseTarget-iGif.debug.xcconfig"; sourceTree = "<group>"; };
-		69876ECC13DC57449540EFB5 /* Pods-iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif/Pods-iGif.debug.xcconfig"; sourceTree = "<group>"; };
-		6BCD66354300F2627975536A /* Pods-iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif/Pods-iGif.release.xcconfig"; sourceTree = "<group>"; };
-		793A93D635F21620BAD12C9D /* Pods-BaseTarget-iGif-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-iGif-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-iGif-iGifTests/Pods-BaseTarget-iGif-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
-		7D442BE0025DB832B400677F /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension.release.xcconfig"; sourceTree = "<group>"; };
-		85F04DD6E35B2C7A41592D32 /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
-		96AD364C630A748D9F72A756 /* Pods-BaseTarget-10.iGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif/Pods-BaseTarget-10.iGif.debug.xcconfig"; sourceTree = "<group>"; };
+		1660B80F47BBD90C9DF45ABC /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
+		44D6E33E407C8BD7B8C85B63 /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension.release.xcconfig"; path = "Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension.release.xcconfig"; sourceTree = "<group>"; };
+		63F4242348D2B9CB1C9B6613 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A27009312210B60200BDFEEC /* GiphyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyGif.swift; sourceTree = "<group>"; };
 		A27009332210B6E500BDFEEC /* GiphySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphySearchResponse.swift; sourceTree = "<group>"; };
-		ADD64680C23382D2B6EC2671 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AF9308D6BFD686E1EB8160A5 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10_iGif_extension/Pods-BaseTarget-10_iGif_extension.debug.xcconfig"; sourceTree = "<group>"; };
 		B1D22523CD9C3E42CC04FF21 /* Pods_BaseTarget_10_iGif_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseTarget_10_iGif_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3173B02A0D825722EF9C063 /* Pods-BaseTarget-10.iGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif/Pods-BaseTarget-10.iGif.release.xcconfig"; sourceTree = "<group>"; };
-		BD48EE14DF392F7BF21707DF /* Pods-iGif-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif-iGifTests/Pods-iGif-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
-		C81B58246BA4220CFF42CD5F /* Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif-iGifTests/Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB8945F51E41C9B600F46229 /* GifTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTableViewCell.swift; sourceTree = "<group>"; };
 		CB8945F71E424A5500F46229 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		CBB17E051E41227B0016EBA9 /* iGif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGif.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,8 +53,7 @@
 		CBB17E1F1E41227C0016EBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB17E2E1E41B8790016EBA9 /* URLSession+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Rx.swift"; sourceTree = "<group>"; };
 		CBB17E301E41B8AF0016EBA9 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
-		CEBFCBAC8410B555E803F43A /* Pods-iGif-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif-iGifTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-iGif-iGifTests/Pods-iGif-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4CEB2A0AD4B6EB3ECC046D8 /* Pods-BaseTarget-10.iGif-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10.iGif-iGifTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-BaseTarget-10.iGif-iGifTests/Pods-BaseTarget-10.iGif-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E81E7896375381F6813B48 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig"; path = "Target Support Files/Pods-BaseTarget-10_iGif_extension-iGifTests/Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,27 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		42C7FE6187C025B28AE275FF /* Pods */ = {
+		2CB4EF13E52D86BFAE97EDF9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				69876ECC13DC57449540EFB5 /* Pods-iGif.debug.xcconfig */,
-				6BCD66354300F2627975536A /* Pods-iGif.release.xcconfig */,
-				CEBFCBAC8410B555E803F43A /* Pods-iGif-iGifTests.debug.xcconfig */,
-				BD48EE14DF392F7BF21707DF /* Pods-iGif-iGifTests.release.xcconfig */,
-				40F99F01656536E08A620C8F /* Pods-BaseTarget-iGif.debug.xcconfig */,
-				06B17E3FD4D1F2E8ABD5F34C /* Pods-BaseTarget-iGif.release.xcconfig */,
-				1A03F5AAF68A613D05C65ACF /* Pods-BaseTarget-iGif-iGifTests.debug.xcconfig */,
-				793A93D635F21620BAD12C9D /* Pods-BaseTarget-iGif-iGifTests.release.xcconfig */,
-				96AD364C630A748D9F72A756 /* Pods-BaseTarget-10.iGif.debug.xcconfig */,
-				B3173B02A0D825722EF9C063 /* Pods-BaseTarget-10.iGif.release.xcconfig */,
-				D4CEB2A0AD4B6EB3ECC046D8 /* Pods-BaseTarget-10.iGif-iGifTests.debug.xcconfig */,
-				C81B58246BA4220CFF42CD5F /* Pods-BaseTarget-10.iGif-iGifTests.release.xcconfig */,
-				AF9308D6BFD686E1EB8160A5 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */,
-				7D442BE0025DB832B400677F /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */,
-				ADD64680C23382D2B6EC2671 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */,
-				85F04DD6E35B2C7A41592D32 /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */,
+				63F4242348D2B9CB1C9B6613 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */,
+				44D6E33E407C8BD7B8C85B63 /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */,
+				E3E81E7896375381F6813B48 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */,
+				1660B80F47BBD90C9DF45ABC /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
+			path = ../../Pods;
 			sourceTree = "<group>";
 		};
 		A27009302210B5F400BDFEEC /* Model */ = {
@@ -134,8 +111,8 @@
 				CBB17E071E41227B0016EBA9 /* iGif */,
 				CBB17E1C1E41227C0016EBA9 /* iGifTests */,
 				CBB17E061E41227B0016EBA9 /* Products */,
-				42C7FE6187C025B28AE275FF /* Pods */,
 				CF3EBD2F2A1138EF99549AF0 /* Frameworks */,
+				2CB4EF13E52D86BFAE97EDF9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +230,7 @@
 				TargetAttributes = {
 					CBB17E041E41227B0016EBA9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 92MVBZK45G;
 						ProvisioningStyle = Automatic;
 					};
 					CBB17E181E41227C0016EBA9 = {
@@ -571,14 +549,14 @@
 		};
 		CBB17E231E41227C0016EBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF9308D6BFD686E1EB8160A5 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */;
+			baseConfigurationReference = 63F4242348D2B9CB1C9B6613 /* Pods-BaseTarget-10_iGif_extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 92MVBZK45G;
 				INFOPLIST_FILE = iGif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.iGif;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.iGifjhjh;
 				PRODUCT_NAME = iGif;
 				SWIFT_VERSION = 5.0;
 			};
@@ -586,10 +564,10 @@
 		};
 		CBB17E241E41227C0016EBA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D442BE0025DB832B400677F /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */;
+			baseConfigurationReference = 44D6E33E407C8BD7B8C85B63 /* Pods-BaseTarget-10_iGif_extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 92MVBZK45G;
 				INFOPLIST_FILE = iGif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -601,7 +579,7 @@
 		};
 		CBB17E261E41227C0016EBA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADD64680C23382D2B6EC2671 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */;
+			baseConfigurationReference = E3E81E7896375381F6813B48 /* Pods-BaseTarget-10_iGif_extension-iGifTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -616,7 +594,7 @@
 		};
 		CBB17E271E41227C0016EBA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85F04DD6E35B2C7A41592D32 /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */;
+			baseConfigurationReference = 1660B80F47BBD90C9DF45ABC /* Pods-BaseTarget-10_iGif_extension-iGifTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";

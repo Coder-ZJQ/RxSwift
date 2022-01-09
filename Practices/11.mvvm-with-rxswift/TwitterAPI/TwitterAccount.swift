@@ -70,7 +70,7 @@ struct TwitterAccount {
     let parameters: Parameters = ["grant_type": "client_credentials"]
     let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"]
 
-    return AF.request("https://api.twitter.com/oauth2/token",
+    return Alamofire.request("https://api.twitter.com/oauth2/token",
                       method: .post,
                       parameters: parameters,
                       encoding: URLEncoding.httpBody,

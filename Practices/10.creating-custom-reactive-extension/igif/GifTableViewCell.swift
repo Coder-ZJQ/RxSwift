@@ -48,7 +48,7 @@ class GifTableViewCell: UITableViewCell {
     let request = URLRequest(url: url)
     
     let s = URLSession.shared.rx.data(request: request)
-        .observeOn(MainScheduler.instance)
+        .observe(on:MainScheduler.instance)
         .subscribe(onNext: { [weak self] data in
             guard let self = self else { return }
             self.gifImageView.animate(withGIFData: data)
